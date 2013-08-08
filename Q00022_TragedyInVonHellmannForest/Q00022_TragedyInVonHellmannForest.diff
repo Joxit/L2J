@@ -2,7 +2,7 @@
 #P L2J_DataPack_BETA
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-15.html
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-15.html  (revision 0)
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-15.html (revision 0)
 +++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-15.html	(working copy)
 @@ -0,0 +1,5 @@
 +<html><body>"This was to be his greatest accomplishment! The army of undead that he conjured played a pivotal role in the tragedy that occurred in the Hellmann Forest, but the outcome wasn't as he expected...<br>
@@ -11,25 +11,46 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-15.
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-16.html">Next Page</a>
 +</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-01.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-14.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-01.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-01.html	(working copy)
-@@ -0,0 +1,5 @@
-+<html>
-+<body>Ghost of Adventurer:<br>
-+Do you have something to tell a ghost who is neither alive nor dead?<br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-02.html">"I came to listen to you."</a>
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-14.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-14.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Innocentin:<br>
+-It's the report of the Mystic Neidrahu, the instigator of the insurrection! 
+-Do you care to read it?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31328-15.htm">"Yes!"</a></body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-01b.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-08.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-01b.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-01b.html	(working copy)
-@@ -0,0 +1,3 @@
-+<html><body>Innocentin:<br>
-+Take this crucifix to Magister Tifaren and ask her to perform necromancy. She tends to be quite wary of strangers, so you may need to prove your sincerity to her. Keep trying, she'll come around.
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-08.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-08.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-Hunt zombies or ghosts in the Forest of the Dead for a clean skull, 
+-preferably an Elven one. It will increase my chances of summoning a priest of 
+-Einhasad to use a child of Shilen.</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-10.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-10.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-10.htm	(working copy)
+@@ -1,3 +0,0 @@
+-<html><body>Innocentin:<br>
+-You'll find the well in the northwest part of the village. Show the ghost the 
+-letter and he'll grant your request.</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-01.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-01.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-01.htm	(working copy)
+@@ -1,6 +0,0 @@
+-<html><body>Innocentin:<br>
+-Ah, hello again!<br>
+-Sometime ago, a priest here doing volunteer work <font color="LEVEL">found a 
+-crucifix and brought it to me</font>.<br>
+-It was the very same crucifix I gave you! Did you drop it?<br>
+-Take this crucifix to Magister Tifaren immediately!</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-07.html
 ===================================================================
@@ -42,15 +63,346 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-07.
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-08.html">"What is it?"</a>
 +</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-20.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-15.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-20.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-20.html	(working copy)
-@@ -0,0 +1,4 @@
-+<html><body>Innocentin:<br>
-+Did you finish it? It's the true account of the terrible tragedy that occurred in Hellmann Forest... But it doesn't answer all of my questions... Would you do something for me?<br>
-+I'm afraid it won't be easy, and you look very tired! Why don't you take a break and come back when you're refreshed.
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-15.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-15.htm	(working copy)
+@@ -1,7 +0,0 @@
+-<html><body><br><font color="LEVEL">Regarding Neidrahu</font><br>
+-"... No one knows for sure how deeply Alfred von Hellmann was influenced by 
+-his magic, for his eloquence was certainly equal to his magic ability. Alfred 
+-wasn't the only one swayed by his words. Neidrahu called himself a messenger, 
+-and personally gathered many supporters for the insurrection."<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31328-16.htm">Turn the page</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/__init__.py
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/__init__.py	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/__init__.py	(working copy)
+@@ -1,310 +0,0 @@
+-# Made by Emperorc
+-import sys
+-from com.l2jserver.gameserver.model.quest import State
+-from com.l2jserver.gameserver.model.quest import QuestState
+-from com.l2jserver.gameserver.model.quest import Quest as JQuest
+-from com.l2jserver.gameserver.network.serverpackets import NpcSay
+-from com.l2jserver.gameserver.ai import CtrlIntention
+-
+-qn = "22_TragedyInVonHellmannForest"
+-
+-#NPCS
+-INNOCENTIN = 31328
+-TIFAREN = 31334
+-WELL = 31527
+-GHOST_PRIEST = 31528
+-GHOST_ADVENTURER = 31529
+-NPCS = range(31527,31530) + [31328, 31334]
+-
+-#MOBS
+-SOUL_OF_WELL = 27217
+-MOBS = range(21553,21557) + [21561]
+-
+-#ITEMS 
+-CROSS, SKULL, LETTER, JEWEL1, JEWEL2, SEALED_BOX, BOX = range(7141,7148)
+-
+-def AutoChat(npc,text) :
+-    chars = npc.getKnownList().getKnownPlayers().values().toArray()
+-    if chars != None:
+-       for pc in chars :
+-          sm = NpcSay(npc.getObjectId(), 0, npc.getNpcId(), text)
+-          pc.sendPacket(sm)
+-
+-class Quest (JQuest) :
+-
+- def __init__(self,id,name,descr):
+-     JQuest.__init__(self,id,name,descr)
+-     self.questItemIds = range(7141,7148)
+-     self.priest = ""
+-     self.tifaren = 0
+-     self.soul = 0
+-     self.well = 0
+-
+- def onAdvEvent (self,event,npc, player) :
+-   st = player.getQuestState(qn)
+-   if not st: return
+-   htmltext = event 
+-   if event == "31334-02.htm" :
+-       st2 = player.getQuestState("Q00021_HiddenTruth")
+-       if st2 :
+-           if not (st2.getState() == State.COMPLETED and player.getLevel() >= 63) :
+-               htmltext = "31334-03.htm"
+-               st.exitQuest(1)
+-       else :
+-           htmltext = "31334-03.htm"
+-           st.exitQuest(1)
+-   elif event == "31334-04.htm" :
+-       st.set("cond","1")
+-       st.set("id","1")
+-       st.setState(State.STARTED)
+-       st.playSound("ItemSound.quest_accept")
+-   elif event == "31334-06.htm" :
+-       if st.getQuestItemsCount(CROSS) == 0 :
+-           htmltext = "31334-07.htm"
+-           st.set("cond","2")
+-   elif event == "31334-08.htm" :
+-       st.set("cond","4")
+-       st.set("id","2")
+-   elif event == "31334-13.htm" :
+-       if st.getInt("id") == 2 and st.getQuestItemsCount(CROSS) > 0 and st.getQuestItemsCount(SKULL) > 0 :
+-           if self.tifaren == 1 :
+-               htmltext = "31334-14.htm"
+-               st.set("cond","6")
+-           else :
+-               self.tifaren = 1
+-               st.set("cond","7")
+-               st.set("id","4")
+-               st.takeItems(SKULL,-1)
+-               priest = st.addSpawn(GHOST_PRIEST,38354,-49777,-1128)
+-               st.startQuestTimer("Despawn Ghost Priest",120000,priest)
+-               AutoChat(priest,"Did you call me, "+player.getName()+"?")
+-               self.priest = player.getName()
+-       elif st.getInt("id") == 4 and st.getQuestItemsCount(CROSS) > 0 :
+-           if self.tifaren == 1 :
+-               htmltext = "31334-14.htm"
+-               st.set("cond","6")
+-           else :
+-               self.tifaren = 1
+-               st.takeItems(SKULL,-1)
+-               priest = st.addSpawn(GHOST_PRIEST,38354,-49777,-1128)
+-               st.startQuestTimer("Despawn Ghost Priest",120000,priest)
+-               AutoChat(priest,"Did you call me, "+player.getName()+"?")
+-               self.priest = player.getName()
+-   elif event == "31528-05.htm" :
+-       st.playSound("AmbSound.d_horror_03")
+-   elif event == "31528-09.htm" :
+-       st.set("id","5")
+-       st.set("cond","8")
+-       st.startQuestTimer("Despawn Ghost Priest 2",3000,npc)
+-   elif event == "31328-04.htm" :
+-       st.takeItems(CROSS,-1)
+-       st.set("id","6")
+-   elif event == "31328-10.htm" :
+-       st.giveItems(LETTER,1)
+-       st.set("id","7")
+-       st.set("cond","9")
+-   elif event == "31529-03.htm" :
+-       st.takeItems(LETTER,-1)
+-       st.set("id","8")
+-   elif event == "31529-09.htm" :
+-       st.set("id","9")
+-   elif event == "31529-12.htm" :
+-       st.giveItems(JEWEL1,1)
+-       st.set("id","10")
+-       st.set("cond","10")
+-   elif event == "31527-02.htm" :
+-       if self.well == 0 :
+-           self.well = 1
+-           soul = st.addSpawn(SOUL_OF_WELL,34706,-54590,-2054)
+-           self.soul = 0
+-           st.playSound("SkillSound3.antaras_fear")
+-           st.startQuestTimer("Soul of Well 1",90000,soul)
+-           st.startQuestTimer("Soul of Well Despawn",120000,soul)
+-           soul.addDamageHate(player,0,99999)
+-           soul.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK,player,None)
+-       else :
+-           htmltext = "31527-03.htm"
+-   elif event == "31328-13.htm" :
+-       st.takeItems(BOX,-1)
+-       st.set("id","13")
+-       st.set("cond","15")
+-   elif event == "31328-21.htm" :
+-       st.set("id","14")
+-       st.set("cond","16")
+-   elif event == "Despawn Ghost Priest" :
+-       AutoChat(npc,"I'm confused! Maybe it's time to go back.")
+-       npc.reduceCurrentHp(9999999,npc,None)
+-       self.tifaren = 0
+-       if st.getQuestTimer("Despawn Ghost Priest 2") :
+-           st.getQuestTimer("Despawn Ghost Priest 2").cancel()
+-       return
+-   elif event == "Despawn Ghost Priest 2" :
+-       npc.reduceCurrentHp(9999999,npc,None)
+-       self.tifaren = 0
+-       AutoChat(npc,"My train of thought is chaotic. It goes back to the beginning of time...")
+-       if st.getQuestTimer("Despawn Ghost Priest") :
+-           st.getQuestTimer("Despawn Ghost Priest").cancel()
+-       return
+-   elif event == "Soul of Well 1" :
+-       self.soul = 1
+-       return
+-   elif event == "Soul of Well Despawn" :
+-       npc.reduceCurrentHp(9999999,npc,None)
+-       self.well = 0
+-       return
+-   return htmltext 
+-
+- def onTalk (self,npc,player):
+-   st = player.getQuestState(qn)
+-   htmltext = Quest.getNoQuestMsg(player) 
+-   if not st: return htmltext
+-   npcId = npc.getNpcId()
+-   state = st.getState()
+-   id = st.getInt("id")
+-   ex = st.getInt("ex")
+-   cond = st.getInt("cond") 
+-   onlyone = st.getInt("onlyone")
+-   if state == State.COMPLETED :
+-       htmltext = Quest.getAlreadyCompletedMsg(player)
+-
+-   elif npcId == INNOCENTIN :
+-       if state == State.CREATED :
+-           st2 = player.getQuestState("Q00021_HiddenTruth")
+-           if st2 :
+-               if st2.getState() == 'State.COMPLETED' :
+-                   htmltext = "31328-00.htm"
+-       if id < 5 :
+-           if st.getQuestItemsCount(CROSS) == 0 :
+-               st.giveItems(CROSS,1)
+-               st.set("cond","3")
+-               htmltext = "31328-01.htm"
+-           else :
+-               htmltext = "31328-02.htm"
+-       elif id == 5 :
+-           htmltext = "31328-03.htm"
+-       elif id == 6 :
+-           htmltext = "31328-05.htm"
+-       elif id == 7 :
+-           htmltext = "31328-11.htm"
+-       elif id == 12 and st.getQuestItemsCount(BOX) > 0 :
+-           htmltext = "31328-12.htm"
+-       elif id == 13 :
+-           htmltext = "31328-14.htm"
+-       elif id == 14 :
+-           st.playSound("ItemSound.quest_finish")
+-           st.exitQuest(False)
+-           st.unset("id")
+-           st.addExpAndSp(345966,31578)
+-           if player.getLevel() < 64 :
+-               htmltext = "31328-23.htm"
+-           else :
+-               htmltext = "31328-22.htm"
+-   elif npcId == TIFAREN :
+-       if state == State.CREATED :
+-           htmltext = "31334-01.htm"
+-       elif id == 1 :
+-           htmltext = "31334-05.htm"
+-       elif id == 2 :
+-           if st.getQuestItemsCount(CROSS) >= 1 and st.getQuestItemsCount(SKULL) > 0 :
+-               if self.tifaren == 1 :
+-                   htmltext = "31334-11.htm"
+-               else :
+-                   htmltext = "31334-10.htm"
+-           else :
+-               htmltext = "31334-09.htm"
+-       elif id == 4 :
+-           if self.tifaren == 1 :
+-               if str(self.priest) == player.getName() :
+-                   htmltext = "31334-15.htm"
+-               else :
+-                   htmltext = "31334-16.htm"
+-                   st.set("cond","6")
+-           else :
+-               htmltext = "31334-17.htm"
+-       elif id == 5 :
+-           htmltext = "31334-18.htm"
+-   elif npcId == GHOST_PRIEST :
+-       st.playSound("AmbSound.d_horror_15")
+-       if str(self.priest) == player.getName() :
+-           htmltext = "31528-01.htm"
+-       else :
+-           htmltext = "31528-02.htm"
+-   elif npcId == GHOST_ADVENTURER :
+-       if id == 7 and st.getQuestItemsCount(LETTER) > 0 :
+-           htmltext = "31529-01.htm"
+-       elif id == 8 :
+-           htmltext = "31529-04.htm"
+-       elif id == 9 :
+-           htmltext = "31529-11.htm"
+-       elif id == 10 and st.getQuestItemsCount(JEWEL1) > 0 :
+-           htmltext = "31529-13.htm"
+-       elif id == 11 and st.getQuestItemsCount(JEWEL1) > 0 :
+-           htmltext = "31529-16.htm"
+-       elif id == 11 and st.getQuestItemsCount(JEWEL2) > 0 :
+-           if st.getQuestItemsCount(SEALED_BOX) == 0 :
+-               htmltext = "31529-17.htm"
+-               st.set("cond","12")
+-           else :
+-               st.takeItems(JEWEL2,-1)
+-               st.takeItems(SEALED_BOX,-1)
+-               st.giveItems(BOX,1)
+-               st.set("id","12")
+-               st.set("cond","14")
+-               htmltext = "31529-18.htm"
+-       elif id == 12 :
+-           htmltext = "31529-19.htm"
+-   elif npcId == WELL :
+-       if (id == 10 or id == 11) and st.getQuestItemsCount(JEWEL1) > 0 :
+-           htmltext = "31527-01.htm"
+-           st.playSound("AmbSound.dd_horror_01")
+-       elif id == 11 and st.getQuestItemsCount(JEWEL2) > 0 :
+-           if st.getQuestItemsCount(SEALED_BOX) == 0 :
+-               htmltext = "31527-04.htm"
+-               st.giveItems(SEALED_BOX,1)
+-               st.set("cond","13")
+-           else :
+-               htmltext = "31527-05.htm"
+-       elif id > 11 :
+-           htmltext = "31527-05.htm"
+-   return htmltext
+-
+- def onAttack (self,npc,player,damage,isPet,skill):
+-   st = player.getQuestState(qn)
+-   if st :
+-       npcId = npc.getNpcId()
+-       id = st.getInt("id")
+-       if npcId == SOUL_OF_WELL :
+-           if id == 10 and st.getQuestItemsCount(JEWEL1) > 0 :
+-               st.set("id","11")
+-           elif id == 11 and st.getQuestItemsCount(JEWEL1) > 0 and self.getRandom(100) < 5:
+-               st.takeItems(JEWEL1,-1)
+-               st.giveItems(JEWEL2,1)
+-               st.playSound("ItemSound.quest_itemget")
+-               st.set("cond","11")
+-   return
+-
+- def onKill(self,npc,player,isPet):
+-   npcId = npc.getNpcId()
+-   st = player.getQuestState(qn)
+-   if st :
+-       if npcId == SOUL_OF_WELL :
+-           self.well = 0
+-       elif npcId in MOBS and st.getState() == State.STARTED:
+-           if self.getRandom(10) < 1 and st.getQuestItemsCount(SKULL) < 1:
+-               st.giveItems(SKULL,1)
+-               st.playSound("ItemSound.quest_itemget")
+-               st.set("cond","5")
+-   return
+-
+-QUEST     = Quest(22,qn,"Tragedy In Von Hellmann Forest") 
+-
+-QUEST.addStartNpc(INNOCENTIN)
+-QUEST.addStartNpc(TIFAREN)
+-
+-for npcid in NPCS :
+-    QUEST.addTalkId(npcid)
+-
+-QUEST.addAttackId(SOUL_OF_WELL)
+-
+-for mobid in MOBS + [SOUL_OF_WELL] :
+-    QUEST.addKillId(mobid)
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-20.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-20.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-20.htm	(working copy)
+@@ -1,6 +0,0 @@
+-<html><body>"What happened next was a repeat of the events of the war 
+-with Beleth. Those killed by an undead were resurrected and enlisted in 
+-Lidia's force. The higher-level vassals of the Hellmann family became 
+-vampires, or high level undeads. They possessed indescribable power!<br>
+-It seemed the battle was over, until..." <br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31328-21.htm">Next Page</a></body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-12.html
 ===================================================================
@@ -85,48 +437,14 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-04.
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31528-05.html">"What about the Lord of Forest of the Dead?"</a>
 +</body>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-13.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-18.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-13.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-13.html	(working copy)
-@@ -0,0 +1,6 @@
-+<html>
-+<body>Ghost of Adventurer:<br>
-+What don't you get?<br>
-+Fight with them, don't kill them. When the jewelry changes color, find me.<br>
-+Don't kill the spirits before the jewelry changes color!
-+</body></html>
-\ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-06.html
-===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-06.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-06.html	(working copy)
-@@ -0,0 +1,4 @@
-+<html><body>Innocentin:<br>
-+Exactly! He only meant to encourage the lame duck king! He never even considered treason until his meeting with a mystic in the forest! Around that time I hired a treasure hunter to find out exactly what was going on with Alfred... That didn't go well at all!<br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-07.html">"What happened?"</a>
-+</body></html>
-\ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-14.html
-===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-14.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-14.html	(working copy)
-@@ -0,0 +1,4 @@
-+<html><body>Grand Magister Tifaren:<br>
-+My concentration has been broken!<br>
-+Come back later when it's quieter. I can't focus with so many people around.
-+</body></html>
-\ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-09a.html
-===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-09a.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-09a.html	(working copy)
-@@ -0,0 +1,5 @@
-+<html><body>Innocentin:<br>
-+The ghost of the treasure hunter is said to appear around the well in the northwest part of the village.
-+<br>
-+Take the letter to him and come back to me with his reply.
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-18.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-18.htm	(working copy)
+@@ -1,3 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-This is it! I'll break the first seal. Give it to Innocentin, only he can 
+-finish opening the lock. Until we meet again!</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-09.html
 ===================================================================
@@ -137,17 +455,32 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-09.
 +You'll find the well in the northwest part of the village. Show the ghost the letter and he'll grant your request.
 +</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-03a.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-11.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-03a.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-03a.html	(working copy)
-@@ -0,0 +1,6 @@
-+<html>
-+<body>Ghost of Adventurer:<br>
-+This is from the Priest of the Earth? He wants me to work even when I'm dead? Einhasad Temple must be worse off than I thought.<br>
-+Well, I don't have anything else to do, so what do you want to know?<br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-04.html">"I want to know about the Mage of the dark arts."</a>
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-11.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-11.htm	(working copy)
+@@ -1,3 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-Is that an Elven skull? Good. However, I'm busy helping someone else, you'll 
+-have to come back later.</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31527-03.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31527-03.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31527-03.htm	(working copy)
+@@ -1,2 +0,0 @@
+-<html><body>Well:<br>
+-Be prepared to fight the spirit from the well!</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-04.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-04.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-04.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Ghost of Priest:<br>
+-Why would you use necromancy to talk to me?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31528-05.htm">"To find out what happened in the Forest of the Dead."</a>
+-</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-05.html
 ===================================================================
@@ -160,17 +493,6 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-05.
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31528-06.html">"What tragedy?"</a>
 +</body>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-02.html
-===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-02.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-02.html	(working copy)
-@@ -0,0 +1,5 @@
-+<html>
-+<body>Ghost of Priest:<br>
-+I'm not sure... It's all so foggy. Why am I here?<br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31528-04.html">"I used necromancy."</a>
-+</body>
-\ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-04.html
 ===================================================================
 --- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-04.html	(revision 0)
@@ -181,6 +503,32 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-04.
 +<br>
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-05.html">"Who is behind the tragedy?"</a>
 +</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-04.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-04.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-04.htm	(working copy)
+@@ -1,2 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-High priest of Einhasad?<br>Ha! You amuse me, now go!</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-08.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-08.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-08.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-Of course! We just came up with another way.<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31529-09.htm">"What is it?"</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31527-04.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31527-04.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31527-04.htm	(working copy)
+@@ -1,2 +0,0 @@
+-<html><body>Well:<br>
+-The box inside the well is within your reach.</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-05.html
 ===================================================================
@@ -196,21 +544,11 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-05.
 +</a>
 +</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-16.html
-===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-16.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-16.html	(working copy)
-@@ -0,0 +1,4 @@
-+<html><body>Grand Magister Tifaren:<br>
-+This ghost isn't the one you requested. Someone else must be conducting the seance as well!<br>
-+Come back when it's quieter and I'll try again.
-+</body></html>
-\ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java
 ===================================================================
 --- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java	(revision 0)
 +++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java	(working copy)
-@@ -0,0 +1,673 @@
+@@ -0,0 +1,677 @@
 +/*
 + * Copyright (C) 2004-2013 L2J DataPack
 + * 
@@ -292,6 +630,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +		addAttackId(SOUL_OF_WELL);
 +		addStartNpc(TIFAREN);
 +		addTalkId(INNOCENTIN, TIFAREN, WELL, GHOST_OF_PRIEST, GHOST_OF_ADVENTURER);
++		registerQuestItems(SKULL, CROSS, BOX, JEWEL1, JEWEL2, SEALED_BOX);
 +	}
 +	
 +	@Override
@@ -504,7 +843,10 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +			}
 +			case "DESPAWN_UMUL_GHOST":
 +			{
-+				WELL_VAR[0] = 0;
++				if (!npc.isDead())
++				{
++					WELL_VAR[0] = 0;
++				}
 +				npc.deleteMe();
 +				break;
 +			}
@@ -573,7 +915,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +			if (player != null)
 +			{
 +				final QuestState st = player.getQuestState(getName());
-+				if ((st != null) && (getRandom(100) < 10))
++				if ((st != null) && st.hasQuestItems(CROSS) && !st.hasQuestItems(SKULL) && (getRandom(100) < 10))
 +				{
 +					st.giveItems(SKULL, 1);
 +					st.setCond(5, true);
@@ -937,25 +1279,14 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-14.
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-15.html">Turn the page</a>
 +</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-19.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-17.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-19.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-19.html	(working copy)
-@@ -0,0 +1,4 @@
-+<html><body>"I had my doubts about Lidia. If she was resurrected, how did she become Lord of the Forest of the Dead? Why not Alfred?<br>
-+I think she conspired with Nidrah! I'll investigate this further."<br>
-+Hmm...
-+</body></html>
-\ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-14.html
-===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-14.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-14.html	(working copy)
-@@ -0,0 +1,4 @@
-+<html><body>Ghost of Adventurer:<br>
-+Hey, why don't you do a good job? You can't just hit once and then run away like a child! Real work isn't easy!<br>
-+<font color="LEVEL">You must call the soul by beating the well, fight until the jewil changes color, and then investigate the will! Is that clear?</font>
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-17.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-17.htm	(working copy)
+@@ -1,3 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-The report is at the gate of the well. Since I'm a ghost, you'll have to get 
+-it.</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-01.html
 ===================================================================
@@ -968,36 +1299,72 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-01.
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31527-02.html">Explore the well</a>
 +</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-05.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-09.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-05.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-05.html	(working copy)
-@@ -0,0 +1,3 @@
-+<html><body>Well:<br>
-+I'll have nothing more to do with this ominous well.
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-09.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-09.htm	(working copy)
+@@ -1,8 +0,0 @@
+-<html><body>Innocentin:<br>
+-It's said that his ghost visits that well every night.<br>
+-I'd always believed that all ghosts were evil, but after my experiences with 
+-necromancy, the realm of the gods is denied to me. I must find out what 
+-actually happened!<br>
+-Would you meet with him and ask him what he found out?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31328-10.htm">"I'll do it."</a>
+-</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-17.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-00.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-17.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-17.html	(working copy)
-@@ -0,0 +1,4 @@
-+<html>
-+<body>Ghost of Adventurer:<br>
-+This is my life's work! Quickly, find Innocentin!
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-00.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-00.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Innocentin:<br>
+-Take the crucifix to Grand Magister Tifaren of the Dark Elves and perform the 
+-necromancy to summon the soul of the priest.<br>
+-Ask him what happened in the Forest of the Dead...</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-18.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-09.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-18.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-18.html	(working copy)
-@@ -0,0 +1,6 @@
-+<html>
-+
-+<body>"What happened next was a repeat of the events of the war with Beleth.  Those killed by an undead were resurrected and enlisted in Lidia's force.  The higher-level vassals of the Hellmann family became vampires, or high level undead. They possessed indescribable power! <br>
-+ It seemed the battle was over, until..." <br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-19.html">Next Page</a> 
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-09.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-09.htm	(working copy)
+@@ -1,2 +0,0 @@
+-<html><body>Ghost of Priest:<br>
+-I don't know. The High Priest was investigating, ask him!</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-07.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-07.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-07.htm	(working copy)
+@@ -1,3 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-You say High Priest Innocentin asks me to hold a seance? You're kidding, 
+-right? Show me proof or be on your way!</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-04.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-04.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-04.htm	(working copy)
+@@ -1,6 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-This is from the Priest of the Earth? He wants me to work even when I'm dead? 
+-Einhasad Temple must be worse off than I thought.<br>
+-Well, I don't have anything else to do, so what do you want to know?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31529-05.htm">"I want to know about the Mage of the dark arts."</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-16.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-16.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-16.htm	(working copy)
+@@ -1,8 +0,0 @@
+-<html><body>"Nidrah's preaching persuaded his followers of the awesome 
+-power of the dark arts. He often spoke of a powerful magus known as a devil, 
+-who practiced magic in Gludio. He convinced them that his own power was equal 
+-to the devil's!<br>Information regarding Beleth, Black Magus and the pastoral 
+-history of the wasteland of Gludio was all available at the main library. 
+-Although many were suspicious of his claims, eventually they believed him."<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31328-17.htm">Turn the page</a>
+-</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-11.html
 ===================================================================
@@ -1031,6 +1398,15 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-16.
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-17.html">Turn the page</a>
 +</body></html>
 \ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-18.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-18.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-18.htm	(working copy)
+@@ -1,3 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-Finished? Don't tell me.<br>Probably something related to Innocentin. Take it 
+-to him, I don't want to get involved!</body></html>
+\ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-10.html
 ===================================================================
 --- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-10.html	(revision 0)
@@ -1052,6 +1428,806 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-03.
 +(Points to Tifaren.)
 +</body>
 \ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31527-05.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31527-05.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31527-05.htm	(working copy)
+@@ -1,2 +0,0 @@
+-<html><body>Well:<br>
+-I'll have nothing more to do with this ominous well.</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-23.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-23.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-23.htm	(working copy)
+@@ -1,8 +0,0 @@
+-<html><body>Innocentin:<br>
+-Did you finish it? It's the true account of the terrible tragedy that 
+-occurred in Hellmann Forest... But it doesn't answer all of my questions...
+-Would you do something for me?<br>I'm afraid it won't be easy, and you look 
+-very tired! Why don't you take a break and come back later when you're 
+-refreshed and have had a little more training.<br>
+-<font color="LEVEL">(The Heart of Lidia quest may only be undertaken by a 
+-character of level 64 or above.)</font></body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-06.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-06.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-06.html	(working copy)
+@@ -0,0 +1,6 @@
++<html><body>Grand Magister Tifaren:<br>
++Einhasad's Crucifix! You would have me summon the soul of a priest?<br>
++I believe you that High Priest Innocentin sent you. Since he requests it, I'll do my best.<br>
++I need you to bring me something.<br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31334-08.html">"What?"</a>
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-11.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-11.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-11.htm	(working copy)
+@@ -1,8 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-They aren't very smart! They'll attack if you touch the well.<br>
+-<font color="LEVEL">All you have to do is fight them</font>.<br>
+-While you're fighting, I'll lift up the gate of the well.<br>
+-You can back out if you want to...<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31529-12.htm">"I'll do it!"</a><br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31529-10.htm">"I don't want to do it."</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-15.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-15.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-15.htm	(working copy)
+@@ -1,3 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-I don't want to get involved with a priest of Einhasad. He's right here, 
+-finish your business quickly!</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-01.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-01.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-01.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-What's your business here?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31334-02.htm">"I need the necromantic rite of communion performed."</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-13.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-13.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-13.html	(working copy)
+@@ -0,0 +1,5 @@
++<html><body><br>
++<font color="LEVEL">Regarding Neidrahu</font><br>
++"... No one knows for sure how deeply Alfred von Hellmann was influenced by his magic, for his eloquence was certainly equal to his magic ability. Alfred wasn't the only one swayed by his words. Neidrahu called himself a messenger, and personally gathered many supporters for the insurrection."<br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-14.html">Turn the page</a>
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-10.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-10.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-10.html	(working copy)
+@@ -0,0 +1,9 @@
++<html>
++<body>Ghost of Adventurer:<br>
++They aren't very smart! They'll attack if you touch the well.<br>
++<font color="LEVEL">All you have to do is fight them</font>.<br>
++While you're fighting, I'll lift up the gate of the well.<br>
++You can back out if you want to...<br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-11.html">"I'll do it!"</a><br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-09.html">"I don't want to do it."</a>
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-12.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-12.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-12.htm	(working copy)
+@@ -1,5 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-In the name of the Mother, come to me! I, who have mastered the laws of 
+-nature, demand that you obey my order! Your spirit shall reside within this 
+-vessel. Come!<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31334-13.htm">Wait</a></body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-06.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-06.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-06.html	(working copy)
+@@ -0,0 +1,6 @@
++<html>
++<body>Ghost of Adventurer:<br>
++I remember now! I hid the book about him in this well.<br>
++The heads of those accused of following demons were thrown into it. <font color="LEVEL">If you enter the well, they'll attack you</font>!<br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-07.html">"Is there no other way?"</a>
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-04.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-04.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-04.html	(working copy)
+@@ -0,0 +1,4 @@
++<html><body>Grand Magister Tifaren:<br>
++High priest of Einhasad?<br>
++Ha! You amuse me, now go!
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-08.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-08.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-08.html	(working copy)
+@@ -0,0 +1,9 @@
++<html>
++<body>Ghost of Adventurer:<br>
++They aren't very smart! They'll attack if you touch the well.<br>
++<font color="LEVEL">All you have to do is fight them</font>.<br>
++While you're fighting, I'll lift up the gate of the well.<br>
++You can back out if you want to...<br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-11.html">"I'll do it!"</a><br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-09.html">"I quit."</a>
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-08.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-08.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-08.html	(working copy)
+@@ -0,0 +1,6 @@
++<html><body>Innocentin:<br>
++It's said that his ghost visits that well every night.<br>
++I'd always believed that all ghosts were evil, but after my experiences with necromancy, the realm of the gods is denied to me. I must find out what actually happened!<br>
++Would you meet with him and ask him what he found out?<br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-09.html">"I'll do it."</a>
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-18.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-18.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-18.html	(working copy)
+@@ -0,0 +1,4 @@
++<html><body>Grand Magister Tifaren:<br>
++Finished? Don't tell me.<br>
++Probably something related to Innocentin. Take it to him, I don't want to get involved!
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-05.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-05.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-05.html	(working copy)
+@@ -0,0 +1,4 @@
++<html><body>Grand Magister Tifaren:<br>
++Unbelievable! Whose soul could the high priest want me to summon with dark magic? Doesn't he serve the god of light?<br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31334-06.html">Show her Einhasad's Crucifix</a>
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts.cfg
+===================================================================
+--- dist/game/data/scripts.cfg	(revision 9900)
++++ dist/game/data/scripts.cfg	(working copy)
+@@ -233,7 +233,7 @@
+ quests/Q00019_GoToThePastureland/Q00019_GoToThePastureland.java
+ quests/Q00020_BringUpWithLove/Q00020_BringUpWithLove.java
+ quests/Q00021_HiddenTruth/Q00021_HiddenTruth.java
+-quests/22_TragedyInVonHellmannForest/__init__.py
++quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java
+ quests/23_LidiasHeart/__init__.py
+ quests/Q00024_InhabitantsOfTheForestOfTheDead/Q00024_InhabitantsOfTheForestOfTheDead.java
+ quests/25_HidingBehindTheTruth/__init__.py
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-03.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-03.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-03.htm	(working copy)
+@@ -1,6 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-This is from High Priest Innocentin? He wants me to work even when I'm dead? 
+-Einhasad Temple must be worse off than I thought.<br>
+-Well, I don't have anything else to do, so what do you want to know?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31529-05.htm">"I want to know about the Mage of the dark arts."</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-04.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-04.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-04.htm	(working copy)
+@@ -1,8 +0,0 @@
+-<html><body>Innocentin<br>
+-I see.. Lidia von Hellmann was lord of the Forest of the Dead! She was 
+-Alfred's daughter, a survivor of the tragedy of Hellmann Forest...
+-Thank you.<br>Thanks to you, we know that his death wasn't in vain...<br>
+-I will treasure this crucifix always!<br>
+-Hmm..?  Was there something else?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31328-06.htm">"Who's behind all of this?"</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-12.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-12.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-12.html	(working copy)
+@@ -0,0 +1,9 @@
++<html>
++<body>Ghost of Adventurer:<br>
++If you hit the well, the spirits will come out.<br>
++ While you are fighting with the spirits, I will break the seal of the hidden report in the well<br>
++<font color="LEVEL">Just, don't kill the spirit while I'm working.     Because they will come back to the well if they die.</font><br>
++If I break the seal, the color of the jewelry will change.  After that, you can kill the spirit or do whatever you want.  You got it?<br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-13.html">"I am not sure"</a><br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-13a.html">"I see"</a>
++</body></html>
+\ No newline at end of file
+Index: dist/sql/game/updates/Q00022.sql
+===================================================================
+--- dist/sql/game/updates/Q00022.sql	(revision 0)
++++ dist/sql/game/updates/Q00022.sql	(working copy)
+@@ -0,0 +1 @@
++UPDATE character_quests SET name='Q00022_TragedyInVonHellmannForest' WHERE name='22_TragedyInVonHellmannForest';
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-03.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-03.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-03.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Ghost of Priest:<br>
+-I'm not sure... It's all so foggy. Why am I here?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31528-04.htm">"I used necromancy."</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-06.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-06.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-06.htm	(working copy)
+@@ -1,5 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-The shock of decapitation has dulled my memory, so I don't remember him well, 
+-and his disciples burned all the records.<br>
+-I think I remember why I'm here.<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31529-07.htm">"Why?"</a></body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-04.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-04.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-04.html	(working copy)
+@@ -0,0 +1,3 @@
++<html><body>Well:<br>
++The box inside the well is within your reach.
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-02.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-02.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-02.htm	(working copy)
+@@ -1,6 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-The necromantic rite of communion is a secret rite performed only by the 
+-children of Shilen. It is our secret heritage. Not everyone may receive it. 
+-Who sent you?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31334-04.htm">"High Priest Innocentin sent me."</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-02.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-02.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-02.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-What do you want to know?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31529-03.htm">"Here's a letter from the High Priest of the Earth."</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-02.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-02.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-02.html	(working copy)
+@@ -0,0 +1,3 @@
++<html><body>Well:<br>
++A spirit attacks you from the well.
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-05.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-05.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-05.html	(working copy)
+@@ -0,0 +1,6 @@
++<html>
++<body>Ghost of Adventurer:<br>
++The shock of decapitation has dulled my memory, so I don't remember him well, and his disciples burned all the records.<br>
++I think I remember why I'm here.<br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-06.html">"Why?"</a>
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-08.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-08.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-08.html	(working copy)
+@@ -0,0 +1,4 @@
++<html>
++<body>Ghost of Priest:<br>
++I don't know. The High Priest was investigating, ask him!
++</body>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-16.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-16.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-16.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-Don't hit them and run away, and don't kill them too quickly!<br>
+-Lure the spirits out by hitting the well and fight them until the jewelry 
+-changes color. Then we'll investigate.</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-02.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-02.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-02.html	(working copy)
+@@ -0,0 +1,4 @@
++<html><body>Grand Magister Tifaren:<br>
++The necromantic rite of communion is a secret rite performed only by the children of Shilen. It is our secret heritage. Not everyone may receive it. Who sent you?<br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31334-04.html">"High Priest Innocentin sent me."</a>
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-08.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-08.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-08.htm	(working copy)
+@@ -1,9 +0,0 @@
+-<html><body>Innocentin:<br>
+-He was accused of worshipping the devil! His secretive nature, along with the 
+-sensitivity of the mission, led to his downfall.<br>
+-I was occupied elsewhere and couldn't protect him...<br>
+-He was charged, convicted and executed on the square of Rune Castle! The 
+-evidence he had gathered for me was thrown into a <font color="LEVEL">deserted 
+-well</font>.<br><br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31328-09.htm">"Tell me more!"</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-08.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-08.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-08.htm	(working copy)
+@@ -1,7 +0,0 @@
+-<html><body>Ghost of Priest:<br>
+-The Hellmann family had revolted against the kingdom, hoping that the King 
+-would fight. However, the King had lost his will to fight since losing his 
+-wife and son at the battle against Amadeo, King of Aden.<br>
+-The result was a disaster and not what Alfred Von Hellmann had wanted.<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31528-09.htm">I need to ask him if there was somebody behind the scenes.</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-06.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-06.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-06.htm	(working copy)
+@@ -1,7 +0,0 @@
+-<html><body>Innocentin:<br>
+-Who's behind the tragedy? Well, there are several theories, I'm sure you've 
+-heard them all!<br>Why don't I tell you one you probably haven't heard...<br>
+-Alfred von Hellmann and I were very close friends and he shared with me the 
+-terrible dissatisfaction he had in his heart...<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31328-07.htm">"I heard that he didn't intentionally become a traitor."</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-11.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-11.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-11.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Innocentin:<br>
+-The ghost of the treasure hunter is said to appear around the well in the 
+-northwest part of the village.<br>
+-Take the letter to him and come back to me with his reply.</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-03.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-03.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-03.html	(working copy)
+@@ -0,0 +1,6 @@
++<html>
++<body>Ghost of Adventurer:<br>
++This is from High Priest Innocentin? He wants me to work even when I'm dead? Einhasad Temple must be worse off than I thought.<br>
++Well, I don't have anything else to do, so what do you want to know?<br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-04.html">"I want to know about the Mage of the dark arts."</a>
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-06.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-06.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-06.htm	(working copy)
+@@ -1,5 +0,0 @@
+-<html><body>Ghost of Priest:<br>
+-You must mean Lidia von Hellmann, she was the only survivor of the tragedy 
+-here.<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31528-07.htm">"What tragedy?"</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-01.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-01.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-01.html	(working copy)
+@@ -0,0 +1,6 @@
++<html><body>Innocentin:<br>
++Ah, hello again!<br>
++Sometime ago, a priest here doing volunteer work <font color="LEVEL">found a crucifix and brought it to me</font>.<br>
++It was the very same crucifix I gave you! Did you drop it?<br>
++Take this crucifix to Magister Tifaren immediately!
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-07.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-07.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-07.html	(working copy)
+@@ -0,0 +1,3 @@
++<html><body>Grand Magister Tifaren:<br>
++You say High Priest Innocentin asks me to hold a seance? You're kidding, right? Show me proof or be on your way!
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-12.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-12.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-12.htm	(working copy)
+@@ -1,10 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-Ok. Then, let's talk about the method. First, take this jewelry. If you hit 
+-the well, the spirits will come out.<br> While you are fighting with the 
+-spirits, I will break the seal of the hidden report in the well<br>
+-<font color="LEVEL">Just, don't kill the spirit while I'm working. Because 
+-they will come back to the well if they die.</font><br>
+-If I break the seal, the color of the jewelry will change. After that, you 
+-can kill the spirit or do whatever you want. You got it?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31529-14.htm">"I am not sure"</a><br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31529-15.htm">"I see"</a></body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-13a.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-13a.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-13a.html	(working copy)
+@@ -0,0 +1,4 @@
++<html>
++<body>Ghost of Adventurer:<br>
++OK!  Go ahead!
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-16.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-16.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-16.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-This ghost isn't the one you requested. Someone else must be conducting the 
+-seance as well!<br>
+-Come back when it's quieter and I'll try again.</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-07.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-07.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-07.htm	(working copy)
+@@ -1,6 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-I remember now! I hid the book about him in this well.<br>
+-The heads of those accused of following demons were thrown into it. 
+-<font color="LEVEL">If you enter the well, they'll attack you</font>!<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31529-08.htm">"Is there no other way?"</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-03.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-03.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-03.html	(working copy)
+@@ -0,0 +1,3 @@
++<html><body>Well:<br>
++Be prepared to fight the spirit from the well!
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-17.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-17.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-17.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-Two minutes wasn't enough?<br>
+-I'll try bringing him out once more. This time, finish your talk!<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31334-13.htm">Try again</a></body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-07.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-07.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-07.html	(working copy)
+@@ -0,0 +1,7 @@
++<html><body>Innocentin:<br>
++He was accused of worshipping the devil! His secretive nature, along with the sensitivity of the mission, led to his downfall.<br>
++I was occupied elsewhere and couldn't protect him...<br>
++He was charged, convicted and executed on the square of Rune Castle! The evidence he had gathered for me was thrown into a <font color="LEVEL">deserted well</font>.<br>
++<br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-08.html">"Tell me more!"</a>
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-13.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-13.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-13.htm	(working copy)
+@@ -1,5 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-Success! My work is done.<br>
+-The soul is not stable in this vessel. It won't last long! <font color="LEVEL">
+-Find out the rest directly from him</font> before he leaves this realm!
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-05.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-05.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-05.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Innocentin:<br>
+-Do you want to ask me something?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31328-06.htm">"Who is behind the tragedy?"</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-10.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-10.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-10.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-An Elven skull! Now I can proceed.<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31334-12.htm">Wait for incantation</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-01.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-01.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-01.html	(working copy)
+@@ -0,0 +1,5 @@
++<html>
++<body>Ghost of Adventurer:<br>
++Do you have something to tell a ghost who is neither alive nor dead?<br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-02.html">"I came to listen to you."</a>
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-05.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-05.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-05.htm	(working copy)
+@@ -1,5 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-Unbelievable! Whose soul could the high priest want me to summon with dark 
+-magic? Doesn't he serve the god of light?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31334-06.htm">Show him Einhasad's Crucifix</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-01b.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-01b.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-01b.html	(working copy)
+@@ -0,0 +1,3 @@
++<html><body>Innocentin:<br>
++Take this crucifix to Magister Tifaren and ask her to perform necromancy. She tends to be quite wary of strangers, so you may need to prove your sincerity to her. Keep trying, she'll come around.
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-20.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-20.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-20.html	(working copy)
+@@ -0,0 +1,4 @@
++<html><body>Innocentin:<br>
++Did you finish it? It's the true account of the terrible tragedy that occurred in Hellmann Forest... But it doesn't answer all of my questions... Would you do something for me?<br>
++I'm afraid it won't be easy, and you look very tired! Why don't you take a break and come back when you're refreshed.
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-19.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-19.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-19.htm	(working copy)
+@@ -1,7 +0,0 @@
+-<html><body>"It was then that Nidrah's magic sprang into action! 
+-At dusk, as the King's army took inventory of the treasures of the Hellmann 
+-family, a huge army of undead fighters rushed the castle!<br>
+-They were the souls of the executed vassals, led by Alfred's children Lidia 
+-and Eilhalder von Hellmann! All were under the control of Nidrah."<br>
+-<br><a action="bypass -h Quest 22_TragedyInVonHellmannForest 31328-20.htm">Turn the page</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31527-01.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31527-01.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31527-01.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Well:<br>
+-Ominous energy emanates from the well.<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31527-02.htm">Explore the well</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-17.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-17.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-17.htm	(working copy)
+@@ -1,8 +0,0 @@
+-<html><body>"This was to be his greatest accomplishment! The army of 
+-undead that he conjured played a pivotal role in the tragedy that occurred in 
+-the Hellmann Forest, but the outcome wasn't as he expected...<br>
+-Before his army was ready, the King learned of the Hellmann family's treason. 
+-In a fit of rage, and without any consultations, the King mobilized an 
+-occupation force and marched on the Hellmann Forest."<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31328-18.htm">Next Page</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-13.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-13.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-13.html	(working copy)
+@@ -0,0 +1,6 @@
++<html>
++<body>Ghost of Adventurer:<br>
++What don't you get?<br>
++Fight with them, don't kill them. When the jewelry changes color, find me.<br>
++Don't kill the spirits before the jewelry changes color!
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-14.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-14.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-14.html	(working copy)
+@@ -0,0 +1,4 @@
++<html><body>Grand Magister Tifaren:<br>
++My concentration has been broken!<br>
++Come back later when it's quieter. I can't focus with so many people around.
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-06.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-06.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-06.html	(working copy)
+@@ -0,0 +1,4 @@
++<html><body>Innocentin:<br>
++Exactly! He only meant to encourage the lame duck king! He never even considered treason until his meeting with a mystic in the forest! Around that time I hired a treasure hunter to find out exactly what was going on with Alfred... That didn't go well at all!<br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-07.html">"What happened?"</a>
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-09a.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-09a.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-09a.html	(working copy)
+@@ -0,0 +1,5 @@
++<html><body>Innocentin:<br>
++The ghost of the treasure hunter is said to appear around the well in the northwest part of the village.
++<br>
++Take the letter to him and come back to me with his reply.
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-12.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-12.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-12.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Innocentin:<br>
+-Oh, you're back? Did you bring any news?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31328-13.htm">"Check out this box."</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-07.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-07.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-07.htm	(working copy)
+@@ -1,7 +0,0 @@
+-<html><body>Innocentin:<br>
+-Exactly! He only meant to encourage the lame duck king! He never even 
+-considered treason until his meeting with a mystic in the forest! Around that 
+-time I hired a treasure hunter to find out exactly what was going on with 
+-Alfred... That didn't go well at all!<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31328-08.htm">"What happened?"</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-03a.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-03a.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-03a.html	(working copy)
+@@ -0,0 +1,6 @@
++<html>
++<body>Ghost of Adventurer:<br>
++This is from the Priest of the Earth? He wants me to work even when I'm dead? Einhasad Temple must be worse off than I thought.<br>
++Well, I don't have anything else to do, so what do you want to know?<br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-04.html">"I want to know about the Mage of the dark arts."</a>
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-02.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-02.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-02.html	(working copy)
+@@ -0,0 +1,5 @@
++<html>
++<body>Ghost of Priest:<br>
++I'm not sure... It's all so foggy. Why am I here?<br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31528-04.html">"I used necromancy."</a>
++</body>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-16.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-16.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-16.html	(working copy)
+@@ -0,0 +1,4 @@
++<html><body>Grand Magister Tifaren:<br>
++This ghost isn't the one you requested. Someone else must be conducting the seance as well!<br>
++Come back when it's quieter and I'll try again.
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-09.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-09.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-09.htm	(working copy)
+@@ -1,5 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-I believe High Priest Innocentin sent you. Hunt zombies or ghosts in the 
+-Forest of the Dead to find me a clean skull, preferably an Elven one. It will 
+-increase my chances of summoning a priest of Einhasad to use a child of 
+-Shilen.</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-19.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-19.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-19.html	(working copy)
+@@ -0,0 +1,4 @@
++<html><body>"I had my doubts about Lidia. If she was resurrected, how did she become Lord of the Forest of the Dead? Why not Alfred?<br>
++I think she conspired with Nidrah! I'll investigate this further."<br>
++Hmm...
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-14.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-14.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-14.html	(working copy)
+@@ -0,0 +1,4 @@
++<html><body>Ghost of Adventurer:<br>
++Hey, why don't you do a good job? You can't just hit once and then run away like a child! Real work isn't easy!<br>
++<font color="LEVEL">You must call the soul by beating the well, fight until the jewil changes color, and then investigate the will! Is that clear?</font>
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-19.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-19.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-19.htm	(working copy)
+@@ -1,2 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-This is my life's work! Quickly, find Innocentin!</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-05.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-05.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-05.html	(working copy)
+@@ -0,0 +1,3 @@
++<html><body>Well:<br>
++I'll have nothing more to do with this ominous well.
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-17.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-17.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-17.html	(working copy)
+@@ -0,0 +1,4 @@
++<html>
++<body>Ghost of Adventurer:<br>
++This is my life's work! Quickly, find Innocentin!
++</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-03.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-03.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-03.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Innocentin:<br>
+-Come on in! Did he tell you anything?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31328-04.htm">"Well, he said..."</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-18.html
+===================================================================
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-18.html	(revision 0)
++++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-18.html	(working copy)
+@@ -0,0 +1,6 @@
++<html>
++
++<body>"What happened next was a repeat of the events of the war with Beleth.  Those killed by an undead were resurrected and enlisted in Lidia's force.  The higher-level vassals of the Hellmann family became vampires, or high level undead. They possessed indescribable power! <br>
++ It seemed the battle was over, until..." <br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-19.html">Next Page</a> 
++</body></html>
+\ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-02.html
 ===================================================================
 --- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-02.html	(revision 0)
@@ -1061,6 +2237,18 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-02.
 +Come on in! Did he tell you anything?<br>
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-03.html">"Well, he said..."</a>
 +</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-07.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-07.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-07.htm	(working copy)
+@@ -1,6 +0,0 @@
+-<html><body>Ghost of Priest:<br>
+-The tragedy of the Hellmann forest was the massacre of the royal family. The 
+-King's army slaughtered them and all of their supporters. That's how this 
+-forest got it's name.<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31528-08.htm">"Why were they killed?"</a>
+-</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-15.html
 ===================================================================
@@ -1082,17 +2270,13 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-16.
 +This is it! I'll break the first seal. Give it to Innocentin, only he can finish opening the lock. Until we meet again!
 +</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-06.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-02.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-06.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-06.html	(working copy)
-@@ -0,0 +1,6 @@
-+<html><body>Grand Magister Tifaren:<br>
-+Einhasad's Crucifix! You would have me summon the soul of a priest?<br>
-+I believe you that High Priest Innocentin sent you. Since he requests it, I'll do my best.<br>
-+I need you to bring me something.<br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31334-08.html">"What?"</a>
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-02.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-02.htm	(working copy)
+@@ -1,2 +0,0 @@
+-<html><body>Ghost of Priest:<br>
+-....................<br>(Points to Tifaren.)</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-04.html
 ===================================================================
@@ -1128,31 +2312,26 @@ Index: dist/game/data/scripts/quests/Q00021_HiddenTruth/Q00021_HiddenTruth.java
  						if (st == null)
  						{
  							htmltext = "31328-06.html";
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-13.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-21.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-13.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-13.html	(working copy)
-@@ -0,0 +1,5 @@
-+<html><body><br>
-+<font color="LEVEL">Regarding Neidrahu</font><br>
-+"... No one knows for sure how deeply Alfred von Hellmann was influenced by his magic, for his eloquence was certainly equal to his magic ability. Alfred wasn't the only one swayed by his words. Neidrahu called himself a messenger, and personally gathered many supporters for the insurrection."<br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-14.html">Turn the page</a>
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-21.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-21.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>"I had my doubts about Lidia. If she was resurrected, how 
+-did she become Lord of the Forest of the Dead? Why not Alfred?<br>
+-I think she conspired with Nidrah! I'll investigate this further."<br>
+-Hmm...</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-10.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-03.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-10.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-10.html	(working copy)
-@@ -0,0 +1,9 @@
-+<html>
-+<body>Ghost of Adventurer:<br>
-+They aren't very smart! They'll attack if you touch the well.<br>
-+<font color="LEVEL">All you have to do is fight them</font>.<br>
-+While you're fighting, I'll lift up the gate of the well.<br>
-+You can back out if you want to...<br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-11.html">"I'll do it!"</a><br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-09.html">"I don't want to do it."</a>
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-03.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-03.htm	(working copy)
+@@ -1,5 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-You want me to hold a seance? The necromantic rite of communion is the secret 
+-magic of Dark Elves. It's not for novices!<br>(This quest is for characters 
+-level 63 or above who have also completed the Hidden Truth quest.)
+-</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-10.html
 ===================================================================
@@ -1164,18 +2343,6 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-10.
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-11.html">"Check out this box."</a>
 +</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-06.html
-===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-06.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-06.html	(working copy)
-@@ -0,0 +1,6 @@
-+<html>
-+<body>Ghost of Adventurer:<br>
-+I remember now! I hid the book about him in this well.<br>
-+The heads of those accused of following demons were thrown into it. <font color="LEVEL">If you enter the well, they'll attack you</font>!<br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-07.html">"Is there no other way?"</a>
-+</body></html>
-\ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-09.html
 ===================================================================
 --- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-09.html	(revision 0)
@@ -1185,15 +2352,19 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-09.
 +I believe High Priest Innocentin sent you. Hunt zombies or ghosts in the Forest of the Dead to find me a clean skull, preferably an Elven one. It will increase my chances of summoning a priest of Einhasad to use a child of Shilen.
 +</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-04.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-09.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-04.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-04.html	(working copy)
-@@ -0,0 +1,4 @@
-+<html><body>Grand Magister Tifaren:<br>
-+High priest of Einhasad?<br>
-+Ha! You amuse me, now go!
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-09.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-09.htm	(working copy)
+@@ -1,8 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-They aren't very smart! They'll attack if you touch the well.<br>
+-<font color="LEVEL">All you have to do is fight them</font>.<br>
+-While you're fighting, I'll lift up the gate of the well.<br>
+-You can back out if you want to...<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31529-12.htm">"I'll do it!"</a><br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31529-10.htm">"I quit."</a>
+-</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-03.html
 ===================================================================
@@ -1205,32 +2376,16 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-03.
 +(This quest is for characters level 63 or above who have also completed the Hidden Truth quest.)
 +</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-08.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-06.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-08.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-08.html	(working copy)
-@@ -0,0 +1,9 @@
-+<html>
-+<body>Ghost of Adventurer:<br>
-+They aren't very smart! They'll attack if you touch the well.<br>
-+<font color="LEVEL">All you have to do is fight them</font>.<br>
-+While you're fighting, I'll lift up the gate of the well.<br>
-+You can back out if you want to...<br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-11.html">"I'll do it!"</a><br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-09.html">"I quit."</a>
-+</body></html>
-\ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-08.html
-===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-08.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-08.html	(working copy)
-@@ -0,0 +1,6 @@
-+<html><body>Innocentin:<br>
-+It's said that his ghost visits that well every night.<br>
-+I'd always believed that all ghosts were evil, but after my experiences with necromancy, the realm of the gods is denied to me. I must find out what actually happened!<br>
-+Would you meet with him and ask him what he found out?<br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-09.html">"I'll do it."</a>
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-06.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-06.htm	(working copy)
+@@ -1,5 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-Einhasad's Crucifix! You would have me summon the soul of a priest?<br>
+-I believe you that High Priest Innocentin sent you. Since he requests it, 
+-I'll do my best.<br>I need you to bring me something.<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31334-08.htm">"What?"</a></body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-15.html
 ===================================================================
@@ -1239,16 +2394,6 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-15.
 @@ -0,0 +1,3 @@
 +<html><body>Grand Magister Tifaren:<br>
 +I don't want to get involved with a priest of Einhasad. He's right here, finish your business quickly!
-+</body></html>
-\ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-18.html
-===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-18.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-18.html	(working copy)
-@@ -0,0 +1,4 @@
-+<html><body>Grand Magister Tifaren:<br>
-+Finished? Don't tell me.<br>
-+Probably something related to Innocentin. Take it to him, I don't want to get involved!
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-01.html
@@ -1261,50 +2406,25 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-01.
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31334-02.html">"I need the necromantic rite of communion performed."</a>
 +</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-05.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-02.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-05.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-05.html	(working copy)
-@@ -0,0 +1,4 @@
-+<html><body>Grand Magister Tifaren:<br>
-+Unbelievable! Whose soul could the high priest want me to summon with dark magic? Doesn't he serve the god of light?<br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31334-06.html">Show her Einhasad's Crucifix</a>
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-02.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-02.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Innocentin:<br>
+-Take this crucifix to Magister Tifaren and ask her to perform necromancy. She 
+-tends to be quite wary of strangers, so you may need to prove your sincerity 
+-to her. Keep trying, she'll come around.</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts.cfg
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-01.htm
 ===================================================================
---- dist/game/data/scripts.cfg	(revision 9900)
-+++ dist/game/data/scripts.cfg	(working copy)
-@@ -233,7 +233,7 @@
- quests/Q00019_GoToThePastureland/Q00019_GoToThePastureland.java
- quests/Q00020_BringUpWithLove/Q00020_BringUpWithLove.java
- quests/Q00021_HiddenTruth/Q00021_HiddenTruth.java
--quests/22_TragedyInVonHellmannForest/__init__.py
-+quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java
- quests/23_LidiasHeart/__init__.py
- quests/Q00024_InhabitantsOfTheForestOfTheDead/Q00024_InhabitantsOfTheForestOfTheDead.java
- quests/25_HidingBehindTheTruth/__init__.py
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-12.html
-===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-12.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-12.html	(working copy)
-@@ -0,0 +1,9 @@
-+<html>
-+<body>Ghost of Adventurer:<br>
-+If you hit the well, the spirits will come out.<br>
-+ While you are fighting with the spirits, I will break the seal of the hidden report in the well<br>
-+<font color="LEVEL">Just, don't kill the spirit while I'm working.     Because they will come back to the well if they die.</font><br>
-+If I break the seal, the color of the jewelry will change.  After that, you can kill the spirit or do whatever you want.  You got it?<br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-13.html">"I am not sure"</a><br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-13a.html">"I see"</a>
-+</body></html>
-\ No newline at end of file
-Index: dist/sql/game/updates/Q00022.sql
-===================================================================
---- dist/sql/game/updates/Q00022.sql	(revision 0)
-+++ dist/sql/game/updates/Q00022.sql	(working copy)
-@@ -0,0 +1 @@
-+UPDATE character_quests SET name='Q00022_TragedyInVonHellmannForest' WHERE name='22_TragedyInVonHellmannForest';
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-01.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-01.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-Do you have something to tell a ghost who is neither alive nor dead?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31529-02.htm">"I came to listen to you."</a>
+-</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-08.html
 ===================================================================
@@ -1315,14 +2435,51 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-08.
 +Hunt zombies or ghosts in the Forest of the Dead for a clean skull, preferably an Elven one. It will increase my chances of summoning a priest of Einhasad to use a child of Shilen.
 +</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-04.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-14.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-04.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-04.html	(working copy)
-@@ -0,0 +1,3 @@
-+<html><body>Well:<br>
-+The box inside the well is within your reach.
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-14.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31334-14.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Grand Magister Tifaren:<br>
+-My concentration has been broken!<br>
+-Come back later when it's quieter. I can't focus with so many people around.
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-05.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-05.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-05.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Ghost of Priest:<br>
+-It's all so foggy. Can you be more specific?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31528-06.htm">"What about the Lord of Forest of the Dead?"</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-14.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-14.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-14.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-What don't you get?<br>
+-Fight with them, don't kill them. When the jewelry changes color, find me.<br>
+-Don't kill the spirits before the jewelry changes color!</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-13.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-13.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-13.htm	(working copy)
+@@ -1,10 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-If you hit the well, the spirits will come out.<br>
+-While you are fighting with the spirits, I will break the seal of the hidden 
+-report in the well<br>
+-<font color="LEVEL">Just, don't kill the spirit while I'm working. Because 
+-they will come back to the well if they die.</font><br>
+-If I break the seal, the color of the jewelry will change. After that, you 
+-can kill the spirit or do whatever you want. You got it?<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31529-14.htm">"I am not sure"</a><br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31529-15.htm">"I see"</a></body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-13.html
 ===================================================================
@@ -1333,6 +2490,13 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-13.
 +Success! My work is done.<br>
 +The soul is not stable in this vessel. It won't last long! <font color="LEVEL">Find out the rest directly from him</font> before he leaves this realm!
 +</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31527-02.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31527-02.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31527-02.htm	(working copy)
+@@ -1 +0,0 @@
+-<html><body>Well:<br>A spirit attacks you from the well.</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-01.html
 ===================================================================
@@ -1345,6 +2509,23 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-01.
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31528-02.html">"Can you remember anything?"</a>
 +</body>
 \ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-18.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-18.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-18.htm	(working copy)
+@@ -1,11 +0,0 @@
+-<html><body>"The supporters of the von Hellmann family fought bravely, 
+-but their lack of organization was their undoing. As the King's army 
+-approached, the family finally realized that they had failed. By then, most 
+-of their sympathizers had been beheaded or taken prisoner by the King's army. 
+-The von Hellmanns were very powerful, but their treasonous behavior caused 
+-them to fall into disgrace and to be renounced by the royal family. The fall 
+-was especially painful to Alfred, who, as patriarch, had to watch as his 
+-vassals and then his family were tortured and beheaded, before he ascended 
+-the scaffold himself.<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31328-19.htm">Turn the page</a>
+-</body></html>
+\ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-17.html
 ===================================================================
 --- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-17.html	(revision 0)
@@ -1356,14 +2537,35 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-17.
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31334-13.html">Try again</a>
 +</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-02.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-22.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-02.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-02.html	(working copy)
-@@ -0,0 +1,3 @@
-+<html><body>Well:<br>
-+A spirit attacks you from the well.
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-22.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-22.htm	(working copy)
+@@ -1,6 +0,0 @@
+-<html><body>Innocentin:<br>
+-Did you finish it? It's the true account of the terrible tragedy that 
+-occurred in Hellmann Forest... But it doesn't answer all of my questions... 
+-Would you do something for me?<br>
+-I'm afraid it won't be easy, and you look very tired! Why don't you take a 
+-break and come back when you're refreshed.</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-01.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-01.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-01.htm	(working copy)
+@@ -1,4 +0,0 @@
+-<html><body>Ghost of Priest:<br>
+-It's all so confusing...<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31528-03.htm">"Can you remember anything?"</a>
+-</body></html>
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-15.htm
+===================================================================
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-15.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-15.htm	(working copy)
+@@ -1,2 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-OK! Go ahead!</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-03.html
 ===================================================================
@@ -1380,38 +2582,6 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-03.
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-05.html"> "Who's behind all of this?" </a>
 +</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-05.html
-===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-05.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-05.html	(working copy)
-@@ -0,0 +1,6 @@
-+<html>
-+<body>Ghost of Adventurer:<br>
-+The shock of decapitation has dulled my memory, so I don't remember him well, and his disciples burned all the records.<br>
-+I think I remember why I'm here.<br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-06.html">"Why?"</a>
-+</body></html>
-\ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-08.html
-===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-08.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-08.html	(working copy)
-@@ -0,0 +1,4 @@
-+<html>
-+<body>Ghost of Priest:<br>
-+I don't know. The High Priest was investigating, ask him!
-+</body>
-\ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-02.html
-===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-02.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-02.html	(working copy)
-@@ -0,0 +1,4 @@
-+<html><body>Grand Magister Tifaren:<br>
-+The necromantic rite of communion is a secret rite performed only by the children of Shilen. It is our secret heritage. Not everyone may receive it. Who sent you?<br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31334-04.html">"High Priest Innocentin sent me."</a>
-+</body></html>
-\ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-21.html
 ===================================================================
 --- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-21.html	(revision 0)
@@ -1422,18 +2592,6 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-21.
 +I'm afraid it won't be easy, and you look very tired! Why don't you take a break and come back later when you're refreshed and have had a little more training.
 +<br>
 +<font color="LEVEL">(The Heart of Lidia quest may only be undertaken by a character of level 64 or above.)</font>
-+</body></html>
-\ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-03.html
-===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-03.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-03.html	(working copy)
-@@ -0,0 +1,6 @@
-+<html>
-+<body>Ghost of Adventurer:<br>
-+This is from High Priest Innocentin? He wants me to work even when I'm dead? Einhasad Temple must be worse off than I thought.<br>
-+Well, I don't have anything else to do, so what do you want to know?<br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-04.html">"I want to know about the Mage of the dark arts."</a>
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-17.html
@@ -1449,17 +2607,19 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-17.
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-18.html">Turn the page</a>
 +</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-01.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-13.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-01.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-01.html	(working copy)
-@@ -0,0 +1,6 @@
-+<html><body>Innocentin:<br>
-+Ah, hello again!<br>
-+Sometime ago, a priest here doing volunteer work <font color="LEVEL">found a crucifix and brought it to me</font>.<br>
-+It was the very same crucifix I gave you! Did you drop it?<br>
-+Take this crucifix to Magister Tifaren immediately!
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-13.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31328-13.htm	(working copy)
+@@ -1,8 +0,0 @@
+-<html><body>Innocentin:<br>
+-Indeed! Is this the box he told you about?<br>
+-He told me once, in case something happened to him, he would store all his 
+-most important documents in a box! Hmm...<br>
+-I can't help but think... Perhaps it's fortunate that I left the temple and 
+-came here! Ah... but that's not important...<br>
+-Now give me the box!<br>I must open it carefully and see what it holds. 
+-Why don't you come back a little later?</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-06.html
 ===================================================================
@@ -1472,24 +2632,16 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31528-06.
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31528-07.html">"Why were they killed?"</a>
 +</body>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-07.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-05.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-07.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31334-07.html	(working copy)
-@@ -0,0 +1,3 @@
-+<html><body>Grand Magister Tifaren:<br>
-+You say High Priest Innocentin asks me to hold a seance? You're kidding, right? Show me proof or be on your way!
-+</body></html>
-\ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-13a.html
-===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-13a.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-13a.html	(working copy)
-@@ -0,0 +1,4 @@
-+<html>
-+<body>Ghost of Adventurer:<br>
-+OK!  Go ahead!
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-05.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-05.htm	(working copy)
+@@ -1,5 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-His name is Neid, short for Nidrah.<br>
+-I can't rest in peace until I find him.<br>
+-<a action="bypass -h Quest 22_TragedyInVonHellmannForest 31529-06.htm">"Tell me about him."</a>
+-</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-09.html
 ===================================================================
@@ -1501,25 +2653,11 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-09.
 +It's your loss, not mine.
 +</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-07.html
+Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-10.htm
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-07.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-07.html	(working copy)
-@@ -0,0 +1,7 @@
-+<html><body>Innocentin:<br>
-+He was accused of worshipping the devil! His secretive nature, along with the sensitivity of the mission, led to his downfall.<br>
-+I was occupied elsewhere and couldn't protect him...<br>
-+He was charged, convicted and executed on the square of Rune Castle! The evidence he had gathered for me was thrown into a <font color="LEVEL">deserted well</font>.<br>
-+<br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-08.html">"Tell me more!"</a>
-+</body></html>
-\ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-03.html
-===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-03.html	(revision 0)
-+++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31527-03.html	(working copy)
-@@ -0,0 +1,3 @@
-+<html><body>Well:<br>
-+Be prepared to fight the spirit from the well!
-+</body></html>
+--- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-10.htm	(revision 9900)
++++ dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-10.htm	(working copy)
+@@ -1,2 +0,0 @@
+-<html><body>Ghost of Adventurer:<br>
+-It's your loss, not mine.</body></html>
 \ No newline at end of file

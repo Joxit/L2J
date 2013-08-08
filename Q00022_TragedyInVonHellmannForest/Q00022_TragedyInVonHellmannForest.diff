@@ -544,11 +544,13 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-05.
 +</a>
 +</body></html>
 \ No newline at end of file
+### Eclipse Workspace Patch 1.0
+#P L2J_DataPack_BETA
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java	(revision 0)
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java (revision 0)
 +++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java	(working copy)
-@@ -0,0 +1,677 @@
+@@ -0,0 +1,673 @@
 +/*
 + * Copyright (C) 2004-2013 L2J DataPack
 + * 
@@ -911,15 +913,11 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +		}
 +		else
 +		{
-+			L2PcInstance player = getRandomPartyMember(killer, 4);
-+			if (player != null)
++			final QuestState st = killer.getQuestState(getName());
++			if ((st != null) && st.hasQuestItems(CROSS) && !st.hasQuestItems(SKULL) && (getRandom(100) < 10))
 +			{
-+				final QuestState st = player.getQuestState(getName());
-+				if ((st != null) && st.hasQuestItems(CROSS) && !st.hasQuestItems(SKULL) && (getRandom(100) < 10))
-+				{
-+					st.giveItems(SKULL, 1);
-+					st.setCond(5, true);
-+				}
++				st.giveItems(SKULL, 1);
++				st.setCond(5, true);
 +			}
 +		}
 +		return super.onKill(npc, killer, isSummon);

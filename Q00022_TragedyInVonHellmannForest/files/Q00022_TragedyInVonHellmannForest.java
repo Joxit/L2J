@@ -79,6 +79,7 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 		addAttackId(SOUL_OF_WELL);
 		addStartNpc(TIFAREN);
 		addTalkId(INNOCENTIN, TIFAREN, WELL, GHOST_OF_PRIEST, GHOST_OF_ADVENTURER);
+		registerQuestItems(SKULL, CROSS, BOX, JEWEL1, JEWEL2, SEALED_BOX);
 	}
 	
 	@Override
@@ -291,7 +292,10 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 			}
 			case "DESPAWN_UMUL_GHOST":
 			{
-				WELL_VAR[0] = 0;
+				if (!npc.isDead())
+				{
+					WELL_VAR[0] = 0;
+				}
 				npc.deleteMe();
 				break;
 			}
@@ -356,15 +360,11 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 		}
 		else
 		{
-			L2PcInstance player = getRandomPartyMember(killer, 4);
-			if (player != null)
+			final QuestState st = killer.getQuestState(getName());
+			if ((st != null) && st.hasQuestItems(CROSS) && !st.hasQuestItems(SKULL) && (getRandom(100) < 10))
 			{
-				final QuestState st = player.getQuestState(getName());
-				if ((st != null) && (getRandom(100) < 10))
-				{
-					st.giveItems(SKULL, 1);
-					st.setCond(5, true);
-				}
+				st.giveItems(SKULL, 1);
+				st.setCond(5, true);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

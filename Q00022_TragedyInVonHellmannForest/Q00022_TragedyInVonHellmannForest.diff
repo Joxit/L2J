@@ -543,7 +543,8 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-05.
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-06.html">"I heard that he didn't intentionally become a traitor." 
 +</a>
 +</body></html>
-\ No newline at end of fileIndex: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java
+\ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java
 ===================================================================
 --- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java	(revision 0)
 +++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java	(working copy)

@@ -543,12 +543,9 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-05.
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-06.html">"I heard that he didn't intentionally become a traitor." 
 +</a>
 +</body></html>
-\ No newline at end of file
-### Eclipse Workspace Patch 1.0
-#P L2J_DataPack_BETA
-Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java
+\ No newline at end of fileIndex: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java
 ===================================================================
---- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java (revision 0)
+--- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java	(revision 0)
 +++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java	(working copy)
 @@ -0,0 +1,673 @@
 +/*
@@ -722,7 +719,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +						final L2Npc ghost2 = addSpawn(GHOST_OF_PRIEST, PRIEST_LOC, true, 0);
 +						ghost2.setScriptValue(player.getObjectId());
 +						st.startQuestTimer("DESPAWN_GHOST2", 1000 * 120, ghost2);
-+						ghost2.broadcastPacket(new NpcSay(ghost2.getObjectId(), 0, ghost2.getNpcId(), NpcStringId.DID_YOU_CALL_ME_S1).addStringParameter(player.getName()));
++						ghost2.broadcastPacket(new NpcSay(ghost2.getObjectId(), 0, ghost2.getId(), NpcStringId.DID_YOU_CALL_ME_S1).addStringParameter(player.getName()));
 +						st.takeItems(SKULL, -1);
 +						st.setCond(7, true);
 +						htmltext = event;
@@ -742,7 +739,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +						final L2Npc ghost2 = addSpawn(GHOST_OF_PRIEST, PRIEST_LOC, true, 0);
 +						ghost2.setScriptValue(player.getObjectId());
 +						st.startQuestTimer("DESPAWN_GHOST2", 1000 * 120, ghost2);
-+						ghost2.broadcastPacket(new NpcSay(ghost2.getObjectId(), 0, ghost2.getNpcId(), NpcStringId.DID_YOU_CALL_ME_S1).addStringParameter(player.getName()));
++						ghost2.broadcastPacket(new NpcSay(ghost2.getObjectId(), 0, ghost2.getId(), NpcStringId.DID_YOU_CALL_ME_S1).addStringParameter(player.getName()));
 +						htmltext = event;
 +					}
 +					else
@@ -777,7 +774,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +				TIFAREN_VAR[0] = 0;
 +				if (npc.getScriptValue() != 0)
 +				{
-+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.IM_CONFUSED_MAYBE_ITS_TIME_TO_GO_BACK));
++					npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), NpcStringId.IM_CONFUSED_MAYBE_ITS_TIME_TO_GO_BACK));
 +				}
 +				
 +				npc.deleteMe();
@@ -907,7 +904,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +	@Override
 +	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 +	{
-+		if (npc.getNpcId() == SOUL_OF_WELL)
++		if (npc.getId() == SOUL_OF_WELL)
 +		{
 +			WELL_VAR[0] = 0;
 +		}
@@ -937,7 +934,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +		{
 +			case State.CREATED:
 +			{
-+				if (npc.getNpcId() == TIFAREN)
++				if (npc.getId() == TIFAREN)
 +				{
 +					htmltext = "31334-01.htm";
 +				}
@@ -945,7 +942,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +			}
 +			case State.STARTED:
 +			{
-+				switch (npc.getNpcId())
++				switch (npc.getId())
 +				{
 +					case TIFAREN:
 +					{
@@ -1209,7 +1206,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +			}
 +			case State.COMPLETED:
 +			{
-+				if (npc.getNpcId() == TIFAREN)
++				if (npc.getId() == TIFAREN)
 +				{
 +					htmltext = getAlreadyCompletedMsg(talker);
 +				}

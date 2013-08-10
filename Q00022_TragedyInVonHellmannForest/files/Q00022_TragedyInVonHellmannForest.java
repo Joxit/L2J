@@ -169,7 +169,7 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 						final L2Npc ghost2 = addSpawn(GHOST_OF_PRIEST, PRIEST_LOC, true, 0);
 						ghost2.setScriptValue(player.getObjectId());
 						st.startQuestTimer("DESPAWN_GHOST2", 1000 * 120, ghost2);
-						ghost2.broadcastPacket(new NpcSay(ghost2.getObjectId(), 0, ghost2.getNpcId(), NpcStringId.DID_YOU_CALL_ME_S1).addStringParameter(player.getName()));
+						ghost2.broadcastPacket(new NpcSay(ghost2.getObjectId(), 0, ghost2.getId(), NpcStringId.DID_YOU_CALL_ME_S1).addStringParameter(player.getName()));
 						st.takeItems(SKULL, -1);
 						st.setCond(7, true);
 						htmltext = event;
@@ -189,7 +189,7 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 						final L2Npc ghost2 = addSpawn(GHOST_OF_PRIEST, PRIEST_LOC, true, 0);
 						ghost2.setScriptValue(player.getObjectId());
 						st.startQuestTimer("DESPAWN_GHOST2", 1000 * 120, ghost2);
-						ghost2.broadcastPacket(new NpcSay(ghost2.getObjectId(), 0, ghost2.getNpcId(), NpcStringId.DID_YOU_CALL_ME_S1).addStringParameter(player.getName()));
+						ghost2.broadcastPacket(new NpcSay(ghost2.getObjectId(), 0, ghost2.getId(), NpcStringId.DID_YOU_CALL_ME_S1).addStringParameter(player.getName()));
 						htmltext = event;
 					}
 					else
@@ -224,7 +224,7 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 				TIFAREN_VAR[0] = 0;
 				if (npc.getScriptValue() != 0)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.IM_CONFUSED_MAYBE_ITS_TIME_TO_GO_BACK));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), NpcStringId.IM_CONFUSED_MAYBE_ITS_TIME_TO_GO_BACK));
 				}
 				
 				npc.deleteMe();
@@ -354,7 +354,7 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		if (npc.getNpcId() == SOUL_OF_WELL)
+		if (npc.getId() == SOUL_OF_WELL)
 		{
 			WELL_VAR[0] = 0;
 		}
@@ -384,7 +384,7 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 		{
 			case State.CREATED:
 			{
-				if (npc.getNpcId() == TIFAREN)
+				if (npc.getId() == TIFAREN)
 				{
 					htmltext = "31334-01.htm";
 				}
@@ -392,7 +392,7 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case TIFAREN:
 					{
@@ -656,7 +656,7 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 			}
 			case State.COMPLETED:
 			{
-				if (npc.getNpcId() == TIFAREN)
+				if (npc.getId() == TIFAREN)
 				{
 					htmltext = getAlreadyCompletedMsg(talker);
 				}

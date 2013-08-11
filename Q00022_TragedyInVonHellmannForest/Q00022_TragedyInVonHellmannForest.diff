@@ -13,6 +13,8 @@ Index: dist/game/data/scripts.cfg
  quests/23_LidiasHeart/__init__.py
  quests/Q00024_InhabitantsOfTheForestOfTheDead/Q00024_InhabitantsOfTheForestOfTheDead.java
  quests/25_HidingBehindTheTruth/__init__.py
+### Eclipse Workspace Patch 1.0
+#P L2J_DataPack_BETA
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-15.html
 ===================================================================
 --- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-15.html	(revision 0)
@@ -553,7 +555,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 ===================================================================
 --- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java	(revision 0)
 +++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java	(working copy)
-@@ -0,0 +1,656 @@
+@@ -0,0 +1,644 @@
 +/*
 + * Copyright (C) 2004-2013 L2J DataPack
 + * 
@@ -675,7 +677,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +				if (st.isCreated())
 +				{
 +					final QuestState qt = player.getQuestState(Q00021_HiddenTruth.class.getSimpleName());
-+					if ((qt != null) && qt.isCompleted() && (player.getLevel() >= MIN_LVL))
++					if ((player.getLevel() >= MIN_LVL) && (qt != null) && qt.isCompleted())
 +					{
 +						htmltext = event;
 +					}
@@ -753,7 +755,6 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +					npc.setScriptValue(0);
 +					st.startQuestTimer("DESPAWN_GHOST2", 1000 * 3, npc);
 +					st.setCond(8);
-+					
 +				}
 +				break;
 +			}
@@ -764,7 +765,6 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +				{
 +					npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), NpcStringId.IM_CONFUSED_MAYBE_ITS_TIME_TO_GO_BACK));
 +				}
-+				
 +				npc.deleteMe();
 +				break;
 +			}
@@ -912,7 +912,6 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +	@Override
 +	public String onTalk(L2Npc npc, L2PcInstance talker)
 +	{
-+		
 +		final QuestState st = talker.getQuestState(getName());
 +		String htmltext = getNoQuestMsg(talker);
 +		if (st == null)
@@ -952,16 +951,13 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +									{
 +										htmltext = "31334-09.html";
 +									}
++									else if (TIFAREN_VAR == 0)
++									{
++										htmltext = "31334-10.html";
++									}
 +									else
 +									{
-+										if (TIFAREN_VAR == 0)
-+										{
-+											htmltext = "31334-10.html";
-+										}
-+										else
-+										{
-+											htmltext = "31334-11.html";
-+										}
++										htmltext = "31334-11.html";
 +									}
 +								}
 +								break;
@@ -971,21 +967,18 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +							{
 +								if (st.hasQuestItems(CROSS))
 +								{
-+									if (TIFAREN_VAR != 0)
++									if (TIFAREN_VAR == 0)
 +									{
-+										if (TIFAREN_VAR == talker.getObjectId())
-+										{
-+											htmltext = "31334-15.html";
-+										}
-+										else
-+										{
-+											htmltext = "31334-16.html";
-+											st.setCond(6, true);
-+										}
++										htmltext = "31334-17.html";
++									}
++									else if (TIFAREN_VAR == talker.getObjectId())
++									{
++										htmltext = "31334-15.html";
 +									}
 +									else
 +									{
-+										htmltext = "31334-17.html";
++										htmltext = "31334-16.html";
++										st.setCond(6, true);
 +									}
 +								}
 +								break;
@@ -1006,7 +999,6 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +						playSound(talker, QuestSound.AMBSOUND_HORROR_15);
 +						if (npc.getScriptValue() == talker.getObjectId())
 +						{
-+							
 +							htmltext = "31528-01.html";
 +						}
 +						else
@@ -1104,7 +1096,6 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +									st.giveItems(SEALED_BOX, 1);
 +									st.setCond(13, true);
 +									htmltext = "31527-04.html";
-+									
 +								}
 +								break;
 +							}
@@ -1130,7 +1121,6 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +									if (st.getInt("id") == 0)
 +									{
 +										htmltext = "31529-01.html";
-+										
 +									}
 +									else if (st.getInt("id") == 8)
 +									{
@@ -1228,7 +1218,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-11.
 @@ -0,0 +1,8 @@
 +<html><body>Ghost of Adventurer:<br>
 +Ok. Then, let's talk about the method. First, take this jewelry. If you hit the well, the spirits will come out.<br>
-+ While you are fighting with the spirits, I will break the seal of the hidden report in the well<br>
++While you are fighting with the spirits, I will break the seal of the hidden report in the well<br>
 +<font color="LEVEL">Just, don't kill the spirit while I'm working. Because they will come back to the well if they die.</font><br>
 +If I break the seal, the color of the jewelry will change. After that, you can kill the spirit or do whatever you want. You got it?<br>
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-13.html">"I am not sure"</a><br>
@@ -1380,7 +1370,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-16.
 +++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-16.html	(working copy)
 @@ -0,0 +1,4 @@
 +<html><body>
-+"The supporters of the von Hellmann family fought bravely, but their lack of organization was their undoing. As the King's army approached, the family finally realized that they had failed. By then, most of their sympathizers had been beheaded or taken prisoner by the King's army. The von Hellmanns were very powerful, but their treasonous behavior caused them to fall into disgrace and to be renounced by the royal family. The fall was especially painful to Alfred, who, as patriarch, had to watch as his vassals and then his family were tortured and beheaded, before he ascended the scaffold himself. <br>
++"The supporters of the von Hellmann family fought bravely, but their lack of organization was their undoing. As the King's army approached, the family finally realized that they had failed. By then, most of their sympathizers had been beheaded or taken prisoner by the King's army. The von Hellmanns were very powerful, but their treasonous behavior caused them to fall into disgrace and to be renounced by the royal family. The fall was especially painful to Alfred, who, as patriarch, had to watch as his vassals and then his family were tortured and beheaded, before he ascended the scaffold himself.<br>
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-17.html">Turn the page</a>
 +</body></html>
 \ No newline at end of file
@@ -1607,7 +1597,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-12.
 @@ -0,0 +1,8 @@
 +<html><body>Ghost of Adventurer:<br>
 +If you hit the well, the spirits will come out.<br>
-+ While you are fighting with the spirits, I will break the seal of the hidden report in the well<br>
++While you are fighting with the spirits, I will break the seal of the hidden report in the well<br>
 +<font color="LEVEL">Just, don't kill the spirit while I'm working. Because they will come back to the well if they die.</font><br>
 +If I break the seal, the color of the jewelry will change. After that, you can kill the spirit or do whatever you want. You got it?<br>
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31529-13.html">"I am not sure"</a><br>
@@ -2129,6 +2119,28 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-14.
 +<font color="LEVEL">You must call the soul by beating the well, fight until the jewil changes color, and then investigate the will! Is that clear?</font>
 +</body></html>
 \ No newline at end of file
+Index: dist/game/data/scripts/quests/Q00024_InhabitantsOfTheForestOfTheDead/Q00024_InhabitantsOfTheForestOfTheDead.java
+===================================================================
+--- dist/game/data/scripts/quests/Q00024_InhabitantsOfTheForestOfTheDead/Q00024_InhabitantsOfTheForestOfTheDead.java	(revision 9906)
++++ dist/game/data/scripts/quests/Q00024_InhabitantsOfTheForestOfTheDead/Q00024_InhabitantsOfTheForestOfTheDead.java	(working copy)
+@@ -18,6 +18,8 @@
+  */
+ package quests.Q00024_InhabitantsOfTheForestOfTheDead;
+ 
++import quests.Q00023_LidiasHeart.Q00023_LidiasHeart;
++
+ import com.l2jserver.gameserver.model.actor.L2Npc;
+ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+ import com.l2jserver.gameserver.model.quest.Quest;
+@@ -71,7 +73,7 @@
+ 		{
+ 		// Dorian
+ 			case "31389-02.htm":
+-				final QuestState qs = player.getQuestState("23_LidiasHeart");
++				final QuestState qs = player.getQuestState(Q00023_LidiasHeart.class.getSimpleName());
+ 				if ((player.getLevel() > 65) && (qs != null) && qs.isCompleted())
+ 				{
+ 					st.startQuest();
 Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-19.htm
 ===================================================================
 --- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-19.htm	(revision 9906)
@@ -2171,8 +2183,8 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-18.
 +++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-18.html	(working copy)
 @@ -0,0 +1,5 @@
 +<html><body>
-+"What happened next was a repeat of the events of the war with Beleth. Those killed by an undead were resurrected and enlisted in Lidia's force. The higher-level vassals of the Hellmann family became vampires, or high level undead. They possessed indescribable power! <br>
-+ It seemed the battle was over, until..." <br>
++"What happened next was a repeat of the events of the war with Beleth. Those killed by an undead were resurrected and enlisted in Lidia's force. The higher-level vassals of the Hellmann family became vampires, or high level undead. They possessed indescribable power!<br>
++It seemed the battle was over, until..."<br>
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-19.html">Next Page</a>
 +</body></html>
 \ No newline at end of file
@@ -2204,7 +2216,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-15.
 +++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-15.html	(working copy)
 @@ -0,0 +1,3 @@
 +<html><body>Ghost of Adventurer:<br>
-+The report is at the gate of the well. Since I'm a ghost, you'll have to get it.<br>
++The report is at the gate of the well. Since I'm a ghost, you'll have to get it.
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31528-02.htm
@@ -2517,11 +2529,11 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-03.
 +++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-03.html	(working copy)
 @@ -0,0 +1,7 @@
 +<html><body>Innocentin<br>
-+I see.. Lidia von Hellmann was lord of the Forest of the Dead! She was Alfred's daughter, a survivor of the tragedy of Hellmann Forest... Thank you. <br>
-+Thanks to you, we know that his death wasn't in vain... <br>
-+I will treasure this crucifix always! <br>
-+ Hmm..? Was there something else?<br>
-+<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-05.html"> "Who's behind all of this?" </a>
++I see.. Lidia von Hellmann was lord of the Forest of the Dead! She was Alfred's daughter, a survivor of the tragedy of Hellmann Forest... Thank you.<br>
++Thanks to you, we know that his death wasn't in vain...<br>
++I will treasure this crucifix always!<br>
++Hmm..? Was there something else?<br>
++<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-05.html">"Who's behind all of this?"</a>
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-21.html
@@ -2542,7 +2554,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31328-17.
 @@ -0,0 +1,5 @@
 +<html><body>
 +"It was then that Nidrah's magic sprang into action! At dusk, as the King's army took inventory of the treasures of the Hellmann family, a huge army of undead fighters rushed the castle!<br>
-+ They were the souls of the executed vassals, led by Alfred's children Lidia and Eilhalder von Hellmann! All were under the control of Nidrah."<br><br>
++They were the souls of the executed vassals, led by Alfred's children Lidia and Eilhalder von Hellmann! All were under the control of Nidrah."<br><br>
 +<a action="bypass -h Quest Q00022_TragedyInVonHellmannForest 31328-18.html">Turn the page</a>
 +</body></html>
 \ No newline at end of file
@@ -2598,3 +2610,4 @@ Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-10.htm
 -<html><body>Ghost of Adventurer:<br>
 -It's your loss, not mine.</body></html>
 \ No newline at end of file
+

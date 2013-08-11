@@ -119,7 +119,7 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 				if (st.isCreated())
 				{
 					final QuestState qt = player.getQuestState(Q00021_HiddenTruth.class.getSimpleName());
-					if ((qt != null) && qt.isCompleted() && (player.getLevel() >= MIN_LVL))
+					if ((player.getLevel() >= MIN_LVL) && (qt != null) && qt.isCompleted())
 					{
 						htmltext = event;
 					}
@@ -197,7 +197,6 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 					npc.setScriptValue(0);
 					st.startQuestTimer("DESPAWN_GHOST2", 1000 * 3, npc);
 					st.setCond(8);
-					
 				}
 				break;
 			}
@@ -208,7 +207,6 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 				{
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), NpcStringId.IM_CONFUSED_MAYBE_ITS_TIME_TO_GO_BACK));
 				}
-				
 				npc.deleteMe();
 				break;
 			}
@@ -356,7 +354,6 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		
 		final QuestState st = talker.getQuestState(getName());
 		String htmltext = getNoQuestMsg(talker);
 		if (st == null)
@@ -396,16 +393,13 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 									{
 										htmltext = "31334-09.html";
 									}
+									else if (TIFAREN_VAR == 0)
+									{
+										htmltext = "31334-10.html";
+									}
 									else
 									{
-										if (TIFAREN_VAR == 0)
-										{
-											htmltext = "31334-10.html";
-										}
-										else
-										{
-											htmltext = "31334-11.html";
-										}
+										htmltext = "31334-11.html";
 									}
 								}
 								break;
@@ -415,21 +409,18 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 							{
 								if (st.hasQuestItems(CROSS))
 								{
-									if (TIFAREN_VAR != 0)
+									if (TIFAREN_VAR == 0)
 									{
-										if (TIFAREN_VAR == talker.getObjectId())
-										{
-											htmltext = "31334-15.html";
-										}
-										else
-										{
-											htmltext = "31334-16.html";
-											st.setCond(6, true);
-										}
+										htmltext = "31334-17.html";
+									}
+									else if (TIFAREN_VAR == talker.getObjectId())
+									{
+										htmltext = "31334-15.html";
 									}
 									else
 									{
-										htmltext = "31334-17.html";
+										htmltext = "31334-16.html";
+										st.setCond(6, true);
 									}
 								}
 								break;
@@ -450,7 +441,6 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 						playSound(talker, QuestSound.AMBSOUND_HORROR_15);
 						if (npc.getScriptValue() == talker.getObjectId())
 						{
-							
 							htmltext = "31528-01.html";
 						}
 						else
@@ -548,7 +538,6 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 									st.giveItems(SEALED_BOX, 1);
 									st.setCond(13, true);
 									htmltext = "31527-04.html";
-									
 								}
 								break;
 							}
@@ -574,7 +563,6 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 									if (st.getInt("id") == 0)
 									{
 										htmltext = "31529-01.html";
-										
 									}
 									else if (st.getInt("id") == 8)
 									{

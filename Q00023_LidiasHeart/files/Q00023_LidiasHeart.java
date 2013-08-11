@@ -78,9 +78,9 @@ public class Q00023_LidiasHeart extends Quest
 			case "31526-07a.html":
 			case "31526-05.html":
 			case "31526-04.html":
-			case "31328-18.html":
 			case "31328-17.html":
 			case "31328-16.html":
+			case "31328-15.html":
 			case "31328-11.html":
 			case "31328-10.html":
 			case "31328-06.html":
@@ -273,7 +273,6 @@ public class Q00023_LidiasHeart extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		
 		final QuestState st = talker.getQuestState(getName());
 		String htmltext = getNoQuestMsg(talker);
 		if (st == null)
@@ -333,16 +332,15 @@ public class Q00023_LidiasHeart extends Quest
 									}
 									case 7:
 									{
-										htmltext = "31328-15.html";
+										htmltext = "31328-13.html";
 										break;
 									}
 								}
 								break;
-								
 							}
 							case 6:
 							{
-								htmltext = "31328-22.html";
+								htmltext = "31328-21.html";
 								break;
 							}
 						}

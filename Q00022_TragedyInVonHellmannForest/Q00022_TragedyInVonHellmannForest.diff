@@ -553,7 +553,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 ===================================================================
 --- dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java	(revision 0)
 +++ dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_TragedyInVonHellmannForest.java	(working copy)
-@@ -0,0 +1,672 @@
+@@ -0,0 +1,656 @@
 +/*
 + * Copyright (C) 2004-2013 L2J DataPack
 + * 
@@ -618,17 +618,15 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +	private static final int JEWEL2 = 7145;
 +	private static final int SEALED_BOX = 7146;
 +	// Misc
-+	private static int MIN_LVL = 63;
-+	private static int[] TIFAREN_VAR;
-+	private static int[] WELL_VAR;
-+	private static Location PRIEST_LOC = new Location(38354, -49777, -1128);
-+	private static Location SOUL_WELL_LOC = new Location(34706, -54590, -2054);
++	private static final int MIN_LVL = 63;
++	private static final Location PRIEST_LOC = new Location(38354, -49777, -1128);
++	private static final Location SOUL_WELL_LOC = new Location(34706, -54590, -2054);
++	private static int TIFAREN_VAR;
++	private static int WELL_VAR;
 +	
 +	public Q00022_TragedyInVonHellmannForest(int questId, String name, String descr)
 +	{
 +		super(questId, name, descr);
-+		TIFAREN_VAR = new int[2];
-+		WELL_VAR = new int[2];
 +		addKillId(MOBS);
 +		addKillId(SOUL_OF_WELL);
 +		addAttackId(SOUL_OF_WELL);
@@ -702,55 +700,40 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +				}
 +				else
 +				{
-+					htmltext = "31334-07.html";
 +					st.setCond(2, true);
++					htmltext = "31334-07.html";
 +				}
 +				break;
 +			}
 +			case "31334-08.html":
 +			{
-+				htmltext = event;
 +				st.setCond(4, true);
++				htmltext = event;
 +				break;
 +			}
 +			case "31334-13.html":
 +			{
-+				if ((st.isCond(5) || st.isCond(6)) && st.hasQuestItems(CROSS) && st.hasQuestItems(SKULL))
++				final int cond = st.getCond();
++				if (((5 <= cond) && (cond <= 7)) && st.hasQuestItems(CROSS) && st.hasQuestItems(SKULL))
 +				{
-+					if (TIFAREN_VAR[0] == 0)
++					if (TIFAREN_VAR == 0)
 +					{
-+						TIFAREN_VAR[0] = 1;
-+						TIFAREN_VAR[1] = player.getObjectId();
++						TIFAREN_VAR = player.getObjectId();
 +						final L2Npc ghost2 = addSpawn(GHOST_OF_PRIEST, PRIEST_LOC, true, 0);
 +						ghost2.setScriptValue(player.getObjectId());
 +						st.startQuestTimer("DESPAWN_GHOST2", 1000 * 120, ghost2);
 +						ghost2.broadcastPacket(new NpcSay(ghost2.getObjectId(), 0, ghost2.getId(), NpcStringId.DID_YOU_CALL_ME_S1).addStringParameter(player.getName()));
-+						st.takeItems(SKULL, -1);
-+						st.setCond(7, true);
++						if (((cond == 5) || (cond == 6)) && st.hasQuestItems(SKULL))
++						{
++							st.takeItems(SKULL, -1);
++							st.setCond(7, true);
++						}
 +						htmltext = event;
 +					}
 +					else
 +					{
-+						htmltext = "31334-14.html";
 +						st.setCond(6, true);
-+					}
-+				}
-+				else if ((st.isCond(6) || st.isCond(7)) && st.hasQuestItems(CROSS))
-+				{
-+					if (TIFAREN_VAR[0] == 0)
-+					{
-+						TIFAREN_VAR[0] = 1;
-+						TIFAREN_VAR[1] = player.getObjectId();
-+						final L2Npc ghost2 = addSpawn(GHOST_OF_PRIEST, PRIEST_LOC, true, 0);
-+						ghost2.setScriptValue(player.getObjectId());
-+						st.startQuestTimer("DESPAWN_GHOST2", 1000 * 120, ghost2);
-+						ghost2.broadcastPacket(new NpcSay(ghost2.getObjectId(), 0, ghost2.getId(), NpcStringId.DID_YOU_CALL_ME_S1).addStringParameter(player.getName()));
-+						htmltext = event;
-+					}
-+					else
-+					{
 +						htmltext = "31334-14.html";
-+						st.setCond(6, true);
 +					}
 +				}
 +				break;
@@ -776,7 +759,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +			}
 +			case "DESPAWN_GHOST2":
 +			{
-+				TIFAREN_VAR[0] = 0;
++				TIFAREN_VAR = 0;
 +				if (npc.getScriptValue() != 0)
 +				{
 +					npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), NpcStringId.IM_CONFUSED_MAYBE_ITS_TIME_TO_GO_BACK));
@@ -825,8 +808,9 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +			}
 +			case "31527-02.html":
 +			{
-+				if (WELL_VAR[0] == 0)
++				if (WELL_VAR == 0)
 +				{
++					WELL_VAR = 1;
 +					final L2Npc umul_ghost = addSpawn(SOUL_OF_WELL, SOUL_WELL_LOC, true, 0);
 +					st.startQuestTimer("UMUL_GHOST", 1000 * 90, umul_ghost);
 +					st.startQuestTimer("DESPAWN_UMUL_GHOST", 1000 * 120, umul_ghost);
@@ -849,7 +833,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +			{
 +				if (!npc.isDead())
 +				{
-+					WELL_VAR[0] = 0;
++					WELL_VAR = 0;
 +				}
 +				npc.deleteMe();
 +				break;
@@ -873,7 +857,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +			{
 +				st.giveItems(JEWEL1, 1);
 +				st.set("id", 10);
-+				st.setCond(10);
++				st.setCond(10, true);
 +				htmltext = event;
 +				break;
 +			}
@@ -911,7 +895,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +	{
 +		if (npc.getId() == SOUL_OF_WELL)
 +		{
-+			WELL_VAR[0] = 0;
++			WELL_VAR = 0;
 +		}
 +		else
 +		{
@@ -953,24 +937,24 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +					{
 +						switch (st.getCond())
 +						{
-+							case 3:
 +							case 1:
++							case 3:
 +							{
 +								htmltext = "31334-05.html";
 +								break;
 +							}
-+							case 5:
 +							case 4:
++							case 5:
 +							{
-+								if (hasQuestItems(talker, CROSS))
++								if (st.hasQuestItems(CROSS))
 +								{
-+									if (!hasQuestItems(talker, SKULL))
++									if (!st.hasQuestItems(SKULL))
 +									{
 +										htmltext = "31334-09.html";
 +									}
-+									else if (hasQuestItems(talker, SKULL))
++									else
 +									{
-+										if (TIFAREN_VAR[0] == 0)
++										if (TIFAREN_VAR == 0)
 +										{
 +											htmltext = "31334-10.html";
 +										}
@@ -985,18 +969,18 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +							case 6:
 +							case 7:
 +							{
-+								if (hasQuestItems(talker, CROSS))
++								if (st.hasQuestItems(CROSS))
 +								{
-+									if (TIFAREN_VAR[0] == 1)
++									if (TIFAREN_VAR != 0)
 +									{
-+										if (TIFAREN_VAR[1] == talker.getObjectId())
++										if (TIFAREN_VAR == talker.getObjectId())
 +										{
 +											htmltext = "31334-15.html";
 +										}
 +										else
 +										{
 +											htmltext = "31334-16.html";
-+											st.setCond(6);
++											st.setCond(6, true);
 +										}
 +									}
 +									else
@@ -1008,7 +992,7 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/Q00022_Tr
 +							}
 +							case 8:
 +							{
-+								if (hasQuestItems(talker, CROSS))
++								if (st.hasQuestItems(CROSS))
 +								{
 +									htmltext = "31334-18.html";
 +								}

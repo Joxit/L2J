@@ -6,8 +6,8 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-07a.html
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-07a.html	(working copy)
 @@ -0,0 +1,4 @@
 +<html><body>Broken Bookshelf:<br>
-+ A book tied with a leather string.  It's tied very tight, and doesn't seem like it could easily be cut.<br>
-+<a action="bypass -h Quest Q00023_LidiasHeart 31526-08.html"> Try to cut the string. </a>
++A book tied with a leather string. It's tied very tight, and doesn't seem like it could easily be cut.<br>
++<a action="bypass -h Quest Q00023_LidiasHeart 31526-08.html">Try to cut the string.</a>
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/23_LidiasHeart/31526-06.htm
@@ -58,9 +58,9 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31386-03.html
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31386-03.html	(working copy)
 @@ -0,0 +1,5 @@
 +<html><body>Violet:<br>
-+This is the very Silver Spear that King Astaire Van Halter bestowed upon Duke Adolph!  It's the treasured heirloom of the Hellmann family!  The lord will be overjoyed!  The long lost honor of his family name is restored, and it's all because of you!  <br>
-+Thank you.  Please accept this small token of our gratitude!  I only wish that we could have you over to the castle and give you a more formal recognition...<br>
-+ I probably have to express our gratitude to the lord through another person, not me.  Please talk with the village people. 
++This is the very Silver Spear that King Astaire Van Halter bestowed upon Duke Adolph! It's the treasured heirloom of the Hellmann family! The lord will be overjoyed! The long lost honor of his family name is restored, and it's all because of you!<br>
++Thank you. Please accept this small token of our gratitude! I only wish that we could have you over to the castle and give you a more formal recognition...<br>
++I probably have to express our gratitude to the lord through another person, not me. Please talk with the village people.
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/23_LidiasHeart/31530-01.htm
@@ -80,7 +80,7 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31524-02.html
 @@ -0,0 +1,4 @@
 +<html><body>Ghost of von Hellmann:<br>
 +Oh, the horror! The von Hellmann's are dead and Lidia is a demon? Her curse upon this land is depriving me of my rest!<br>
-+<a action="bypass -h Quest Q00023_LidiasHeart 31524-03.html">"It's the truth."
++<a action="bypass -h Quest Q00023_LidiasHeart 31524-03.html">"It's the truth."</a>
 +</body></html>
 \ No newline at end of file
 Index: dist/sql/game/updates/Q00023.sql
@@ -97,7 +97,7 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-12.html
 @@ -0,0 +1,4 @@
 +<html><body>Broken Bookshelf:<br>
 +In the chest where you found the book, you also find a hairpin shaped like a Moon Face Flower.<br>
-+<a action="bypass -h Quest Q00023_LidiasHeart 31526-04.html"> Examine the hairpin.</a>
++<a action="bypass -h Quest Q00023_LidiasHeart 31526-04.html">Examine the hairpin.</a>
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/23_LidiasHeart/31328-20.htm
@@ -194,7 +194,7 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-13.html
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-13.html	(working copy)
 @@ -0,0 +1,3 @@
 +<html><body>Broken Bookshelf:<br>
-+ The locker is empty. 
++The locker is empty.
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/23_LidiasHeart/31526-00.htm
@@ -357,7 +357,7 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31523-04.html
 +<html><body>Tombstone:<br>
 +There is a tablet engraved with familiar characters.<br>
 +<a action="bypass -h Quest Q00023_LidiasHeart 31523-06.html">Dig</a><br>
-+<a action="bypass -h Quest Q00023_LidiasHeart 31523-02.html">Recall the ghost</a> 
++<a action="bypass -h Quest Q00023_LidiasHeart 31523-02.html">Recall the ghost</a>
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31530-03.html
@@ -375,9 +375,9 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-08.html
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-08.html	(working copy)
 @@ -0,0 +1,5 @@
 +<html><body>Broken Bookshelf:<br>
-+ When you cut the string, it falls to the floor and you hear a faint sigh.  <br>
-+Shall you read the book? <br>
-+<a action="bypass -h Quest Q00023_LidiasHeart 31526-09.html">Read the book. </a>
++When you cut the string, it falls to the floor and you hear a faint sigh.<br>
++Shall you read the book?<br>
++<a action="bypass -h Quest Q00023_LidiasHeart 31526-09.html">Read the book.</a>
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-01.html
@@ -386,8 +386,8 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-01.html
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-01.html	(working copy)
 @@ -0,0 +1,4 @@
 +<html><body>Broken Desk:<br>
-+ The chest is secured with a padlock which bears the mark of the Hellmann family.<br>
-+<a action="bypass -h Quest Q00023_LidiasHeart 31526-02.html"> Use a Silver Spear key</a>
++The chest is secured with a padlock which bears the mark of the Hellmann family.<br>
++<a action="bypass -h Quest Q00023_LidiasHeart 31526-02.html">Use a Silver Spear key</a>
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/23_LidiasHeart/31328-01.htm
@@ -500,7 +500,7 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31328-16.html
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31328-16.html	(working copy)
 @@ -0,0 +1,7 @@
 +<html><body>Innocentin:<br>
-+Lidia's Diary? <br>
++Lidia's Diary?<br>
 +Lidia was dear Alfred's precious daughter... They led an idyllic life, until that tragic day...<br>
 +Does her diary cover the period after she became lord of the forest?<br>
 +<a action="bypass -h Quest Q00023_LidiasHeart 31328-17.html">"Yes, it does."</a><br>
@@ -532,11 +532,11 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-05.html
 --- dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-05.html	(revision 0)
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-05.html	(working copy)
 @@ -0,0 +1,6 @@
-+<html><body>Broken Bookshelf: <br>
-+According to legend, the Moon Face Flower only blooms on moonlit nights.  <br>
++<html><body>Broken Bookshelf:<br>
++According to legend, the Moon Face Flower only blooms on moonlit nights.<br>
 +It's very shy, and shows its face only to its future husband. This legend made it quite popular among young, single, aristocratic ladies.<br>
-+ I wonder who might have owned this one? <br>
-+<a action="bypass -h Quest Q00023_LidiasHeart 31526-06.html">Take the hairpin. </a>
++I wonder who might have owned this one?<br>
++<a action="bypass -h Quest Q00023_LidiasHeart 31526-06.html">Take the hairpin.</a>
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31328-22.html
@@ -609,10 +609,10 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-09.html
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-09.html	(working copy)
 @@ -0,0 +1,6 @@
 +<html><body>Broken Bookshelf:<br>
-+  "Month of Shilen, 15th day.<br>
-+Lately, Father spends all his days with Nidrah!  He doesn't take care of the manor like he should.  What makes him so angry?<br>
-+ What's this?!<br>
-+<a action="bypass -h Quest Q00023_LidiasHeart 31526-10.html"> "It's Lidia's Diary!" </a>
++"Month of Shilen, 15th day.<br>
++Lately, Father spends all his days with Nidrah! He doesn't take care of the manor like he should. What makes him so angry?"<br>
++What's this?!<br>
++<a action="bypass -h Quest Q00023_LidiasHeart 31526-10.html">"It's Lidia's Diary!"</a>
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/23_LidiasHeart/31328-07.htm
@@ -718,10 +718,10 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-02.html
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-02.html	(working copy)
 @@ -0,0 +1,6 @@
 +<html><body>Broken Desk:<br>
-+ The chest opens with a creak.<br>
-+  Inside, you find an old hairpin and a book tied with a leather string.<br>
-+<a action="bypass -h Quest Q00023_LidiasHeart 31526-04.html"> Examine the hair pin. </a><br>
-+<a action="bypass -h Quest Q00023_LidiasHeart 31526-07a.html">Examine the book. </a>
++The chest opens with a creak.<br>
++Inside, you find an old hairpin and a book tied with a leather string.<br>
++<a action="bypass -h Quest Q00023_LidiasHeart 31526-04.html">Examine the hair pin.</a><br>
++<a action="bypass -h Quest Q00023_LidiasHeart 31526-07a.html">Examine the book.</a>
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-11.html
@@ -730,7 +730,7 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-11.html
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-11.html	(working copy)
 @@ -0,0 +1,4 @@
 +<html><body>Broken Bookshelf:<br>
-+ You've found Lidia's Diary!<br>
++You've found Lidia's Diary!<br>
 +Check the bookshelf again. You may find something else.
 +</body></html>
 \ No newline at end of file
@@ -750,9 +750,9 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-03.html
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-03.html	(working copy)
 @@ -0,0 +1,5 @@
 +<html><body>Broken Bookshelf:<br>
-+ The chest opens with a creak.  Inside, you find an old hairpin and a book tied with a leather string.<br>
-+<a action="bypass -h Quest Q00023_LidiasHeart 31526-04.html"> Examine the hair pin.</a><br>
-+<a action="bypass -h Quest Q00023_LidiasHeart 31526-07a.html"> Examine the book. </a>
++The chest opens with a creak. Inside, you find an old hairpin and a book tied with a leather string.<br>
++<a action="bypass -h Quest Q00023_LidiasHeart 31526-04.html">Examine the hair pin.</a><br>
++<a action="bypass -h Quest Q00023_LidiasHeart 31526-07a.html">Examine the book.</a>
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/23_LidiasHeart/31526-04.htm
@@ -921,8 +921,8 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-04.html
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-04.html	(working copy)
 @@ -0,0 +1,4 @@
 +<html><body>Broken Bookshelf:<br>
-+ The hair pin is a type once used by aristocratic ladies.  It's engraved with the image of a Moon Face Flower, and was probably used by a unattached young lady. <br>
-+<a action="bypass -h Quest Q00023_LidiasHeart 31526-05.html"> "I wonder what that design means?" </a>
++The hair pin is a type once used by aristocratic ladies. It's engraved with the image of a Moon Face Flower, and was probably used by a unattached young lady.<br>
++<a action="bypass -h Quest Q00023_LidiasHeart 31526-05.html">"I wonder what that design means?"</a>
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31328-06.html
@@ -932,7 +932,7 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31328-06.html
 @@ -0,0 +1,6 @@
 +<html><body>Innocentin:<br>
 +According to a custom from the Elmoreden period, a Silver Spear was the symbol of the family responsible for guarding the royal family.<br>
-+An ancient proverb says, <font color="LEVEL">"A jeweled scepter for the mighty King of Elmore and two Silver Spears for his protectors"</font>. <br>
++An ancient proverb says, <font color="LEVEL">A jeweled scepter for the mighty King of Elmore and two Silver Spears for his protectors"</font>.<br>
 +I'll wager that somewhere is a lock that matches this key...<br>
 +<a action="bypass -h Quest Q00023_LidiasHeart 31328-07.html">"Who holds the spear now?"</a>
 +</body></html>
@@ -1136,10 +1136,10 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31328-01a.html
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31328-01a.html	(working copy)
 @@ -0,0 +1,6 @@
 +<html><body>Innocentin:<br>
-+ This is something you can get started on immediately!<br>
-+ There's a vast conspiracy afoot in the Rune Township and the Forest of the Dead! <br>
++This is something you can get started on immediately!<br>
++There's a vast conspiracy afoot in the Rune Township and the Forest of the Dead!<br>
 +The roots of this conspiracy lie in that forest, and you should seek the truth there.<br>
-+(This quest may only be undertaken by a character of level 64 or above who has completed the Hidden Truth and Tragedy of Hellmann Forest quests.) 
++(This quest may only be undertaken by a character of level 64 or above who has completed the Hidden Truth and Tragedy of Hellmann Forest quests.)
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31328-17.html
@@ -1197,9 +1197,9 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31524-04.html
 --- dist/game/data/scripts/quests/Q00023_LidiasHeart/31524-04.html	(revision 0)
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31524-04.html	(working copy)
 @@ -0,0 +1,5 @@
-+<html><body>Ghost of von Hellmann: <br>
-+This concerns Lidia's Diary? Is that right? Oh, I see! Dear traveler! For whatever little time I have left, I'll read this diary and go over the past again and again in my mind! <br>
-+ Traveler, I shall reward you well for this diary! Dig underneath this tombstone and you will find my key! <br>
++<html><body>Ghost of von Hellmann:<br>
++This concerns Lidia's Diary? Is that right? Oh, I see! Dear traveler! For whatever little time I have left, I'll read this diary and go over the past again and again in my mind!<br>
++Traveler, I shall reward you well for this diary! Dig underneath this tombstone and you will find my key!<br>
 +Take that key to the Chamberlain of the Hellmann Family! You'll find him <font color="LEVEL">in the village hidden in the middle of this forest</font>!
 +</body></html>
 \ No newline at end of file
@@ -1258,7 +1258,7 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/Q00023_LidiasHeart.java
 ===================================================================
 --- dist/game/data/scripts/quests/Q00023_LidiasHeart/Q00023_LidiasHeart.java	(revision 0)
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/Q00023_LidiasHeart.java	(working copy)
-@@ -0,0 +1,532 @@
+@@ -0,0 +1,527 @@
 +/*
 + * Copyright (C) 2004-2013 L2J DataPack
 + * 
@@ -1297,26 +1297,23 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/Q00023_LidiasHeart.java
 + */
 +public class Q00023_LidiasHeart extends Quest
 +{
-+	
-+	// npcs
++	// NPCs
 +	private static final int INNOCENTIN = 31328;
 +	private static final int VIOLET = 31386;
 +	private static final int TOMBSTONE = 31523;
 +	private static final int HELLMANN = 31524;
 +	private static final int BOOKSHELF = 31526;
 +	private static final int BOX = 31530;
-+	
-+	// items
++	// Items
 +	private static final int MAP = 7063;
 +	private static final int KEY = 7149;
 +	private static final int HAIRPIN = 7148;
 +	private static final int DIARY = 7064;
 +	private static final int SPEAR = 7150;
-+	
++	// Misc
 +	private static final int MIN_LVL = 64;
-+	
 +	private static int GHOST_VAR;
-+	private static Location GHOST_LOC = new Location(51432, -54570, -3136);
++	private static final Location GHOST_LOC = new Location(51432, -54570, -3136);
 +	
 +	public Q00023_LidiasHeart(int questId, String name, String descr)
 +	{
@@ -1728,7 +1725,6 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/Q00023_LidiasHeart.java
 +								}
 +								else
 +								{
-+									st.takeItems(SPEAR, -1);
 +									st.giveAdena(350000, true);
 +									st.addExpAndSp(456893, 42112);
 +									st.exitQuest(false, true);
@@ -1782,7 +1778,6 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/Q00023_LidiasHeart.java
 +				break;
 +			}
 +		}
-+		
 +		return htmltext;
 +	}
 +	
@@ -1798,8 +1793,8 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-10.html
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-10.html	(working copy)
 @@ -0,0 +1,4 @@
 +<html><body>Broken Bookshelf:<br>
-+ It's a journal that belonged to Lidia von Hellmann.  It probably has a lot of useful information in it!   <br>
-+<a action="bypass -h Quest Q00023_LidiasHeart 31526-11.html">Pick up the journal. </a>
++It's a journal that belonged to Lidia von Hellmann. It probably has a lot of useful information in it! <br>
++<a action="bypass -h Quest Q00023_LidiasHeart 31526-11.html">Pick up the journal.</a>
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31523-02.html
@@ -1837,7 +1832,7 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31328-19.html
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31328-19.html	(working copy)
 @@ -0,0 +1,5 @@
 +<html><body>Innocentin:<br>
-+Oh really? Then let me ask you one more question. Have you ever heard the expression <font color="LEVEL">"Owner of a Moon Face Flower"</font>?<br>
++Oh really? Then let me ask you one more question. Have you ever heard the expression <font color="LEVEL">Owner of a Moon Face Flower"</font>?<br>
 +<a action="bypass -h Quest Q00023_LidiasHeart 31328-20.html">"It's the Lord of the Forest of the Dead."</a><br>
 +<a action="bypass -h Quest Q00023_LidiasHeart 31328-20.html">"It's Lidia von Hellmann."</a>
 +</body></html>
@@ -1861,7 +1856,7 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31524-05.html
 @@ -0,0 +1,4 @@
 +<html><body>Ghost of von Hellmann:<br>
 +<font color="LEVEL">Dig under this monument for the key and take it to the von Hellmann's page.</font><br>
-+ He's in the hidden village in the center of the forest.
++He's in the hidden village in the center of the forest.
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/23_LidiasHeart/31328-21.htm
@@ -1890,8 +1885,8 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-07.html
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-07.html	(working copy)
 @@ -0,0 +1,4 @@
 +<html><body>Broken Bookshelf:<br>
-+In the locker where you found the hairpin, you also find a book tied with a leather string. <br>
-+<a action="bypass -h Quest Q00023_LidiasHeart 31526-07a.html"> Examine the book. </a>
++In the locker where you found the hairpin, you also find a book tied with a leather string.<br>
++<a action="bypass -h Quest Q00023_LidiasHeart 31526-07a.html">Examine the book.</a>
 +</body></html>
 \ No newline at end of file
 Index: dist/game/data/scripts/quests/23_LidiasHeart/31523-04.htm
@@ -1942,7 +1937,7 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-06.html
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-06.html	(working copy)
 @@ -0,0 +1,4 @@
 +<html><body>Broken Bookshelf:<br>
-+ You took the hairpin.<br>
-+ Check the bookshelf. You may find something else.
++You took the hairpin.<br>
++Check the bookshelf. You may find something else.
 +</body></html>
 \ No newline at end of file

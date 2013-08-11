@@ -36,25 +36,23 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  */
 public class Q00023_LidiasHeart extends Quest
 {
-	// npcs
+	// NPCs
 	private static final int INNOCENTIN = 31328;
 	private static final int VIOLET = 31386;
 	private static final int TOMBSTONE = 31523;
 	private static final int HELLMANN = 31524;
 	private static final int BOOKSHELF = 31526;
 	private static final int BOX = 31530;
-	
-	// items
+	// Items
 	private static final int MAP = 7063;
 	private static final int KEY = 7149;
 	private static final int HAIRPIN = 7148;
 	private static final int DIARY = 7064;
 	private static final int SPEAR = 7150;
-	
+	// Misc
 	private static final int MIN_LVL = 64;
-	
 	private static int GHOST_VAR;
-	private static Location GHOST_LOC = new Location(51432, -54570, -3136);
+	private static final Location GHOST_LOC = new Location(51432, -54570, -3136);
 	
 	public Q00023_LidiasHeart(int questId, String name, String descr)
 	{
@@ -466,7 +464,6 @@ public class Q00023_LidiasHeart extends Quest
 								}
 								else
 								{
-									st.takeItems(SPEAR, -1);
 									st.giveAdena(350000, true);
 									st.addExpAndSp(456893, 42112);
 									st.exitQuest(false, true);
@@ -520,7 +517,6 @@ public class Q00023_LidiasHeart extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	

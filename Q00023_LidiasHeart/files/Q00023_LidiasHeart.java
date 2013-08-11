@@ -367,17 +367,17 @@ public class Q00023_LidiasHeart extends Quest
 								{
 									final boolean hasPin = st.hasQuestItems(HAIRPIN);
 									final boolean hasDiary = st.hasQuestItems(DIARY);
-									if (hasPin && !hasDiary)
+									if (!hasPin && !hasDiary)
+									{
+										htmltext = "31526-03.html";
+									}
+									else if (hasPin)
 									{
 										htmltext = "31526-07.html";
 									}
-									else if (!hasPin & hasDiary)
+									else if (hasDiary)
 									{
 										htmltext = "31526-12.html";
-									}
-									else
-									{
-										htmltext = "31526-03.html";
 									}
 								}
 								break;
@@ -402,17 +402,14 @@ public class Q00023_LidiasHeart extends Quest
 								htmltext = "31524-01.html";
 								break;
 							}
-							case 8:
 							case 7:
 							{
-								if (!st.hasQuestItems(KEY))
-								{
-									if (st.isCond(7))
-									{
-										htmltext = "31524-05.html";
-									}
-								}
-								else
+								htmltext = (st.hasQuestItems(KEY) ? "31524-06.html" : "31524-05.html");
+								break;
+							}
+							case 8:
+							{
+								if (st.hasQuestItems(KEY))
 								{
 									htmltext = "31524-06.html";
 								}

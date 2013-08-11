@@ -37,13 +37,13 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  */
 public class Q00022_TragedyInVonHellmannForest extends Quest
 {
-	// npcs
+	// NPCs
 	private static final int INNOCENTIN = 31328;
 	private static final int TIFAREN = 31334;
 	private static final int WELL = 31527;
 	private static final int GHOST_OF_PRIEST = 31528;
 	private static final int GHOST_OF_ADVENTURER = 31529;
-	// mobs
+	// Mobs
 	private static final int[] MOBS =
 	{
 		21553,
@@ -53,7 +53,7 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 		21561
 	};
 	private static final int SOUL_OF_WELL = 27217;
-	// items
+	// Items
 	private static final int SKULL = 7142;
 	private static final int CROSS = 7141;
 	private static final int BOX = 7147;
@@ -61,11 +61,10 @@ public class Q00022_TragedyInVonHellmannForest extends Quest
 	private static final int JEWEL1 = 7144;
 	private static final int JEWEL2 = 7145;
 	private static final int SEALED_BOX = 7146;
-	// misc
+	// Misc
 	private static int MIN_LVL = 63;
 	private static int[] TIFAREN_VAR;
 	private static int[] WELL_VAR;
-	
 	private static Location PRIEST_LOC = new Location(38354, -49777, -1128);
 	private static Location SOUL_WELL_LOC = new Location(34706, -54590, -2054);
 	

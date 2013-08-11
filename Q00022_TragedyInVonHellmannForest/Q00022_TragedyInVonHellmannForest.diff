@@ -2119,28 +2119,6 @@ Index: dist/game/data/scripts/quests/Q00022_TragedyInVonHellmannForest/31529-14.
 +<font color="LEVEL">You must call the soul by beating the well, fight until the jewil changes color, and then investigate the will! Is that clear?</font>
 +</body></html>
 \ No newline at end of file
-Index: dist/game/data/scripts/quests/Q00024_InhabitantsOfTheForestOfTheDead/Q00024_InhabitantsOfTheForestOfTheDead.java
-===================================================================
---- dist/game/data/scripts/quests/Q00024_InhabitantsOfTheForestOfTheDead/Q00024_InhabitantsOfTheForestOfTheDead.java	(revision 9906)
-+++ dist/game/data/scripts/quests/Q00024_InhabitantsOfTheForestOfTheDead/Q00024_InhabitantsOfTheForestOfTheDead.java	(working copy)
-@@ -18,6 +18,8 @@
-  */
- package quests.Q00024_InhabitantsOfTheForestOfTheDead;
- 
-+import quests.Q00023_LidiasHeart.Q00023_LidiasHeart;
-+
- import com.l2jserver.gameserver.model.actor.L2Npc;
- import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
- import com.l2jserver.gameserver.model.quest.Quest;
-@@ -71,7 +73,7 @@
- 		{
- 		// Dorian
- 			case "31389-02.htm":
--				final QuestState qs = player.getQuestState("23_LidiasHeart");
-+				final QuestState qs = player.getQuestState(Q00023_LidiasHeart.class.getSimpleName());
- 				if ((player.getLevel() > 65) && (qs != null) && qs.isCompleted())
- 				{
- 					st.startQuest();
 Index: dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-19.htm
 ===================================================================
 --- dist/game/data/scripts/quests/22_TragedyInVonHellmannForest/31529-19.htm	(revision 9906)

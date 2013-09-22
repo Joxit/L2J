@@ -1256,7 +1256,7 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/Q00023_LidiasHeart.java
 ===================================================================
 --- dist/game/data/scripts/quests/Q00023_LidiasHeart/Q00023_LidiasHeart.java	(revision 0)
 +++ dist/game/data/scripts/quests/Q00023_LidiasHeart/Q00023_LidiasHeart.java	(working copy)
-@@ -0,0 +1,522 @@
+@@ -0,0 +1,523 @@
 +/*
 + * Copyright (C) 2004-2013 L2J DataPack
 + * 
@@ -1280,6 +1280,7 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/Q00023_LidiasHeart.java
 +import quests.Q00022_TragedyInVonHellmannForest.Q00022_TragedyInVonHellmannForest;
 +import quests.Q00024_InhabitantsOfTheForestOfTheDead.Q00024_InhabitantsOfTheForestOfTheDead;
 +
++import com.l2jserver.gameserver.enums.QuestSound;
 +import com.l2jserver.gameserver.model.Location;
 +import com.l2jserver.gameserver.model.actor.L2Npc;
 +import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;

@@ -66,7 +66,7 @@ public class Q00023_LidiasHeart extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState st = getQuestState(player, false);
 		String htmltext = null;
 		if (st == null)
 		{
@@ -96,8 +96,8 @@ public class Q00023_LidiasHeart extends Quest
 				if ((player.getLevel() >= MIN_LVL) && (qs != null) && qs.isCompleted())
 				{
 					st.startQuest();
-					st.giveItems(MAP, 1);
-					st.giveItems(KEY, 1);
+					giveItems(player, MAP, 1);
+					giveItems(player, KEY, 1);
 					htmltext = event;
 				}
 				else
@@ -117,9 +117,9 @@ public class Q00023_LidiasHeart extends Quest
 			}
 			case "31328-12.html":
 			{
-				if (st.isCond(4) || (st.getInt("id") == 6))
+				if (st.isCond(4) || (st.isMemoState(6)))
 				{
-					st.set("id", 6);
+					st.setMemoState(6);
 					st.setCond(5, true);
 					htmltext = event;
 				}
@@ -127,9 +127,9 @@ public class Q00023_LidiasHeart extends Quest
 			}
 			case "31328-13.html":
 			{
-				if (st.isCond(4) || (st.getInt("id") == 6))
+				if (st.isCond(4) || (st.isMemoState(6)))
 				{
-					st.set("id", 7);
+					st.setMemoState(7);
 					htmltext = event;
 				}
 				break;
@@ -142,10 +142,10 @@ public class Q00023_LidiasHeart extends Quest
 			}
 			case "31328-20.html":
 			{
-				if (st.getInt("id") == 7)
+				if (st.isMemoState(7))
 				{
 					st.setCond(6, true);
-					st.unset("id");
+					st.unset("memoState"); // useless?
 					htmltext = event;
 				}
 				break;
@@ -160,17 +160,17 @@ public class Q00023_LidiasHeart extends Quest
 			{
 				if (st.isCond(3) && st.hasQuestItems(KEY))
 				{
-					st.takeItems(KEY, -1);
+					takeItems(player, KEY, -1);
 					htmltext = event;
 				}
 				break;
 			}
 			case "31526-06.html":
 			{
-				if (!st.hasQuestItems(HAIRPIN))
+				if (!hasQuestItems(player, HAIRPIN))
 				{
-					st.giveItems(HAIRPIN, 1);
-					if (st.hasQuestItems(DIARY))
+					giveItems(player, HAIRPIN, 1);
+					if (hasQuestItems(player, DIARY))
 					{
 						st.setCond(4, true);
 					}
@@ -192,10 +192,10 @@ public class Q00023_LidiasHeart extends Quest
 			}
 			case "31526-11.html":
 			{
-				if (!st.hasQuestItems(DIARY))
+				if (!hasQuestItems(player, DIARY))
 				{
-					st.giveItems(DIARY, 1);
-					if (st.hasQuestItems(HAIRPIN))
+					giveItems(player, DIARY, 1);
+					if (hasQuestItems(player, HAIRPIN))
 					{
 						st.setCond(4, true);
 					}
@@ -213,7 +213,7 @@ public class Q00023_LidiasHeart extends Quest
 			{
 				if (st.isCond(6))
 				{
-					st.takeItems(DIARY, -1);
+					takeItems(player, DIARY, -1);
 					st.setCond(7, true);
 					htmltext = event;
 				}
@@ -250,7 +250,7 @@ public class Q00023_LidiasHeart extends Quest
 			{
 				if (st.isCond(7))
 				{
-					st.giveItems(KEY, 1);
+					giveItems(player, KEY, 1);
 					st.setCond(8, true);
 					htmltext = event;
 				}
@@ -258,10 +258,10 @@ public class Q00023_LidiasHeart extends Quest
 			}
 			case "31530-02.html":
 			{
-				if (st.isCond(9) && st.hasQuestItems(KEY))
+				if (st.isCond(9) && hasQuestItems(player, KEY))
 				{
-					st.takeItems(KEY, -1);
-					st.giveItems(SPEAR, 1);
+					takeItems(player, KEY, -1);
+					giveItems(player, SPEAR, 1);
 					st.setCond(10, true);
 					htmltext = event;
 				}
@@ -274,7 +274,7 @@ public class Q00023_LidiasHeart extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		final QuestState st = talker.getQuestState(getName());
+		final QuestState st = getQuestState(talker, false);
 		String htmltext = getNoQuestMsg(talker);
 		if (st == null)
 		{
@@ -324,7 +324,7 @@ public class Q00023_LidiasHeart extends Quest
 							}
 							case 5:
 							{
-								switch (st.getInt("id"))
+								switch (st.getMemoState())
 								{
 									case 6:
 									{
@@ -353,7 +353,7 @@ public class Q00023_LidiasHeart extends Quest
 						{
 							case 2:
 							{
-								if (st.hasQuestItems(KEY))
+								if (hasQuestItems(talker, KEY))
 								{
 									st.setCond(3, true);
 									htmltext = "31526-01.html";
@@ -362,10 +362,10 @@ public class Q00023_LidiasHeart extends Quest
 							}
 							case 3:
 							{
-								if (!st.hasQuestItems(KEY))
+								if (!hasQuestItems(talker, KEY))
 								{
-									final boolean hasPin = st.hasQuestItems(HAIRPIN);
-									final boolean hasDiary = st.hasQuestItems(DIARY);
+									final boolean hasPin = hasQuestItems(talker, HAIRPIN);
+									final boolean hasDiary = hasQuestItems(talker, DIARY);
 									if (!hasPin && !hasDiary)
 									{
 										htmltext = "31526-03.html";
@@ -383,7 +383,7 @@ public class Q00023_LidiasHeart extends Quest
 							}
 							case 4:
 							{
-								if (st.hasQuestItems(HAIRPIN) && st.hasQuestItems(DIARY))
+								if (hasQuestItems(talker, HAIRPIN) && hasQuestItems(talker, DIARY))
 								{
 									htmltext = "31526-13.html";
 								}
@@ -403,12 +403,12 @@ public class Q00023_LidiasHeart extends Quest
 							}
 							case 7:
 							{
-								htmltext = (st.hasQuestItems(KEY) ? "31524-06.html" : "31524-05.html");
+								htmltext = (hasQuestItems(talker, KEY) ? "31524-06.html" : "31524-05.html");
 								break;
 							}
 							case 8:
 							{
-								if (st.hasQuestItems(KEY))
+								if (hasQuestItems(talker, KEY))
 								{
 									htmltext = "31524-06.html";
 								}
@@ -445,7 +445,7 @@ public class Q00023_LidiasHeart extends Quest
 						{
 							case 8:
 							{
-								if (st.hasQuestItems(KEY))
+								if (hasQuestItems(talker, KEY))
 								{
 									st.setCond(9, true);
 									htmltext = "31386-01.html";
@@ -454,14 +454,14 @@ public class Q00023_LidiasHeart extends Quest
 							}
 							case 10:
 							{
-								if (!st.hasQuestItems(SPEAR))
+								if (!hasQuestItems(talker, SPEAR))
 								{
 									htmltext = "31386-02.html";
 								}
 								else
 								{
-									st.giveAdena(350000, true);
-									st.addExpAndSp(456893, 42112);
+									giveAdena(talker, 350000, true);
+									addExpAndSp(talker, 456893, 42112);
 									st.exitQuest(false, true);
 									htmltext = "31386-03.html";
 								}
@@ -476,7 +476,7 @@ public class Q00023_LidiasHeart extends Quest
 						{
 							case 9:
 							{
-								if (st.hasQuestItems(KEY))
+								if (hasQuestItems(talker, KEY))
 								{
 									htmltext = "31530-01.html";
 								}
@@ -484,7 +484,7 @@ public class Q00023_LidiasHeart extends Quest
 							}
 							case 10:
 							{
-								if (st.hasQuestItems(SPEAR))
+								if (hasQuestItems(talker, SPEAR))
 								{
 									htmltext = "31530-03.html";
 								}

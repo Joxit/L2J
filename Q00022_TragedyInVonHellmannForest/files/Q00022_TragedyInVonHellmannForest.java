@@ -67,12 +67,12 @@ public final class Q00022_TragedyInVonHellmannForest extends Quest
 	private static final int MIN_LVL = 63;
 	private static final Location PRIEST_LOC = new Location(38354, -49777, -1128);
 	private static final Location SOUL_WELL_LOC = new Location(34706, -54590, -2054);
-	private static int TIFAREN_VAR;
-	private static L2Npc SOUL_WELL_NPC = null;
+	private static int _tifarenOwner = 0;
+	private static L2Npc _soulWellNpc = null;
 	
-	public Q00022_TragedyInVonHellmannForest(int questId, String name, String descr)
+	public Q00022_TragedyInVonHellmannForest()
 	{
-		super(questId, name, descr);
+		super(22, Q00022_TragedyInVonHellmannForest.class.getSimpleName(), "Tragedy in Von Hellmann Forest");
 		addKillId(MOBS);
 		addKillId(SOUL_OF_WELL);
 		addAttackId(SOUL_OF_WELL);
@@ -162,9 +162,9 @@ public final class Q00022_TragedyInVonHellmannForest extends Quest
 				final int cond = st.getCond();
 				if (((5 <= cond) && (cond <= 7)) && hasQuestItems(player, CROSS_OF_EINHASAD) && hasQuestItems(player, LOST_SKULL_OF_ELF))
 				{
-					if (TIFAREN_VAR == 0)
+					if (_tifarenOwner == 0)
 					{
-						TIFAREN_VAR = player.getObjectId();
+						_tifarenOwner = player.getObjectId();
 						final L2Npc ghost2 = addSpawn(GHOST_OF_PRIEST, PRIEST_LOC, true, 0);
 						ghost2.setScriptValue(player.getObjectId());
 						st.startQuestTimer("DESPAWN_GHOST2", 1000 * 120, ghost2);
@@ -204,7 +204,7 @@ public final class Q00022_TragedyInVonHellmannForest extends Quest
 			}
 			case "DESPAWN_GHOST2":
 			{
-				TIFAREN_VAR = 0;
+				_tifarenOwner = 0;
 				if (npc.getScriptValue() != 0)
 				{
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), NpcStringId.IM_CONFUSED_MAYBE_ITS_TIME_TO_GO_BACK));
@@ -252,12 +252,12 @@ public final class Q00022_TragedyInVonHellmannForest extends Quest
 			}
 			case "31527-02.html":
 			{
-				if (SOUL_WELL_NPC == null)
+				if (_soulWellNpc == null)
 				{
-					SOUL_WELL_NPC = addSpawn(SOUL_OF_WELL, SOUL_WELL_LOC, true, 0);
-					st.startQuestTimer("activateSoulOfWell", 90000, SOUL_WELL_NPC);
-					st.startQuestTimer("despawnSoulOfWell", 120000, SOUL_WELL_NPC);
-					SOUL_WELL_NPC.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+					_soulWellNpc = addSpawn(SOUL_OF_WELL, SOUL_WELL_LOC, true, 0);
+					st.startQuestTimer("activateSoulOfWell", 90000, _soulWellNpc);
+					st.startQuestTimer("despawnSoulOfWell", 120000, _soulWellNpc);
+					_soulWellNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 					playSound(player, QuestSound.SKILLSOUND_ANTARAS_FEAR);
 					htmltext = event;
 				}
@@ -278,7 +278,7 @@ public final class Q00022_TragedyInVonHellmannForest extends Quest
 				// if the player fails to proceed the quest in 2 minutes, the soul is unspawned
 				if (!npc.isDead())
 				{
-					SOUL_WELL_NPC = null;
+					_soulWellNpc = null;
 				}
 				npc.deleteMe();
 				break;
@@ -340,7 +340,7 @@ public final class Q00022_TragedyInVonHellmannForest extends Quest
 		{
 			if (Util.checkIfInRange(1500, killer, npc, true))
 			{
-				SOUL_WELL_NPC = null;
+				_soulWellNpc = null;
 			}
 		}
 		else
@@ -400,7 +400,7 @@ public final class Q00022_TragedyInVonHellmannForest extends Quest
 									{
 										htmltext = "31334-09.html";
 									}
-									else if (TIFAREN_VAR == 0)
+									else if (_tifarenOwner == 0)
 									{
 										htmltext = "31334-10.html";
 									}
@@ -416,11 +416,11 @@ public final class Q00022_TragedyInVonHellmannForest extends Quest
 							{
 								if (hasQuestItems(talker, CROSS_OF_EINHASAD))
 								{
-									if (TIFAREN_VAR == 0)
+									if (_tifarenOwner == 0)
 									{
 										htmltext = "31334-17.html";
 									}
-									else if (TIFAREN_VAR == talker.getObjectId())
+									else if (_tifarenOwner == talker.getObjectId())
 									{
 										htmltext = "31334-15.html";
 									}
@@ -655,6 +655,6 @@ public final class Q00022_TragedyInVonHellmannForest extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00022_TragedyInVonHellmannForest(22, Q00022_TragedyInVonHellmannForest.class.getSimpleName(), "Tragedy in Von Hellmann Forest");
+		new Q00022_TragedyInVonHellmannForest();
 	}
 }

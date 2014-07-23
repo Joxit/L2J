@@ -1251,7 +1251,6 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31526-10.html
 +It's a journal that belonged to Lidia von Hellmann. It probably has a lot of useful information in it!<br>
 +<a action="bypass -h Quest Q00023_LidiasHeart 31526-11.html">Pick up the journal.</a>
 +</body></html>
-#P L2J_DataPack_BETA
 Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/Q00023_LidiasHeart.java
 ===================================================================
 --- dist/game/data/scripts/quests/Q00023_LidiasHeart/Q00023_LidiasHeart.java	(revision 0)
@@ -1311,12 +1310,12 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/Q00023_LidiasHeart.java
 +	private static final int SPEAR = 7150;
 +	// Misc
 +	private static final int MIN_LVL = 64;
-+	private static int GHOST_VAR;
 +	private static final Location GHOST_LOC = new Location(51432, -54570, -3136);
++	private static boolean _isGhostSpawned = false;
 +	
-+	public Q00023_LidiasHeart(int questId, String name, String descr)
++	public Q00023_LidiasHeart()
 +	{
-+		super(questId, name, descr);
++		super(23, Q00023_LidiasHeart.class.getSimpleName(), "Lidia's Heart");
 +		addStartNpc(INNOCENTIN);
 +		addTalkId(INNOCENTIN, VIOLET, TOMBSTONE, HELLMANN, BOOKSHELF, BOX);
 +		registerQuestItems(KEY, DIARY, SPEAR);
@@ -1482,9 +1481,9 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/Q00023_LidiasHeart.java
 +			{
 +				if (st.isCond(6) || st.isCond(7))
 +				{
-+					if (GHOST_VAR == 0)
++					if (!_isGhostSpawned)
 +					{
-+						GHOST_VAR = 1;
++						_isGhostSpawned = true;
 +						final L2Npc ghost1 = addSpawn(HELLMANN, GHOST_LOC, true, 0);
 +						st.startQuestTimer("DESPAWN_GHOST1", 1000 * 300, ghost1);
 +						ghost1.broadcastPacket(new NpcSay(ghost1.getObjectId(), 0, ghost1.getId(), NpcStringId.WHO_AWOKE_ME));
@@ -1501,7 +1500,7 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/Q00023_LidiasHeart.java
 +			}
 +			case "DESPAWN_GHOST1":
 +			{
-+				GHOST_VAR = 0;
++				_isGhostSpawned = false;
 +				npc.deleteMe();
 +				break;
 +			}
@@ -1777,11 +1776,10 @@ Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/Q00023_LidiasHeart.java
 +	
 +	public static void main(String[] args)
 +	{
-+		new Q00023_LidiasHeart(23, Q00023_LidiasHeart.class.getSimpleName(), "Lidia's Heart");
++		new Q00023_LidiasHeart();
 +	}
 +}
 \ No newline at end of file
-
 Index: dist/game/data/scripts/quests/Q00023_LidiasHeart/31523-02.html
 ===================================================================
 --- dist/game/data/scripts/quests/Q00023_LidiasHeart/31523-02.html	(revision 0)

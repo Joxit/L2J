@@ -52,12 +52,12 @@ public class Q00023_LidiasHeart extends Quest
 	private static final int SPEAR = 7150;
 	// Misc
 	private static final int MIN_LVL = 64;
-	private static int GHOST_VAR;
 	private static final Location GHOST_LOC = new Location(51432, -54570, -3136);
+	private static boolean _isGhostSpawned = false;
 	
-	public Q00023_LidiasHeart(int questId, String name, String descr)
+	public Q00023_LidiasHeart()
 	{
-		super(questId, name, descr);
+		super(23, Q00023_LidiasHeart.class.getSimpleName(), "Lidia's Heart");
 		addStartNpc(INNOCENTIN);
 		addTalkId(INNOCENTIN, VIOLET, TOMBSTONE, HELLMANN, BOOKSHELF, BOX);
 		registerQuestItems(KEY, DIARY, SPEAR);
@@ -223,9 +223,9 @@ public class Q00023_LidiasHeart extends Quest
 			{
 				if (st.isCond(6) || st.isCond(7))
 				{
-					if (GHOST_VAR == 0)
+					if (!_isGhostSpawned)
 					{
-						GHOST_VAR = 1;
+						_isGhostSpawned = true;
 						final L2Npc ghost1 = addSpawn(HELLMANN, GHOST_LOC, true, 0);
 						st.startQuestTimer("DESPAWN_GHOST1", 1000 * 300, ghost1);
 						ghost1.broadcastPacket(new NpcSay(ghost1.getObjectId(), 0, ghost1.getId(), NpcStringId.WHO_AWOKE_ME));
@@ -242,7 +242,7 @@ public class Q00023_LidiasHeart extends Quest
 			}
 			case "DESPAWN_GHOST1":
 			{
-				GHOST_VAR = 0;
+				_isGhostSpawned = false;
 				npc.deleteMe();
 				break;
 			}
@@ -518,6 +518,6 @@ public class Q00023_LidiasHeart extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00023_LidiasHeart(23, Q00023_LidiasHeart.class.getSimpleName(), "Lidia's Heart");
+		new Q00023_LidiasHeart();
 	}
 }

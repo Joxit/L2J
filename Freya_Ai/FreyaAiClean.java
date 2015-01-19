@@ -20,15 +20,15 @@ import java.util.ArrayList;
  * @author Joxit
  */
 public class FreyaAIClean {
-	static String freya_aiScript = "ai-freya-symbol.txt";
-	static String freya_srcipt_dir = "freya_scripts";
-	static String freya_html_dir = "freya_scripts" + File.separator + "html-en";
-	static String freya_npc_pch = "freya_scripts" + File.separator + "npc_pch.txt";
-	static String freya_quest_pch = "freya_scripts" + File.separator + "quest_pch.txt";
-	static String save_dir = "save";
+	final static String freya_srcipt_dir = "freya_scripts";
+	final static String freya_aiScript = freya_srcipt_dir + File.separator + "ai-freya-symbol.txt";
+	final static String freya_html_dir = freya_srcipt_dir + File.separator + File.separator + "html-en";
+	final static String freya_npc_pch = freya_srcipt_dir + File.separator + File.separator + "npc_pch.txt";
+	final static String freya_quest_pch = freya_srcipt_dir + File.separator + File.separator + "quest_pch.txt";
+	final static String save_dir = "save";
 	static boolean byQuest = false;
-	static String save_byQuest = "quests";
-	static String freya_item_pch = "freya_scripts" + File.separator + "item_pch.txt";
+	final static String save_byQuest = "quests";
+	final static String freya_item_pch = freya_srcipt_dir + File.separator + "item_pch.txt";
 
 	public static void main(final String args[]) throws IOException {
 		getItemsIdsByQuest(getQuestName("25"));

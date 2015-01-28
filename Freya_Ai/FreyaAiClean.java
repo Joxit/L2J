@@ -294,19 +294,15 @@ public class FreyaAIClean {
 	}
 
 	/**
-	 * Give all the npc IDs in relationship with this quest name.
-	 *
-	 * @param quest
-	 * @throws IOException
+	 * @param quest where we want all npcs
+	 * @return ArrayList of all npcs
 	 */
-	public static void getNpcsIdsByQuest(final String quest) throws IOException {
+	public static ArrayList<String> getQuestNpcs(final String quest) throws IOException {
 		final FileReader r = new FileReader(freya_aiScript);
-		final FileReader r2 = new FileReader(freya_npc_pch);
 		String buff = "", name = "";
 		final ArrayList<String> npcs = new ArrayList<String>();
 		char c = (char) r.read();
 		int statut = -1;
-		System.out.println("Quete : " + quest);
 		/* on cherche tous les npcs de la quete */
 		while (r.ready()) {
 			if (((c == ' ') || (c == '\n') || (c == '>')) && !buff.equals(" ")) {
@@ -355,10 +351,27 @@ public class FreyaAIClean {
 			c = (char) r.read();
 		}
 		statut = 0;
+		return npcs;
+	}
+
+
+	/**
+	 * Give all the npc IDs in relationship with this quest name.
+	 *
+	 * @param quest
+	 * @throws IOException
+	 */
+	public static void getNpcsIdsByQuest(final String quest) throws IOException {
+		final FileReader r = new FileReader(freya_npc_pch);
+		String buff = "", name = "";
+		final ArrayList<String> npcs;
+		int statut = -1;
+		System.out.println("Quete : " + quest);
+		npcs = getQuestNpcs(quest)
 		System.out.println(npcs);
 		/* on affiche l'id de tous les npcs */
-		while (r2.ready()) {
-			c = (char) r2.read();
+		while (r.ready()) {
+			c = (char) r.read();
 			switch (c) {
 				case '[':
 					buff = "";
@@ -395,7 +408,6 @@ public class FreyaAIClean {
 			}
 		}
 		r.close();
-		r2.close();
 	}
 
 	public static void aiByName(final ArrayList<String> name) throws IOException {

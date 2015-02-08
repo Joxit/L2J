@@ -1,5 +1,7 @@
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+
 
 /**
  * Analyzer for files like item_pch, quest_pch...

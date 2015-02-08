@@ -15,36 +15,51 @@ public class HTMLCleaner {
 	 */
 	public static void formatHtmls(final String readPath, final String savePath) throws IOException {
 		int i = 0;
-		final File dir = new File(readPath);
+		final File dir = new File(readPath + File.separator);
+		char lastChar = '\0';
+		String line = "";
+		if (!dir.isDirectory()) {
+			throw new IOException("readPath must be a directory.");
+		}
+		if (!new File(savePath).isDirectory()) {
+			throw new IOException("savePath must be a directory.");
+		}
 		for (final File file : dir.listFiles()) {
 			if ((i % 500) == 0) {
 				System.out.println(i);
 			}
 			final FileReader r = new FileReader(file.getPath());
-			final FileWriter w = new FileWriter(savePath + file.getName());
+			final FileWriter w = new FileWriter(savePath + File.separator + file.getName());
 			String buff;
 			buff = "";
 			while (r.ready()) {
 				final char c = (char) r.read();
 				switch (c) {
 					case '<':
-						w.write(buff);
+						line += buff;
 						buff = "" + c;
 						break;
 					case ' ':
-						w.write(buff + c);
-						buff = "";
+						if (lastChar != ' ') {
+							line += buff + c;
+							buff = "";
+						}
 						break;
 					case '>':
 						buff += c;
-						if (buff.equalsIgnoreCase("<br>")) {
-							w.write(buff + '\n');
+						if (buff.equalsIgnoreCase("<br>") || buff.equalsIgnoreCase("<br1>")) {
+							line += buff + '\n';
+							w.write(line.replace(" \n", "\n"));
+							line = "";
 							buff = "";
 						} else if (buff.equalsIgnoreCase("</body>")) {
-							w.write('\n' + buff);
+							line += '\n';
+							w.write(line.replace(" \n", "\n") + buff + "</html>");
+							line = "";
 							buff = "";
 						} else if (buff.equalsIgnoreCase("<head>")
-								|| buff.equalsIgnoreCase("</head>")) {
+								|| buff.equalsIgnoreCase("</head>")
+								|| buff.equalsIgnoreCase("</html>")) {
 							buff = "";
 						}
 						break;
@@ -55,6 +70,7 @@ public class HTMLCleaner {
 						buff += c;
 						break;
 				}
+				lastChar = c;
 				w.flush();
 			}
 			r.close();

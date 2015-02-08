@@ -14,79 +14,112 @@ public class PchFinder {
 	/**
 	 * Give the name of something by his id.
 	 *
-	 * @param id of the quest
-	 * @return quest name which has this id (name found in quest_pch)
+	 * @param path of pch
+	 * @param id in pch
+	 * @return name which has this id (name found in *_pch)
 	 * @throws IOException
 	 */
-	public static String getNameById(final String id, final String path) throws IOException {
+	public static String getNameById(final String path, final String id) throws IOException {
+		final ArrayList<String> res = getNamesByIds(path, id);
+		return res.size() > 0 ? res.get(0) : null;
+	}
+
+	/**
+	 * Give all names in pch by their ids
+	 *
+	 * @param path of pch
+	 * @param ids in pch
+	 * @return names which has these ids (names found in *_pch)
+	 * @throws IOException
+	 */
+	public static ArrayList<String> getNamesByIds(final String path, final String... ids)
+			throws IOException {
 		final FileReader r = new FileReader(path);
+		final ArrayList<String> res = new ArrayList<String>();
 		while (r.ready()) {
 			char c = (char) r.read();
 			if (c == '[') {
-				final String[] quest = new String[2];
-				quest[0] = new String();
+				final String[] row = new String[2];
+				row[0] = new String();
 				c = (char) r.read();
 				while ((c != ']') && r.ready()) {
 					if (c != 0) {
-						quest[0] += c;
+						row[0] += c;
 					}
 					c = (char) r.read();
 				}
-				quest[1] = new String();
+				row[1] = new String();
 				while ((c != '\n') && r.ready()) {
 					if (Character.isDigit(c)) {
-						quest[1] += c;
+						row[1] += c;
 					}
 					c = (char) r.read();
 				}
-				if (quest[1].equals(id)) {
-					r.close();
-					System.out.println("name : " + quest[0]);
-					return quest[0];
+				System.out.println(row[1]);
+				if (Util.contains(ids, row[1])) {
+					res.add(row[0]);
 				}
 			}
 		}
 		r.close();
-		return null;
+
+		return res;
 	}
+
+
 
 	/**
 	 * Give the name of something by his id.
 	 *
-	 * @param id of the quest
-	 * @return quest name which has this id (name found in quest_pch)
+	 * @param path of pch
+	 * @param name in pch
+	 * @return id which has this name (name found in *_pch)
 	 * @throws IOException
 	 */
-	public static String getIdByName(final String name, final String path) throws IOException {
+	public static String getIdByName(final String path, final String name) throws IOException {
+		final ArrayList<String> res = getIdsByNames(path, name);
+		return res.size() > 0 ? res.get(0) : null;
+	}
+
+	/**
+	 * Give all names in pch by their ids
+	 *
+	 * @param path of pch
+	 * @param names in pch
+	 * @return ids which has these names (name found in *_pch)
+	 * @throws IOException
+	 */
+	public static ArrayList<String> getIdsByNames(final String path, final String... names)
+			throws IOException {
 		final FileReader r = new FileReader(path);
+		final ArrayList<String> res = new ArrayList<String>();
 		while (r.ready()) {
 			char c = (char) r.read();
 			if (c == '[') {
-				final String[] quest = new String[2];
-				quest[0] = new String();
+				final String[] row = new String[2];
+				row[0] = new String();
 				c = (char) r.read();
 				while ((c != ']') && r.ready()) {
 					if (c != 0) {
-						quest[0] += c;
+						row[0] += c;
 					}
 					c = (char) r.read();
 				}
-				quest[1] = new String();
+				row[1] = new String();
 				while ((c != '\n') && r.ready()) {
 					if (Character.isDigit(c)) {
-						quest[1] += c;
+						row[1] += c;
 					}
 					c = (char) r.read();
 				}
-				if (quest[0].equals(name)) {
-					r.close();
-					System.out.println("id : " + quest[0]);
-					return quest[0];
+				System.out.println(row[0]);
+				if (Util.contains(names, row[0])) {
+					res.add(row[1]);
 				}
 			}
 		}
 		r.close();
-		return null;
-	}
 
+		return res;
+	}
 }

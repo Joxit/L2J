@@ -33,8 +33,12 @@ public class FreyaAiClean {
 
 	public static void main(final String args[]) throws IOException {
 		final String Q0025name = PchFinder.getNameById(freya_quest_pch, "25");
-		//getItemsIdsByQuest(PchFinder.getNameById(freya_quest_pch, "25"));
-		printNpcsIdsByQuest(freya_aiScript, Q0025name);
+		// TODO getItemsIdsByQuest(PchFinder.getNameById(freya_quest_pch, "25"));
+
+		// print all npc of Q0025
+		final ArrayList<String> npcs = getQuestNpcs(freya_aiScript, Q0025name);
+		PchFinder.printNamesAndIds(freya_npc_pch, npcs);
+		// write on disk all ai for quest Q0025 in the folder Q0025_[name]
 		aiByQuest(freya_aiScript, freya_srcipt_dir + "Q0025_" + Q0025name, Q0025name);
 	}
 
@@ -347,61 +351,5 @@ public class FreyaAiClean {
 		r.close();
 		statut = 0;
 		return npcs;
-	}
-
-	/**
-	 * Print all the npc IDs in relationship with this quest name.
-	 *
-	 * @param quest
-	 * @throws IOException
-	 */
-	public static void printNpcsIdsByQuest(final String freya_aiScript, final String quest)
-			throws IOException {
-		final FileReader r = new FileReader(freya_npc_pch);
-		String buff = "", name = "";
-		final ArrayList<String> npcs;
-		int statut = -1;
-		System.out.println("Quete : " + quest);
-		npcs = getQuestNpcs(freya_aiScript, quest);
-		System.out.println(npcs);
-		/* on affiche l'id de tous les npcs */
-		while (r.ready()) {
-			final char c = (char) r.read();
-			switch (c) {
-				case '[':
-					buff = "";
-					statut = 1;
-					break;
-				case ']':
-					if (npcs.contains(buff)) {
-						name = buff;
-						statut = 2;
-						buff = "";
-					} else {
-						statut = 0;
-					}
-					break;
-				default:
-					switch (statut) {
-						case 0:
-							break;
-						case 1:
-							if (Character.isLetterOrDigit(c) || (c == '_')) {
-								buff += c;
-							}
-							break;
-						case 2:
-							if (Character.isDigit(c)) {
-								buff += c;
-							} else if ((c == '\n') || (c == '\r')) {
-								System.out.println(name + " = " + buff);
-								statut = 0;
-							}
-							break;
-					}
-					break;
-			}
-		}
-		r.close();
 	}
 }

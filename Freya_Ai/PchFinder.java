@@ -165,4 +165,68 @@ public class PchFinder {
 
 		return res;
 	}
+
+	/**
+	 * Print all the npc IDs in relationship with this quest name.
+	 *
+	 * @param path of pch
+	 * @param namesOrIds
+	 * @throws IOException
+	 */
+	public static void printNamesAndIds(final String path, final String... namesOrIds)
+			throws IOException {
+		printNamesAndIds(path, Arrays.asList(namesOrIds));
+	}
+
+	/**
+	 * Print all the npc IDs in relationship with this quest name.
+	 *
+	 * @param path of pch
+	 * @param namesOrIds
+	 * @throws IOException
+	 */
+	public static void printNamesAndIds(final String path, final Collection<String> namesOrIds)
+			throws IOException {
+		final FileReader r = new FileReader(path);
+		String buff = "", name = "";
+		int statut = -1;
+		/* on affiche l'id de tous les npcs */
+		while (r.ready()) {
+			final char c = (char) r.read();
+			switch (c) {
+				case '[':
+					buff = "";
+					statut = 1;
+					break;
+				case ']':
+					name = buff;
+					statut = 2;
+					buff = "";
+					break;
+				default:
+					switch (statut) {
+						case 0:
+							break;
+						case 1:
+							if (Character.isLetterOrDigit(c) || (c == '_')) {
+								buff += c;
+							}
+							break;
+						case 2:
+							if (Character.isDigit(c)) {
+								buff += c;
+							} else if ((c == '\n') || (c == '\r')) {
+								if (namesOrIds.contains(buff) || namesOrIds.contains(name)) {
+									System.out.println(name + " = " + buff);
+								}
+								statut = 0;
+							}
+							break;
+					}
+					break;
+			}
+		}
+		r.close();
+	}
+
 }

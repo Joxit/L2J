@@ -1,7 +1,8 @@
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-
+import java.util.Arrays;
+import java.util.Collection;
 
 /**
  * Analyzer for files like item_pch, quest_pch...
@@ -36,6 +37,19 @@ public class PchFinder {
 	 */
 	public static ArrayList<String> getNamesByIds(final String path, final String... ids)
 			throws IOException {
+		return getNamesByIds(path, Arrays.asList(ids));
+	}
+
+	/**
+	 * Give all names in pch by their ids
+	 *
+	 * @param path of pch
+	 * @param ids in pch
+	 * @return names which has these ids (names found in *_pch)
+	 * @throws IOException
+	 */
+	public static ArrayList<String> getNamesByIds(final String path, final Collection<String> ids)
+			throws IOException {
 		final FileReader r = new FileReader(path);
 		final ArrayList<String> res = new ArrayList<String>();
 		while (r.ready()) {
@@ -58,7 +72,7 @@ public class PchFinder {
 					c = (char) r.read();
 				}
 				System.out.println(row[1]);
-				if (Util.contains(ids, row[1])) {
+				if (ids.contains(row[1])) {
 					res.add(row[0]);
 				}
 			}
@@ -67,8 +81,6 @@ public class PchFinder {
 
 		return res;
 	}
-
-
 
 	/**
 	 * Give the name of something by his id.
@@ -93,6 +105,19 @@ public class PchFinder {
 	 */
 	public static ArrayList<String> getIdsByNames(final String path, final String... names)
 			throws IOException {
+		return getIdsByNames(path, Arrays.asList(names));
+	}
+
+	/**
+	 * Give all names in pch by their ids
+	 *
+	 * @param path of pch
+	 * @param names in pch
+	 * @return ids which has these names (name found in *_pch)
+	 * @throws IOException
+	 */
+	public static ArrayList<String> getIdsByNames(final String path, final Collection<String> names)
+			throws IOException {
 		final FileReader r = new FileReader(path);
 		final ArrayList<String> res = new ArrayList<String>();
 		while (r.ready()) {
@@ -115,7 +140,7 @@ public class PchFinder {
 					c = (char) r.read();
 				}
 				System.out.println(row[0]);
-				if (Util.contains(names, row[0])) {
+				if (names.contains(row[0])) {
 					res.add(row[1]);
 				}
 			}

@@ -33,13 +33,18 @@ public class FreyaAiClean {
 
 	public static void main(final String args[]) throws IOException {
 		final String Q0025name = PchFinder.getNameById(freya_quest_pch, "25");
+		System.out.println("The name of Q0025 is " + Q0025name);
+
 		// TODO getItemsIdsByQuest(PchFinder.getNameById(freya_quest_pch, "25"));
 
 		// print all npc of Q0025
-		final ArrayList<String> npcs = getQuestNpcs(freya_aiScript, Q0025name);
+		System.out.println("All npcs of Q0025 : ");
+		final ArrayList<String> npcs = FreyaAiClean.getQuestNpcs(freya_aiScript, Q0025name);
 		PchFinder.printNamesAndIds(freya_npc_pch, npcs);
+
 		// write on disk all ai for quest Q0025 in the folder Q0025_[name]
-		aiByQuest(freya_aiScript, freya_srcipt_dir + "Q0025_" + Q0025name, Q0025name);
+		System.out.println("Names of NPCs that I am writing on the disc : ");
+		FreyaAiClean.aiByName(freya_aiScript, freya_srcipt_dir + "Q0025_" + Q0025name, npcs);
 	}
 
 	public static void aiByName(final String freya_aiScript, final String save_dir,
@@ -313,12 +318,17 @@ public class FreyaAiClean {
 							parent++;
 						}
 					}
+					String line = "";
 					while (r.ready() && (parent != 0)) {
 						c = (char) r.read();
+						line += c;
 						if ((c == ' ') || (c == '\n')) {
-							if (buff.endsWith(quest)) {
+							if (buff.endsWith(quest) && line.contains("gg::HaveMemo")) {
 								npcs.add(name);
 								break;
+							}
+							if (c == '\n') {
+								line = "";
 							}
 							buff = "";
 						} else if (c == '{') {

@@ -87,7 +87,6 @@ public class PchFinder {
 					}
 					c = (char) r.read();
 				}
-				System.out.println(row[1]);
 				if (ids.contains(row[1])) {
 					res.add(row[0]);
 				}
@@ -155,7 +154,6 @@ public class PchFinder {
 					}
 					c = (char) r.read();
 				}
-				System.out.println(row[0]);
 				if (names.contains(row[0])) {
 					res.add(row[1]);
 				}

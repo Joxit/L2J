@@ -40,7 +40,7 @@ public class PchFinder {
 	 */
 	public static String getNameById(final String path, final String id) throws IOException {
 		final ArrayList<String> res = getNamesByIds(path, id);
-		return res.size() > 0 ? res.get(0) : null;
+		return res.stream().findFirst().orElse(null);
 	}
 
 	/**
@@ -108,7 +108,7 @@ public class PchFinder {
 	 */
 	public static String getIdByName(final String path, final String name) throws IOException {
 		final ArrayList<String> res = getIdsByNames(path, name);
-		return res.size() > 0 ? res.get(0) : null;
+		return res.stream().findFirst().orElse(null);
 	}
 
 	/**

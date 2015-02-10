@@ -35,7 +35,10 @@ public class FreyaAiClean {
 		final String Q0025name = PchFinder.getNameById(freya_quest_pch, "25");
 		System.out.println("The name of Q0025 is " + Q0025name);
 
-		// TODO getItemsIdsByQuest(PchFinder.getNameById(freya_quest_pch, "25"));
+		// print all items of Q0025
+		System.out.println("All items of Q0025 : ");
+		final ArrayList<String> items = FreyaAiClean.getItemsIdsByQuest(freya_aiScript, Q0025name);
+		PchFinder.printNamesAndIds(freya_item_pch, items);
 
 		// print all npc of Q0025
 		System.out.println("All npcs of Q0025 : ");
@@ -134,20 +137,17 @@ public class FreyaAiClean {
 	 * @param quest
 	 * @throws IOException
 	 */
-	public static void getItemsIdsByQuest(final String quest) throws IOException {
-		FileReader r = new FileReader(freya_aiScript);
-		final FileReader r2 = new FileReader(freya_item_pch);
-		String buff = "", name = "";
-		final ArrayList<String> npcs = new ArrayList<String>();
+	public static ArrayList<String> getItemsIdsByQuest(final String freya_aiScript,
+			final String quest) throws IOException {
+		final FileReader r = new FileReader(freya_aiScript);
+		String buff = "";
 		final ArrayList<String> items = new ArrayList<String>();
 		char c = (char) r.read();
 		int statut = -1;
-		System.out.println("Quete : " + quest);
-		/* on cherche tous les npcs de la quete */
+		/* on cherche tous les items de la quete */
 		while (r.ready()) {
 			if (((c == ' ') || (c == '\n') || (c == '>')) && !buff.equals(" ")) {
 				if (statut == 2) {
-					name = buff;
 					int parent = 0;
 					while (r.ready() && (parent == 0)) {
 						c = (char) r.read();
@@ -155,17 +155,32 @@ public class FreyaAiClean {
 							parent++;
 						}
 					}
+					int parent2 = -1;
 					while (r.ready() && (parent != 0)) {
 						c = (char) r.read();
-						if ((c == ' ') || (c == '\n')) {
-							if (buff.endsWith(quest)) {
-								npcs.add(name);
-								break;
+						if ((c == '\n')) {
+							if (buff.contains(quest) && buff.contains("gg::HaveMemo")) {
+								parent2 = 0;
+							} else if ((parent2 != -1) && buff.contains("Item")
+									&& !buff.contains("ItemSound")) {
+								final String res = buff.replaceAll(".*@([\\w_\\d]*).*", "$1")
+										.replaceAll("[\n\r ]", "");
+								if (!res.isEmpty() && !items.contains(res)) {
+									items.add(res);
+								}
 							}
 							buff = "";
 						} else if (c == '{') {
+							if (parent2 != -1) {
+								parent2++;
+							}
 							parent++;
 						} else if (c == '}') {
+							if (parent2 == 1) {
+								parent2 = -1;
+							} else if (parent2 != -1) {
+								parent2--;
+							}
 							parent--;
 						}
 						if (buff.equals(" ")) {
@@ -190,109 +205,9 @@ public class FreyaAiClean {
 			}
 			c = (char) r.read();
 		}
-		System.out.println(npcs);
 		r.close();
-		statut = -1;
-		r = new FileReader(freya_aiScript);
-		while (r.ready()) {
-			if (((c == ' ') || (c == '\n') || (c == '>')) && !buff.equals(" ")) {
-				if (statut == 3) {
-					name = buff;
-					int parent = 0;
-					while (r.ready() && (parent == 0)) {
-						c = (char) r.read();
-						if (c == '{') {
-							parent++;
-						}
-					}
-					while (r.ready() && (parent != 0)) {
-						c = (char) r.read();
-						if ((c == ' ') || (c == '\n')) {
-							if (buff.contains("Item")) {
-								statut = 4;
-							}
-							buff = "";
-						} else if (c == '{') {
-							parent++;
-						} else if (c == '}') {
-							parent--;
-						} else if ((statut == 4) && (c == '@')) {
-							statut = 5;
-							buff = "";
-						}
-						if ((statut == 5) && (c == ' ')) {
-							items.add(buff);
-						}
-						if (buff.equals(" ")) {
-							buff = "";
-						}
-
-						buff = buff + c;
-					}
-					statut = -1;
-				}
-				if ((statut == -1) && buff.endsWith("class")) {
-					statut = 1;
-				}
-				if ((statut == 1) && buff.endsWith("0")) {
-					statut = 2;
-				}
-				if ((statut == 2) && npcs.contains(buff)) {
-					statut = 3;
-				}
-				buff = "";
-			} else if (buff.equals(" ")) {
-				buff = "";
-			} else {
-				buff = buff + c;
-			}
-			if ((statut == 2) && (c == '\n')) {
-				statut = -1;
-			}
-			c = (char) r.read();
-		}
 		statut = 0;
-		System.out.println(items);
-		/* on affiche l'id de tous les npcs */
-		while (r2.ready()) {
-			c = (char) r2.read();
-			switch (c) {
-				case '[':
-					buff = "";
-					statut = 1;
-					break;
-				case ']':
-					if (items.contains(buff)) {
-						name = buff;
-						statut = 2;
-						buff = "";
-					} else {
-						statut = 0;
-					}
-					break;
-				default:
-					switch (statut) {
-						case 0:
-							break;
-						case 1:
-							if (Character.isLetterOrDigit(c) || (c == '_')) {
-								buff += c;
-							}
-							break;
-						case 2:
-							if (Character.isDigit(c)) {
-								buff += c;
-							} else if ((c == '\n') || (c == '\r')) {
-								System.out.println(name + " = " + buff);
-								statut = 0;
-							}
-							break;
-					}
-					break;
-			}
-		}
-		r.close();
-		r2.close();
+		return items;
 	}
 
 	/**

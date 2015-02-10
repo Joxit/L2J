@@ -37,7 +37,7 @@ public class FreyaAiClean {
 
 		// print all items of Q0025
 		System.out.println("All items of Q0025 : ");
-		final ArrayList<String> items = FreyaAiClean.getItemsIdsByQuest(freya_aiScript, Q0025name);
+		final ArrayList<String> items = FreyaAiClean.getQuestItems(freya_aiScript, Q0025name);
 		PchFinder.printNamesAndIds(freya_item_pch, items);
 
 		// print all npc of Q0025
@@ -137,8 +137,8 @@ public class FreyaAiClean {
 	 * @param quest
 	 * @throws IOException
 	 */
-	public static ArrayList<String> getItemsIdsByQuest(final String freya_aiScript,
-			final String quest) throws IOException {
+	public static ArrayList<String> getQuestItems(final String freya_aiScript, final String quest)
+			throws IOException {
 		final FileReader r = new FileReader(freya_aiScript);
 		String buff = "";
 		final ArrayList<String> items = new ArrayList<String>();

@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -66,29 +67,14 @@ public class PchFinder {
 	 */
 	public static ArrayList<String> getNamesByIds(final String path, final Collection<String> ids)
 			throws IOException {
-		final FileReader r = new FileReader(path);
+		final BufferedReader r = new BufferedReader(new FileReader(path));
 		final ArrayList<String> res = new ArrayList<String>();
 		while (r.ready()) {
-			char c = (char) r.read();
-			if (c == '[') {
-				final String[] row = new String[2];
-				row[0] = new String();
-				c = (char) r.read();
-				while ((c != ']') && r.ready()) {
-					if (c != 0) {
-						row[0] += c;
-					}
-					c = (char) r.read();
-				}
-				row[1] = new String();
-				while ((c != '\n') && r.ready()) {
-					if (Character.isDigit(c)) {
-						row[1] += c;
-					}
-					c = (char) r.read();
-				}
-				if (ids.contains(row[1])) {
-					res.add(row[0]);
+			final String line = r.readLine();
+			final String[] column = line.replaceAll("[^\\w\\d\\]]", "").split("]");
+			if (column.length == 2) {
+				if (ids.contains(column[1])) {
+					res.add(column[0]);
 				}
 			}
 		}
@@ -133,29 +119,14 @@ public class PchFinder {
 	 */
 	public static ArrayList<String> getIdsByNames(final String path, final Collection<String> names)
 			throws IOException {
-		final FileReader r = new FileReader(path);
+		final BufferedReader r = new BufferedReader(new FileReader(path));
 		final ArrayList<String> res = new ArrayList<String>();
 		while (r.ready()) {
-			char c = (char) r.read();
-			if (c == '[') {
-				final String[] row = new String[2];
-				row[0] = new String();
-				c = (char) r.read();
-				while ((c != ']') && r.ready()) {
-					if (c != 0) {
-						row[0] += c;
-					}
-					c = (char) r.read();
-				}
-				row[1] = new String();
-				while ((c != '\n') && r.ready()) {
-					if (Character.isDigit(c)) {
-						row[1] += c;
-					}
-					c = (char) r.read();
-				}
-				if (names.contains(row[0])) {
-					res.add(row[1]);
+			final String line = r.readLine();
+			final String[] column = line.replaceAll("[^\\w\\d\\]]", "").split("]");
+			if (column.length == 2) {
+				if (names.contains(column[0])) {
+					res.add(column[1]);
 				}
 			}
 		}
@@ -185,43 +156,15 @@ public class PchFinder {
 	 */
 	public static void printNamesAndIds(final String path, final Collection<String> namesOrIds)
 			throws IOException {
-		final FileReader r = new FileReader(path);
-		String buff = "", name = "";
-		int statut = -1;
+		final BufferedReader r = new BufferedReader(new FileReader(path));
 		/* on affiche l'id de tous les npcs */
 		while (r.ready()) {
-			final char c = (char) r.read();
-			switch (c) {
-				case '[':
-					buff = "";
-					statut = 1;
-					break;
-				case ']':
-					name = buff;
-					statut = 2;
-					buff = "";
-					break;
-				default:
-					switch (statut) {
-						case 0:
-							break;
-						case 1:
-							if (Character.isLetterOrDigit(c) || (c == '_')) {
-								buff += c;
-							}
-							break;
-						case 2:
-							if (Character.isDigit(c)) {
-								buff += c;
-							} else if ((c == '\n') || (c == '\r')) {
-								if (namesOrIds.contains(buff) || namesOrIds.contains(name)) {
-									System.out.println(name + " = " + buff);
-								}
-								statut = 0;
-							}
-							break;
-					}
-					break;
+			final String line = r.readLine();
+			final String[] column = line.replaceAll("[^\\w\\d\\]]", "").split("]");
+			if (column.length == 2) {
+				if (namesOrIds.contains(column[0]) || namesOrIds.contains(column[1])) {
+					System.out.println(column[0] + " = " + column[1]);
+				}
 			}
 		}
 		r.close();

@@ -17,9 +17,9 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashMap;
 
 /**
  * Analyzer for files like item_pch, quest_pch...
@@ -40,7 +40,7 @@ public class PchFinder {
 	 * @throws IOException
 	 */
 	public static String getNameById(final String path, final String id) throws IOException {
-		final ArrayList<String> res = getNamesByIds(path, id);
+		final Collection<String> res = getNamesByIds(path, id);
 		return res.stream().findFirst().orElse(null);
 	}
 
@@ -52,7 +52,7 @@ public class PchFinder {
 	 * @return names which has these ids (names found in *_pch)
 	 * @throws IOException
 	 */
-	public static ArrayList<String> getNamesByIds(final String path, final String... ids)
+	public static Collection<String> getNamesByIds(final String path, final String... ids)
 			throws IOException {
 		return getNamesByIds(path, Arrays.asList(ids));
 	}
@@ -65,22 +65,9 @@ public class PchFinder {
 	 * @return names which has these ids (names found in *_pch)
 	 * @throws IOException
 	 */
-	public static ArrayList<String> getNamesByIds(final String path, final Collection<String> ids)
+	public static Collection<String> getNamesByIds(final String path, final Collection<String> ids)
 			throws IOException {
-		final BufferedReader r = new BufferedReader(new FileReader(path));
-		final ArrayList<String> res = new ArrayList<String>();
-		while (r.ready()) {
-			final String line = r.readLine();
-			final String[] column = line.replaceAll("[^\\w\\d\\]]", "").split("]");
-			if (column.length == 2) {
-				if (ids.contains(column[1])) {
-					res.add(column[0]);
-				}
-			}
-		}
-		r.close();
-
-		return res;
+		return getNamesAndIds(path, ids).keySet();
 	}
 
 	/**
@@ -92,7 +79,7 @@ public class PchFinder {
 	 * @throws IOException
 	 */
 	public static String getIdByName(final String path, final String name) throws IOException {
-		final ArrayList<String> res = getIdsByNames(path, name);
+		final Collection<String> res = getIdsByNames(path, name);
 		return res.stream().findFirst().orElse(null);
 	}
 
@@ -104,7 +91,7 @@ public class PchFinder {
 	 * @return ids which has these names (name found in *_pch)
 	 * @throws IOException
 	 */
-	public static ArrayList<String> getIdsByNames(final String path, final String... names)
+	public static Collection<String> getIdsByNames(final String path, final String... names)
 			throws IOException {
 		return getIdsByNames(path, Arrays.asList(names));
 	}
@@ -117,21 +104,46 @@ public class PchFinder {
 	 * @return ids which has these names (name found in *_pch)
 	 * @throws IOException
 	 */
-	public static ArrayList<String> getIdsByNames(final String path, final Collection<String> names)
+	public static Collection<String> getIdsByNames(final String path, final Collection<String> names)
 			throws IOException {
+		return getNamesAndIds(path, names).values();
+	}
+
+	/**
+	 * Give all names and id in pch
+	 *
+	 * @param path of pch
+	 * @param namesOrIds
+	 * @throws IOException
+	 */
+	public static HashMap<String, String> getNamesAndIds(final String path,
+			final String... namesOrIds) throws IOException {
+		return getNamesAndIds(path, Arrays.asList(namesOrIds));
+	}
+
+	/**
+	 * Give all names and id in pch
+	 *
+	 * @param path of pch
+	 * @param namesOrIds
+	 * @return HashMap where key = name and value = id
+	 * @throws IOException
+	 */
+	public static HashMap<String, String> getNamesAndIds(final String path,
+			final Collection<String> namesOrIds) throws IOException {
+		final HashMap<String, String> res = new HashMap<String, String>();
 		final BufferedReader r = new BufferedReader(new FileReader(path));
-		final ArrayList<String> res = new ArrayList<String>();
+		/* on affiche l'id de tous les npcs */
 		while (r.ready()) {
 			final String line = r.readLine();
 			final String[] column = line.replaceAll("[^\\w\\d\\]]", "").split("]");
 			if (column.length == 2) {
-				if (names.contains(column[0])) {
-					res.add(column[1]);
+				if (namesOrIds.contains(column[0]) || namesOrIds.contains(column[1])) {
+					res.put(column[0], column[1]);
 				}
 			}
 		}
 		r.close();
-
 		return res;
 	}
 
@@ -156,18 +168,7 @@ public class PchFinder {
 	 */
 	public static void printNamesAndIds(final String path, final Collection<String> namesOrIds)
 			throws IOException {
-		final BufferedReader r = new BufferedReader(new FileReader(path));
-		/* on affiche l'id de tous les npcs */
-		while (r.ready()) {
-			final String line = r.readLine();
-			final String[] column = line.replaceAll("[^\\w\\d\\]]", "").split("]");
-			if (column.length == 2) {
-				if (namesOrIds.contains(column[0]) || namesOrIds.contains(column[1])) {
-					System.out.println(column[0] + " = " + column[1]);
-				}
-			}
-		}
-		r.close();
+		getNamesAndIds(path, namesOrIds).forEach((k, v) -> System.out.println(k + " = " + v));
 	}
 
 }

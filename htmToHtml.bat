@@ -1,0 +1,2 @@
+REN *.htm *.html
+pause

@@ -133,12 +133,25 @@ public class FreyaAiClean {
 	}
 
 	/**
-	 * Give all the npc IDs in relationship with this quest name. TODO
+	 * Give all the npc IDs in relationship with this quest name. 
+	 * @param freya_aiScript path of the freya ai script
 	 * @param quest
 	 * @throws IOException
 	 */
 	public static ArrayList<String> getQuestItems(final String freya_aiScript, final String quest)
 			throws IOException {
+		return getQuestItems(freya_aiScript, quest, null);
+	}
+
+	/**
+	 * Give all the npc IDs in relationship with this quest name. 
+	 * @param freya_aiScript path of the freya ai script
+	 * @param quest
+	 * @param questId
+	 * @throws IOException
+	 */
+	public static ArrayList<String> getQuestItems(final String freya_aiScript, final String quest,
+			final String questId) throws IOException {
 		final FileReader r = new FileReader(freya_aiScript);
 		String buff = "";
 		final ArrayList<String> items = new ArrayList<String>();
@@ -159,7 +172,9 @@ public class FreyaAiClean {
 					while (r.ready() && (parent != 0)) {
 						c = (char) r.read();
 						if ((c == '\n')) {
-							if (buff.contains(quest) && buff.contains("gg::HaveMemo")) {
+							if ((buff.contains(quest) && (buff.contains("gg::HaveMemo") || buff
+									.contains("myself::SetCurrentQuestID")))
+									|| buff.contains("if( ask == " + questId + " )")) {
 								parent2 = 0;
 							} else if ((parent2 != -1) && buff.contains("Item")
 									&& !buff.contains("ItemSound")) {

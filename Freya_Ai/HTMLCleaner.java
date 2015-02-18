@@ -14,10 +14,12 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
 
 public class HTMLCleaner {
 
@@ -65,7 +67,7 @@ public class HTMLCleaner {
 						buff += c;
 						if (buff.equalsIgnoreCase("<br>") || buff.equalsIgnoreCase("<br1>")) {
 							line += buff + '\n';
-							w.write(line.replace(" \n", "\n"));
+							w.write(line.replace(" \n", "\n").replace(" <br", "<br"));
 							line = "";
 							buff = "";
 						} else if (buff.equalsIgnoreCase("</body>")) {
@@ -94,6 +96,44 @@ public class HTMLCleaner {
 			i++;
 		}
 		System.out.println("total : " + i);
+	}
+
+	/**
+	 * @param readPath
+	 * @param savePath
+	 * @param npcs
+	 * @throws IOException
+	 */
+	public static void renameHtmls(final String readPath, final String savePath,
+			final HashMap<String, String> npcs) throws IOException {
+		final File dir = new File(readPath + File.separator);
+		if (!dir.isDirectory()) {
+			throw new IOException("readPath must be a directory.");
+		}
+		if (!new File(savePath).isDirectory()) {
+			throw new IOException("savePath must be a directory.");
+		}
+		for (final File file : dir.listFiles()) {
+			final String name = file.getName().replaceAll("(.*)_q\\d{4}_\\d+\\w*\\..*", "$1");
+			final String num = file.getName().replaceAll(".*_q\\d{4}_(\\d+\\w*)\\..*", "$1");
+			final String ext = file.getName().replaceAll(".*_q\\d{4}_\\d+\\w*\\.(.*)", "$1");
+			if (npcs.containsKey(name)) {
+				final String id = npcs.get(name).replaceFirst("^10", "");
+				final BufferedReader r = new BufferedReader(new FileReader(file.getPath()));
+				final FileWriter w = new FileWriter(savePath + File.separator + id + "-" + num
+						+ "." + ext);
+				while (r.ready()) {
+					final String line = r.readLine();
+					w.write(line.replaceAll(name + "_q\\d{4}_(\\d+\\w*)\\.htm", id + "-$1.htm"));
+					if (r.ready()) {
+						w.write("\n");
+					}
+					w.flush();
+				}
+				r.close();
+				w.close();
+			}
+		}
 	}
 
 }

@@ -50,6 +50,13 @@ public class FreyaAiClean {
 		FreyaAiClean.aiByName(freya_aiScript, freya_srcipt_dir + "Q0025_" + Q0025name, npcs);
 	}
 
+	/**
+	 * Write all class of freya ai in separate files.
+	 * 
+	 * @param freya_aiScript path of the freya ai script
+	 * @param save_dir directory where we save files
+	 * @param name of all classes of ai
+	 */
 	public static void aiByName(final String freya_aiScript, final String save_dir,
 			final ArrayList<String> name) throws IOException {
 		final FileReader r = new FileReader(freya_aiScript);
@@ -226,6 +233,10 @@ public class FreyaAiClean {
 	}
 
 	/**
+	 * Search all npcs of a quest. is known that a NPC is in a quest when 
+	 * there is gg::HaveMemo( player, @quest) in his script.
+	 * 
+	 * @param freya_aiScript path of the freya ai script
 	 * @param quest where we want all npcs
 	 * @return ArrayList of all npcs
 	 */

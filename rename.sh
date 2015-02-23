@@ -1,7 +1,12 @@
 #!/bin/sh
-
-ID=31149
-NAME=alchemical_mixing_jar_
+if [[ -n $2 ]]
+then
+	echo "Usage : $0 [Name] [ID]"
+	echo "Will rename all files [Name]_x.htm by [ID]-x.htm"
+	exit 0
+fi
+ID=$2
+NAME=$1
 
 for file in $NAME* 
 do

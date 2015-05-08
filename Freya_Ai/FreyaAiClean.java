@@ -14,6 +14,7 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -25,11 +26,16 @@ import java.util.ArrayList;
  */
 public class FreyaAiClean {
 	final static String freya_srcipt_dir = "freya_scripts";
-	final static String freya_aiScript = freya_srcipt_dir + File.separator + "ai-freya-symbol.txt";
-	final static String freya_npc_pch = freya_srcipt_dir + File.separator + "npc_pch.txt";
-	final static String freya_quest_pch = freya_srcipt_dir + File.separator + "quest_pch.txt";
-	final static String freya_item_pch = freya_srcipt_dir + File.separator + "item_pch.txt";
-	final static String freya_html_dir = freya_srcipt_dir + File.separator + "html-en";
+	final static String freya_aiScript = freya_srcipt_dir + File.separator
+			+ "ai-freya-symbol.txt";
+	final static String freya_npc_pch = freya_srcipt_dir + File.separator
+			+ "npc_pch.txt";
+	final static String freya_quest_pch = freya_srcipt_dir + File.separator
+			+ "quest_pch.txt";
+	final static String freya_item_pch = freya_srcipt_dir + File.separator
+			+ "item_pch.txt";
+	final static String freya_html_dir = freya_srcipt_dir + File.separator
+			+ "html-en";
 
 	public static void main(final String args[]) throws IOException {
 		final String Q0025name = PchFinder.getNameById(freya_quest_pch, "25");
@@ -37,28 +43,35 @@ public class FreyaAiClean {
 
 		// print all items of Q0025
 		System.out.println("All items of Q0025 : ");
-		final ArrayList<String> items = FreyaAiClean.getQuestItems(freya_aiScript, Q0025name);
+		final ArrayList<String> items = FreyaAiClean.getQuestItems(
+				freya_aiScript, Q0025name);
 		PchFinder.printNamesAndIds(freya_item_pch, items);
 
 		// print all npc of Q0025
 		System.out.println("All npcs of Q0025 : ");
-		final ArrayList<String> npcs = FreyaAiClean.getQuestNpcs(freya_aiScript, Q0025name);
+		final ArrayList<String> npcs = FreyaAiClean.getQuestNpcs(
+				freya_aiScript, Q0025name);
 		PchFinder.printNamesAndIds(freya_npc_pch, npcs);
 
 		// write on disk all ai for quest Q0025 in the folder Q0025_[name]
 		System.out.println("Names of NPCs that I am writing on the disc : ");
-		FreyaAiClean.aiByName(freya_aiScript, freya_srcipt_dir + "Q0025_" + Q0025name, npcs);
+		FreyaAiClean.aiByName(freya_aiScript, freya_srcipt_dir + "Q0025_"
+				+ Q0025name, npcs);
 	}
 
 	/**
 	 * Write all class of freya ai in separate files.
 	 * 
-	 * @param freya_aiScript path of the freya ai script
-	 * @param save_dir directory where we save files
-	 * @param name of all classes of ai
+	 * @param freya_aiScript
+	 *            path of the freya ai script
+	 * @param save_dir
+	 *            directory where we save files
+	 * @param name
+	 *            of all classes of ai
 	 */
-	public static void aiByName(final String freya_aiScript, final String save_dir,
-			final ArrayList<String> name) throws IOException {
+	public static void aiByName(final String freya_aiScript,
+			final String save_dir, final ArrayList<String> name)
+			throws IOException {
 		final FileReader r = new FileReader(freya_aiScript);
 		String buff = "";
 		char c = (char) r.read();
@@ -73,7 +86,8 @@ public class FreyaAiClean {
 				}
 				if ((statut == 2) && name.contains(buff)) {
 					System.out.println(buff);
-					final FileWriter w = new FileWriter(save_dir + File.separator + buff + ".c");
+					final BufferedWriter w = new BufferedWriter(new FileWriter(
+							save_dir + File.separator + buff + ".c"));
 
 					w.write(buff);
 					int parent = 0;
@@ -122,14 +136,17 @@ public class FreyaAiClean {
 	 * Give all the npc in relationship with this quest name from the Freya AI
 	 * and save their scripts in a special folder.
 	 *
-	 * @param freya_aiScript path of the freya ai script
-	 * @param save path where we will save all files (folder like Q[id]_[name]
+	 * @param freya_aiScript
+	 *            path of the freya ai script
+	 * @param save
+	 *            path where we will save all files (folder like Q[id]_[name]
 	 *            for exemple)
-	 * @param quest name of the quest (same as quest_pch)
+	 * @param quest
+	 *            name of the quest (same as quest_pch)
 	 * @throws IOException
 	 */
-	public static void aiByQuest(final String freya_aiScript, final String save, final String quest)
-			throws IOException {
+	public static void aiByQuest(final String freya_aiScript,
+			final String save, final String quest) throws IOException {
 		final ArrayList<String> npcs = getQuestNpcs(freya_aiScript, quest);
 		final File dir = new File(save);
 		if (!dir.mkdir() && !dir.exists()) {
@@ -140,25 +157,29 @@ public class FreyaAiClean {
 	}
 
 	/**
-	 * Give all the npc IDs in relationship with this quest name. 
-	 * @param freya_aiScript path of the freya ai script
+	 * Give all the npc IDs in relationship with this quest name.
+	 * 
+	 * @param freya_aiScript
+	 *            path of the freya ai script
 	 * @param quest
 	 * @throws IOException
 	 */
-	public static ArrayList<String> getQuestItems(final String freya_aiScript, final String quest)
-			throws IOException {
+	public static ArrayList<String> getQuestItems(final String freya_aiScript,
+			final String quest) throws IOException {
 		return getQuestItems(freya_aiScript, quest, null);
 	}
 
 	/**
-	 * Give all the npc IDs in relationship with this quest name. 
-	 * @param freya_aiScript path of the freya ai script
+	 * Give all the npc IDs in relationship with this quest name.
+	 * 
+	 * @param freya_aiScript
+	 *            path of the freya ai script
 	 * @param quest
 	 * @param questId
 	 * @throws IOException
 	 */
-	public static ArrayList<String> getQuestItems(final String freya_aiScript, final String quest,
-			final String questId) throws IOException {
+	public static ArrayList<String> getQuestItems(final String freya_aiScript,
+			final String quest, final String questId) throws IOException {
 		final FileReader r = new FileReader(freya_aiScript);
 		String buff = "";
 		final ArrayList<String> items = new ArrayList<String>();
@@ -179,14 +200,17 @@ public class FreyaAiClean {
 					while (r.ready() && (parent != 0)) {
 						c = (char) r.read();
 						if ((c == '\n')) {
-							if ((buff.contains(quest) && (buff.contains("gg::HaveMemo") || buff
+							if ((buff.contains(quest) && (buff
+									.contains("gg::HaveMemo") || buff
 									.contains("myself::SetCurrentQuestID")))
-									|| buff.contains("if( ask == " + questId + " )")) {
+									|| buff.contains("if( ask == " + questId
+											+ " )")) {
 								parent2 = 0;
 							} else if ((parent2 != -1) && buff.contains("Item")
 									&& !buff.contains("ItemSound")) {
-								final String res = buff.replaceAll(".*@([\\w_\\d]*).*", "$1")
-										.replaceAll("[\n\r ]", "");
+								final String res = buff.replaceAll(
+										".*@([\\w_\\d]*).*", "$1").replaceAll(
+										"[\n\r ]", "");
 								if (!res.isEmpty() && !items.contains(res)) {
 									items.add(res);
 								}
@@ -233,15 +257,17 @@ public class FreyaAiClean {
 	}
 
 	/**
-	 * Search all npcs of a quest. is known that a NPC is in a quest when 
-	 * there is gg::HaveMemo( player, @quest) in his script.
+	 * Search all npcs of a quest. is known that a NPC is in a quest when there
+	 * is gg::HaveMemo( player, @quest) in his script.
 	 * 
-	 * @param freya_aiScript path of the freya ai script
-	 * @param quest where we want all npcs
+	 * @param freya_aiScript
+	 *            path of the freya ai script
+	 * @param quest
+	 *            where we want all npcs
 	 * @return ArrayList of all npcs
 	 */
-	public static ArrayList<String> getQuestNpcs(final String freya_aiScript, final String quest)
-			throws IOException {
+	public static ArrayList<String> getQuestNpcs(final String freya_aiScript,
+			final String quest) throws IOException {
 		final FileReader r = new FileReader(freya_aiScript);
 		String buff = "", name = "";
 		final ArrayList<String> npcs = new ArrayList<String>();
@@ -264,7 +290,8 @@ public class FreyaAiClean {
 						c = (char) r.read();
 						line += c;
 						if ((c == ' ') || (c == '\n')) {
-							if (buff.endsWith(quest) && line.contains("gg::HaveMemo")) {
+							if (buff.endsWith(quest)
+									&& line.contains("gg::HaveMemo")) {
 								npcs.add(name);
 								break;
 							}

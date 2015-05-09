@@ -15,6 +15,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -26,12 +27,15 @@ public class HTMLCleaner {
 	/**
 	 * Format all freya htmls (add new line) and save in a new directory
 	 *
-	 * @param readPath directory path where are all htmls files
-	 * @param savePath directory path where we save formated htmls
+	 * @param readPath
+	 *            directory path where are all htmls files
+	 * @param savePath
+	 *            directory path where we save formated htmls
 	 *
 	 * @throws IOException
 	 */
-	public static void formatHtmls(final String readPath, final String savePath) throws IOException {
+	public static void formatHtmls(final String readPath, final String savePath)
+			throws IOException {
 		int i = 0;
 		final File dir = new File(readPath + File.separator);
 		char lastChar = '\0';
@@ -47,7 +51,8 @@ public class HTMLCleaner {
 				System.out.println(i);
 			}
 			final FileReader r = new FileReader(file.getPath());
-			final FileWriter w = new FileWriter(savePath + File.separator + file.getName());
+			final BufferedWriter w = new BufferedWriter(new FileWriter(savePath
+					+ File.separator + file.getName()));
 			String buff;
 			buff = "";
 			while (r.ready()) {
@@ -65,14 +70,17 @@ public class HTMLCleaner {
 						break;
 					case '>':
 						buff += c;
-						if (buff.equalsIgnoreCase("<br>") || buff.equalsIgnoreCase("<br1>")) {
+						if (buff.equalsIgnoreCase("<br>")
+								|| buff.equalsIgnoreCase("<br1>")) {
 							line += buff + '\n';
-							w.write(line.replace(" \n", "\n").replace(" <br", "<br"));
+							w.write(line.replace(" \n", "\n").replace(" <br",
+									"<br"));
 							line = "";
 							buff = "";
 						} else if (buff.equalsIgnoreCase("</body>")) {
 							line += '\n';
-							w.write(line.replace(" \n", "\n") + buff + "</html>");
+							w.write(line.replace(" \n", "\n") + buff
+									+ "</html>");
 							line = "";
 							buff = "";
 						} else if (buff.equalsIgnoreCase("<head>")
@@ -104,8 +112,9 @@ public class HTMLCleaner {
 	 * @param npcs
 	 * @throws IOException
 	 */
-	public static void renameHtmls(final String readPath, final String savePath,
-			final HashMap<String, String> npcs) throws IOException {
+	public static void renameHtmls(final String readPath,
+			final String savePath, final HashMap<String, String> npcs)
+			throws IOException {
 		final File dir = new File(readPath + File.separator);
 		if (!dir.isDirectory()) {
 			throw new IOException("readPath must be a directory.");
@@ -114,17 +123,22 @@ public class HTMLCleaner {
 			throw new IOException("savePath must be a directory.");
 		}
 		for (final File file : dir.listFiles()) {
-			final String name = file.getName().replaceAll("(.*)_q\\d{4}_\\d+\\w*\\..*", "$1");
-			final String num = file.getName().replaceAll(".*_q\\d{4}_(\\d+\\w*)\\..*", "$1");
-			final String ext = file.getName().replaceAll(".*_q\\d{4}_\\d+\\w*\\.(.*)", "$1");
+			final String name = file.getName().replaceAll(
+					"(.*)_q\\d{4}_\\d+\\w*\\..*", "$1");
+			final String num = file.getName().replaceAll(
+					".*_q\\d{4}_(\\d+\\w*)\\..*", "$1");
+			final String ext = file.getName().replaceAll(
+					".*_q\\d{4}_\\d+\\w*\\.(.*)", "$1");
 			if (npcs.containsKey(name)) {
 				final String id = npcs.get(name).replaceFirst("^10", "");
-				final BufferedReader r = new BufferedReader(new FileReader(file.getPath()));
-				final FileWriter w = new FileWriter(savePath + File.separator + id + "-" + num
-						+ "." + ext);
+				final BufferedReader r = new BufferedReader(new FileReader(
+						file.getPath()));
+				final FileWriter w = new FileWriter(savePath + File.separator
+						+ id + "-" + num + "." + ext);
 				while (r.ready()) {
 					final String line = r.readLine();
-					w.write(line.replaceAll(name + "_q\\d{4}_(\\d+\\w*)\\.htm", id + "-$1.htm"));
+					w.write(line.replaceAll(name + "_q\\d{4}_(\\d+\\w*)\\.htm",
+							id + "-$1.htm"));
 					if (r.ready()) {
 						w.write("\n");
 					}

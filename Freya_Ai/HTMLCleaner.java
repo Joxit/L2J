@@ -133,8 +133,8 @@ public class HTMLCleaner {
 				final String id = npcs.get(name).replaceFirst("^10", "");
 				final BufferedReader r = new BufferedReader(new FileReader(
 						file.getPath()));
-				final FileWriter w = new FileWriter(savePath + File.separator
-						+ id + "-" + num + "." + ext);
+				final BufferedWriter w = new BufferedWriter(new FileWriter(
+						savePath + File.separator + id + "-" + num + "." + ext));
 				while (r.ready()) {
 					final String line = r.readLine();
 					w.write(line.replaceAll(name + "_q\\d{4}_(\\d+\\w*)\\.htm",

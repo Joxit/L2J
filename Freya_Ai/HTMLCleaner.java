@@ -20,6 +20,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class HTMLCleaner {
@@ -122,32 +123,41 @@ public class HTMLCleaner {
 		if (!new File(savePath).isDirectory()) {
 			throw new IOException("savePath must be a directory.");
 		}
-		for (final File file : dir.listFiles()) {
-			final String name = file.getName().replaceAll(
-					"(.*)_q\\d{4}_\\d+\\w*\\..*", "$1");
-			final String num = file.getName().replaceAll(
-					".*_q\\d{4}_(\\d+\\w*)\\..*", "$1");
-			final String ext = file.getName().replaceAll(
-					".*_q\\d{4}_\\d+\\w*\\.(.*)", "$1");
-			if (npcs.containsKey(name)) {
-				final String id = npcs.get(name).replaceFirst("^10", "");
-				final BufferedReader r = new BufferedReader(new FileReader(
-						file.getPath()));
-				final BufferedWriter w = new BufferedWriter(new FileWriter(
-						savePath + File.separator + id + "-" + num + "." + ext));
-				while (r.ready()) {
-					final String line = r.readLine();
-					w.write(line.replaceAll(name + "_q\\d{4}_(\\d+\\w*)\\.htm",
-							id + "-$1.htm"));
-					if (r.ready()) {
-						w.write("\n");
+		Arrays.stream(dir.listFiles()).forEach(
+				file -> {
+					final String name = file.getName().replaceAll(
+							"(.*)_q\\d{4}_\\d+\\w*\\..*", "$1");
+					final String num = file.getName().replaceAll(
+							".*_q\\d{4}_(\\d+\\w*)\\..*", "$1");
+					final String ext = file.getName().replaceAll(
+							".*_q\\d{4}_\\d+\\w*\\.(.*)", "$1");
+					if (npcs.containsKey(name)) {
+						try {
+							final String id = npcs.get(name).replaceFirst(
+									"^10", "");
+							final BufferedReader r = new BufferedReader(
+									new FileReader(file.getPath()));
+							final BufferedWriter w = new BufferedWriter(
+									new FileWriter(savePath + File.separator
+											+ id + "-" + num + "." + ext));
+							while (r.ready()) {
+								final String line = r.readLine();
+								w.write(line.replaceAll(name
+										+ "_q\\d{4}_(\\d+\\w*)\\.htm", id
+										+ "-$1.htm"));
+
+								if (r.ready()) {
+									w.write("\n");
+								}
+								w.flush();
+							}
+							r.close();
+							w.close();
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
 					}
-					w.flush();
-				}
-				r.close();
-				w.close();
-			}
-		}
+				});
 	}
 
 }

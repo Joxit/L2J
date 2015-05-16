@@ -141,13 +141,12 @@ public class HTMLCleaner {
 									new FileWriter(savePath + File.separator
 											+ id + "-" + num + "." + ext));
 							while (r.ready()) {
-								final String line = r.readLine();
-								w.write(line.replaceAll(name
-										+ "_q\\d{4}_(\\d+\\w*)\\.htm", id
-										+ "-$1.htm"));
-
+								w.write(r.readLine().replaceAll(
+										name + "_q\\d{4}_(\\d+\\w*)\\.htm",
+										id + "-$1.htm"));
+								// Prevent LF at EOF
 								if (r.ready()) {
-									w.write("\n");
+									w.newLine();
 								}
 								w.flush();
 							}

@@ -140,15 +140,14 @@ public class HTMLCleaner {
 							final BufferedWriter w = new BufferedWriter(
 									new FileWriter(savePath + File.separator
 											+ id + "-" + num + "." + ext));
+							r.lines().forEach(
+									line -> {
+										write(w, r, line, name
+												+ "_q\\d{4}_(\\d+\\w*)\\.htm",
+												id + "-$1.htm");
+									});
 							while (r.ready()) {
-								w.write(r.readLine().replaceAll(
-										name + "_q\\d{4}_(\\d+\\w*)\\.htm",
-										id + "-$1.htm"));
-								// Prevent LF at EOF
-								if (r.ready()) {
-									w.newLine();
-								}
-								w.flush();
+
 							}
 							r.close();
 							w.close();
@@ -159,4 +158,17 @@ public class HTMLCleaner {
 				});
 	}
 
+	private static void write(BufferedWriter w, BufferedReader r, String line,
+			String regex, String remplacement) {
+		try {
+			w.write(line.replaceAll(regex, remplacement));
+			// Prevent LF at EOF
+			if (r.ready()) {
+				w.newLine();
+			}
+			w.flush();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

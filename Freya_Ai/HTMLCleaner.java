@@ -146,9 +146,6 @@ public class HTMLCleaner {
 												+ "_q\\d{4}_(\\d+\\w*)\\.htm",
 												id + "-$1.htm");
 									});
-							while (r.ready()) {
-
-							}
 							r.close();
 							w.close();
 						} catch (Exception e) {

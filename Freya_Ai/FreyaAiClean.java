@@ -258,7 +258,7 @@ public class FreyaAiClean {
 
 	/**
 	 * Search all npcs of a quest. is known that a NPC is in a quest when there
-	 * is gg::HaveMemo( player, @quest) in his script.
+	 * <code>is gg::HaveMemo( player, @quest)</code> in his script.
 	 * 
 	 * @param freya_aiScript
 	 *            path of the freya ai script

@@ -15,6 +15,19 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 public class Util {
+	public static boolean isIn(char c, char... chars) {
+		if (chars == null) {
+			return false;
+		}
+		for (char cur_char : chars) {
+			if (c == cur_char) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
 	public static boolean isDigit(final String text) {
 		if ((text == null) || text.isEmpty()) {
 			return false;

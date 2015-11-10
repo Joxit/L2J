@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /*
  * Copyright (C) 2013-2015 Joxit
  *
@@ -15,17 +17,12 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 public class Util {
-	public static boolean isIn(char c, char... chars) {
+	public static boolean isIn(char c, Character... chars) {
 		if (chars == null) {
 			return false;
 		}
-		for (char cur_char : chars) {
-			if (c == cur_char) {
-				return true;
-			}
-		}
 
-		return false;
+		return Arrays.stream(chars).anyMatch(cur_char -> cur_char.equals(c));
 	}
 
 	public static boolean isDigit(final String text) {

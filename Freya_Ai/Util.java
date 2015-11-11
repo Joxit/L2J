@@ -18,11 +18,7 @@ import java.util.Arrays;
  */
 public class Util {
 	public static boolean isIn(char c, Character... chars) {
-		if (chars == null) {
-			return false;
-		}
-
-		return Arrays.stream(chars).anyMatch(cur_char -> cur_char.equals(c));
+		return chars == null ? false : Arrays.stream(chars).anyMatch(cur_char -> cur_char.equals(c));
 	}
 
 	public static boolean isDigit(final String text) {

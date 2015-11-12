@@ -69,7 +69,7 @@ public class FreyaAiClean {
 		char c = (char) r.read();
 		int statut = -1;
 		while (r.ready()) {
-			if (Util.isIn(c, ' ', '\n', '>') && !buff.equals(" ")) {
+			if (Util.isCharIn(c, ' ', '\n', '>') && !buff.equals(" ")) {
 				if ((statut == -1) && buff.endsWith("class")) {
 					statut = 1;
 				}
@@ -178,7 +178,7 @@ public class FreyaAiClean {
 		int statut = -1;
 		/* on cherche tous les items de la quete */
 		while (r.ready()) {
-			if (Util.isIn(c, ' ', '\n', '>') && !buff.equals(" ")) {
+			if (Util.isCharIn(c, ' ', '\n', '>') && !buff.equals(" ")) {
 				if (statut == 2) {
 					int parent = 0;
 					while (r.ready() && (parent == 0)) {
@@ -260,7 +260,7 @@ public class FreyaAiClean {
 		int statut = -1;
 		/* on cherche tous les npcs de la quete */
 		while (r.ready()) {
-			if (Util.isIn(c, ' ', '\n', '>') && !buff.equals(" ")) {
+			if (Util.isCharIn(c, ' ', '\n', '>') && !buff.equals(" ")) {
 				if (statut == 2) {
 					name = buff;
 					int parent = 0;

@@ -17,7 +17,7 @@ import java.util.Arrays;
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 public class Util {
-	public static boolean isIn(char c, Character... chars) {
+	public static boolean isCharIn(char c, Character... chars) {
 		return chars == null ? false : Arrays.stream(chars).anyMatch(cur_char -> cur_char.equals(c));
 	}
 
